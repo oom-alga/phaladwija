@@ -1,0 +1,173 @@
+/*
+ * Copyright (c) 2013 
+ * ==================================
+ *
+ * This is part of an item on themeforest
+ * You can check out the screenshots and purchase it on themeforest:
+ * http://rxa.li/documenter
+ * 
+ * ===========================================
+ * original filename: custom.css
+ * filesize: 1701 Bytes
+ * last modified: Mon, 03 Jun 2013 20:23:47 +0200
+ *
+ */
+ 
+html  											{ background:#f6f8fb; color:#3a4144; }
+body 											{ background:#f6f8fb; color:#3a4144; font-family:'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif; font-size:13px; font-weight:400; line-height:26px; text-shadow:1px 1px 0px #ffffff; overflow-x:hidden !important; }
+::selection 									{ background:#00aff0; color:#ffffff; }
+::-moz-selection 								{ background:#00aff0; color:#ffffff; }
+::-webkit-selection 							{ background:#00aff0; color:#ffffff; }
+.clear											{ clear:both; }
+
+a 												{ color:#00aff0; transition:all 0.2s ease-out; -moz-transition:all 0.2s ease-out; -webkit-transition:all 0.2s ease-out; -khtml-transition:all 0.2s ease-out; -o-transition:all 0.2s ease-out; }
+a:hover 										{ color:#30abbd; text-decoration:none; }
+hr 												{ border-top:1px solid #bcc6ca; border-bottom:1px solid #ffffff; }
+p												{ line-height:24px;  }
+img												{ outline:none; border:none; }
+a img											{ outline:none; border:none; }
+small											{ font-size:11px; line-height:14px; text-transform:none; display:inline-block; }
+blockquote										{ font-family:Georgia, "Times New Roman", Times, serif; font-size:18px; font-style:italic; line-height:30px; margin-top:10px; color:#9fa5a8; margin-bottom:25px; padding:15px; padding-right:30px; background:url(../images/blockquote.png) no-repeat top right; }
+abbr											{ cursor:help; border-bottom:1px dotted #000000; }
+ul, ol											{ margin:0; padding:0; }
+
+#documenter_content 							{ margin-top:20px; }
+#documenter_content section						{ max-width:800px; padding-bottom:1000px; }
+#documenter_sidebar #documenter_logo 			{ background:url(../images/logo2.png) no-repeat center; height:74px; min-height:74px; margin:25px 0 50px 0; }
+#documenter_content ul li						{ list-style:disc outside; margin-left:inherit; }
+#documenter_content h1							{ font-size:36px; line-height:48px; font-weight:800; letter-spacing:-1px; margin:0; padding:0; }
+#documenter_content h2							{ font-size:30px; line-height:36px; font-weight:800; letter-spacing:-1px; margin:0 0 10px 0; padding:0; }
+#documenter_content h3							{ font-size:24px; line-height:36px; font-weight:800; letter-spacing:-1px; margin:0 0 10px 0; padding:0; }
+#documenter_content h4							{ font-size:18px; line-height:24px; font-weight:800; letter-spacing:-1px; margin:0 0 10px 0; padding:0; }
+#documenter_cover ul							{ margin:0; padding:0; line-height:30px; }
+#documenter_cover ul li	i						{ padding:0 10px 0 0; font-size:18px; color:#c0c5cb; }	
+#documenter_content h3 i						{ padding:0 10px 0 0; color:#00aff0; font-size:36px; }
+
+#documenter_sidebar								{ color:#cdd2dd; font-size:15px; text-shadow:1px 1px 0px #000000; background:url(../images/background.jpg) repeat-y top center; }
+#documenter_sidebar ul 							{ margin:0; padding:0; border-top:1px solid rgba(255,255,255,.1); }
+#documenter_sidebar ul li						{ margin:0; padding:0; }
+#documenter_sidebar ul li a 					{ text-align:left; border-bottom:1px solid rgba(255,255,255,.05); color:#ffffff; font-weight:600; font-size:13px; padding:10px 15px 10px 0; }
+#documenter_sidebar ul li a:hover 				{ color:#00aff0; }
+#documenter_sidebar ul li a.current 			{ color:#00aff0; }
+#documenter_sidebar ul li a i					{ padding:0 10px 0 15px; }
+
+#documenter_copyright 							{ display:block !important; visibility:visible !important; text-align:left; line-height:13px; left:10px; color:#889083; }
+#documenter_copyright a							{ color:#b9c2b3; }
+#documenter_copyright a:hover					{ color:#dbe5d5; }
+
+#documenter_content p.warning,
+#documenter_content p.info 						{ box-shadow:0px 0px 8px rgba(0,0,0,0.1); -moz-box-shadow:0px 0px 8px rgba(0,0,0,0.1); -webkit-box-shadow:0px 0px 8px rgba(0,0,0,0.1); -khtml-box-shadow:0px 0px 8px rgba(0,0,0,0.1); -o-box-shadow:0px 0px 8px rgba(0,0,0,0.1); border:1px solid #D3D6DB; }
+#documenter_content p.warning 					{ background-color:#ffd; }
+#documenter_content p.info 						{ background-color::#dff; }
+
+.social											{ margin:0 0 0 5px; }
+.social a										{ font-size:18px; color:#3a4252; padding:3px; }
+.social a:hover									{ color:#00aff0; }
+
+.keyfeatures									{ }
+.keyfeatures h4.title							{ font-weight:700 !important; margin-top:15px !important; }
+.keyfeatures i									{ font-size:18px; line-height:26px; width:26px; height:26px; color:#efc766; padding:20px; border:2px solid #efc766; -moz-border-radius:50%; -webkit-border-radius:50%; -khtml-border-radius:50%; -o-border-radius:50%; border-radius:50%; }
+.keyfeatures .col_1_3							{ margin:20px 0 0 0; }
+.keyfeatures .col_1_3 i							{ font-size:30px; line-height:36px; width:36px; height:36px; background:#efc766; color:#ffffff; text-shadow:none; }
+
+p.c_1 											{ background-color:#069; padding:20px; color:#fff; font-size:48px; }
+p.c_2  											{ background-color:#960; margin:20px; font-size:28px; text-align:right; color:#CCC; padding-right:20px; }
+p.c_3 											{ width:200px; border:3px solid #090; text-align:center; background:#990; color:#FFF; }
+p.c_4 											{ }
+p.c_5 											{ text-decoration:blink; }
+p.c_5:after 									{ content:"Don't use text-decoration:blink in your docs! (added with :after pseudo class)"; }
+p.c_6 											{ }
+p.c_7 											{ }
+p.c_8 											{ }
+p.c_9 											{ }
+
+/*----------------------------------------------*/
+/* Clear Floats */
+/*----------------------------------------------*/
+.clear, .clearpagination 						{ clear:both; }
+.clearfix 										{ display:inline-block; }
+* html .clearfix 								{ height:1%; }
+.clearfix 										{ display:block; }
+.clearfix:after 								{ clear:both; content:' '; display:block; font-size:0; line-height:0; visibility:hidden; width:0; height:0; }
+.fix 											{ clear:both; height:1px; margin:-1px 0 0; overflow:hidden; }
+
+/*----------------------------------------*/
+/* List Styles */
+/*----------------------------------------*/
+ul 												{ list-style:circle outside; }
+ol 												{ list-style:decimal outside; }
+li 												{ margin:2px 0;}
+ol li 											{ margin-top:5px; margin-bottom:7px; }
+ul, ol, dd 										{ margin-left:15px; margin-bottom:20px; }
+ul ul, ol ul, ul ol, ol ol 						{ margin-bottom:0; }
+ul.checklist									{ margin-left:5px; }
+ul.arrowlist									{ margin-left:5px; }
+ul.errorlist									{ margin-left:5px; }
+ul.psd-small									{ margin-left:0; }
+ul.checklist li									{ list-style:none !important; background:url(../images/icon_check.png) no-repeat 0 5px; margin-left:0px; padding-left:35px; line-height:28px; margin-bottom:5px; }
+ul.arrowlist li									{ list-style:none !important; background:url(../images/icon_arrow.png) no-repeat 0 5px; margin-left:0px; padding-left:20px; line-height:24px; margin-bottom:3px; }
+ul.errorlist li									{ list-style:none !important; background:url(../images/icon_error.png) no-repeat 0 5px; margin-left:0px; padding-left:25px; line-height:26px; margin-bottom:3px; }
+ul.psd-small li									{ list-style:none !important; background:url(../images/icon_psd-small.png) no-repeat 0 5px; margin-left:0px; padding-left:20px; line-height:22px; margin-bottom:2px; }
+
+/*----------------------------------------*/
+/* Buttons */
+/*----------------------------------------*/
+a.button 										{ text-shadow:none; background:#008fe9; color:#ffffff; display:inline-block; font-size:15px; height:38px; line-height:38px; padding-left:20px; padding-right:20px; text-align:center; margin-bottom:10px; margin-top:10px; margin-right:5px; -moz-border-radius:4px; -webkit-border-radius:4px; -khtml-border-radius:4px; -o-border-radius:4px; border-radius:4px; }
+a.button:hover 									{ background:#78b306; }
+a.button.large 									{ font-size:24px; height:60px; line-height:60px; padding-left:30px; padding-right:30px; }
+a.button.small 									{ font-size:15px; height:35px; line-height:35px; padding-left:15px; padding-right:15px; }
+
+/* Colored buttons */
+a.button.red 									{ background:#af4141; }
+a.button.red:hover								{ background:#833b3b; }
+a.button.orange 								{ background:#ef9f41; }
+a.button.orange:hover 							{ background:#cb7f25; }
+a.button.yellow									{ background:#eadc91; color:#4a4736; }
+a.button.yellow:hover 							{ background:#d4c262; }
+a.button.turq									{ background:#6ab8bd; }
+a.button.turq:hover 							{ background:#338f95; }
+a.button.pink 									{ background:#d27faa; }
+a.button.pink:hover 							{ background:#b35787; }
+a.button.purple 								{ background:#a68ab4; }
+a.button.purple:hover 							{ background:#8d64a2; }
+a.button.brown 									{ background:#8a6c5c; }
+a.button.brown:hover							{ background:#674d3f; }
+a.button.gray									{ background:#9a9a9a; }
+a.button.gray:hover 							{ background:#787878; }
+a.button.dark 									{ background:#484848; }
+a.button.dark:hover 							{ background:#1d1d1d; }
+a.button.white 									{ background:#ffffff; color:#4daf7c; }
+
+/*----------------------------------------*/
+/* Responsive columns */
+/*----------------------------------------*/
+.col											{ float:left; margin-bottom:20px; }
+.col_1_2										{ width:48%; margin-left:1%; margin-right:1%; }
+.col_1_3										{ width:30%; margin-left:1%; margin-right:1%; }
+.col_1_4										{ width:23%; margin-left:1%; margin-right:1%; }
+
+/*----------------------------------------*/
+/* Text styles */
+/*----------------------------------------*/
+.text-light 									{ font-weight:300; }
+.text-book 										{ font-weight:400; }
+.text-bold 										{ font-weight:700; }
+.text-uppercase 								{ text-transform:uppercase; }
+.text-right 									{ text-align:right; }
+.text-left 										{ text-align:left; }
+.text-center 									{ text-align:center; }
+.text-white 									{ color:#ffffff; }
+.text-dark 										{ color:#222527; }
+.text-green 									{ color:#4daf7c; }
+.text-blue 										{ color:#3a70a7; }
+.text-orange 									{ color:#d9ae3a; }
+.text-red 										{ color:#a83939; }
+.text-lightred									{ color:#e2001a; }
+.text-brown 									{ color:#644637; }
+.text-pink 										{ color:#e790e8; }
+.text-purple 									{ color:#8e71a0; }
+
+
+
+
+

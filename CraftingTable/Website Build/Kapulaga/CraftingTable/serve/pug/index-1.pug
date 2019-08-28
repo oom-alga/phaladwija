@@ -1,0 +1,76 @@
+//- layout.pug
+extends ../template/layout.pug
+
+
+block main
+    #head.simple
+        .container
+            .row.justify-content-md-center
+                .col-md-8.text-center
+                    h1.
+                        We focus on growing your business and help you to Success
+
+    #wrap.simple
+        .container
+            .row
+                .col-md-12
+                    p Choose Best Services from us
+                    h1 Selected projects
+                    .justify-content-md-center.items.owl-carousel.owl-theme
+                        - const item = {"sample1" : "Summer", "sample2" : "Awesome", "sample3":"Creative "};
+                        for n, i in item
+                            .item
+                                .row
+                                    figure
+                                        img(src= "image/"+ i +".jpg", alt="profile-sample7")
+                                        figcaption
+                                            h3.title1 The
+                                            h3.title2= n
+                                            h3.title3 Collection
+                                        a(href="#")
+                .col-md-12.all-item
+                    p View all projects
+                    .sip
+
+    #work.simple
+        .container.bg-mage
+            .row.content
+                .col-md-12
+                    h1 WORK
+                        .sec-color PROCESS
+                    p Sed ut perspiciatis unde omnis iste nat eror acus antium que
+            .row.content    
+                .col-md-6
+                    i.fas.fa-edit
+                    h2 Clean & Professional Design
+                    p.small Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sed elit tortor. Quisque bibendum mauris velit, sed tincidunt massa lacinia nec.
+                .col-md-6 
+                    i.fas.fa-laptop-code
+                    h2 Affordable price
+                    p.small Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sed elit tortor. Quisque bibendum mauris velit, sed tincidunt massa lacinia nec.
+                .col-md-6
+                    i.fas.fa-layer-group
+                    h2 Responsive for all devices
+                    p.small Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sed elit tortor. Quisque bibendum mauris velit, sed tincidunt massa lacinia nec.
+                .col-md-6
+                    i.fas.fa-tags
+                    h2 24/7 faster Support
+                    p.small Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sed elit tortor. Quisque bibendum mauris velit, sed tincidunt massa lacinia nec.
+
+    #touch.simple
+        .container
+            .row
+                .col-md-6
+                    h1 Get in touch
+                    p
+                        |Whether you like to start a new project, discuss a brilliant investment idea or just have a small-talk chat, feel free to 
+                        span.sec-color
+                            |contact us.
+    
+
+    footer
+        .container
+            .row
+                .col-md-12
+                    p.   
+                        © 1999—2016 Violine

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        html, body, div, ul, li {margin: 0; padding: 0;}
+        html, body {width: 100%; height: 100%; overflow: hidden; background-color: rgba(0,0,0,0.3);}
+        body {font-family: 'Consolas', 'Courier New'; font-size: 40px; line-height: 1.4;}
+        a {background-color: transparent; text-decoration: none; outline: none;cursor: none;}
+        a:hover, a:focus {text-decoration: none;}
+        a:active, a:visited {text-decoration: none;}
+        dl, ul, ol, menu, li {list-style: none; list-style-type: none;}
+        #wrap {position: relative; height: 100%;}
+        .menu {position: absolute; top: 40px; right: 40px;}
+        .menu li {float: left; margin: 0 20px;}
+        .menu li > a {display: block; padding: 4px 0; height: 100%; text-indent: 12px; color: rgba(255,255,255,1); transition: all .2s ease-out;}
+        .menu li > a:hover {color: rgba(255,0,0,1);}
+
+        .btn-prev {position: absolute; top: 400px; left: 200px; width: 100px; height: 100px; background-color: rgba(255,255,255,.5); border-radius: 100%; line-height: 96px; text-align: center; color: #000;}
+        .btn-next {position: absolute; top: 400px; left: 400px; width: 100px; height: 100px; background-color: rgba(255,255,255,.5); border-radius: 100%; line-height: 96px; text-align: center; color: #000;}
+        .btn-none {position: absolute; top: 400px; left: 600px; width: 100px; height: 100px; background-color: rgba(255,255,255,.5); border-radius: 100%; line-height: 96px; text-align: center; color: #000;}
+        
+        .btn-me.woww:hover{background-color: yellow;transition: .8s;}
+        
+        .padd{padding: 10px;margin: 30px;}
+
+        .cursor {position: absolute; pointer-events: none; width: 4px; height: 4px; border: 2px solid rgba(255,255,255,1); border-radius: 50%; box-sizing: border-box; transform: translate(-50%, -50%);}
+        .cursor.on-focus {transform: translate(0,0); border-color: transparent;}
+
+        .cursor-follow {position: absolute; pointer-events: none; width: 8px; height: 8px; padding: 20px; border: 1px solid rgba(255,255,255,1); border-radius: 50%; box-sizing: border-box; transform: translate(-50%, -50%); transition: all .2s ease-out;}
+        .cursor-follow.on-focus {padding: 0; border: 4px solid rgba(255,0,0,1); transform: translate(0, 0);}
+        
+        .cursor-follow.on-focus-m {padding: 0; border: 4px solid rgba(255,0,0,1); transform: translate(0, 0);}
+        .cursor-follow.on-focus-left {background-color: purple;}
+    </style>
+</head>
+<body>
+    
+    <div id="wrap">
+        <ul class="menu">
+            <li><a href="#" data-mouse-control="type-m">About</a></li>
+            <li><a href="#" data-mouse-control="type-m">Work</a></li>
+            <li><a href="#" data-mouse-control="type-m">Contact Us</a></li>
+            <li><a href="#" data-mouse-control="type-m">Contact Us asdjkalskdlaksdj</a></li>
+        </ul>
+    
+        <a href="#" class="btn-prev" data-mouse-control="type-c">Prev</a>
+        <a href="#" class="btn-next" data-mouse-control="type-c">Next</a>
+        <a href="#" class="btn-none" data-mouse-control="false">None</a>
+
+        <hr>
+        <a href="#" class="btn-me padd" data-mouse-control="type-d">wooow</a>
+
+        <hr>
+        <a href="#" class="btn-me padd woww" data-mouse-control="type-d">wooow</a>
+
+        <hr>
+        <a href="#" class="btn-left padd woww" data-mouse-control="type-left">left</a>
+        <hr>
+        <a href="#" class="btn-left padd woww" data-mouse-control="type-right">right</a>
+    </div>
+
+    <script>
+        $(function(){
+            $('body').css({'cursor': 'none'}).append('<div class="cursor"></div><div class="cursor-follow"></div>');
+            var cursor = $('.cursor'),
+                follow = $('.cursor-follow');
+
+            function mouseMove(obj, event){
+                $(obj).removeAttr('style');
+                $(obj).css({
+                    top: event.clientY + 'px',
+                    left: event.clientX + 'px'
+                });
+            }
+
+            if( cursor ){
+                $('body').on('mouseout', function(event){
+                    cursor.hide();
+                    follow.hide();
+                });
+                $('body').on('mousemove', function(event){
+                    cursor.show();
+                    follow.show();
+                    var e = event,
+                        t = $(e.target),
+                        f = follow,
+                        c = cursor;
+
+                    if( t.data('mouse-control') == 'type-m' ){
+                        c.addClass('on-focus');
+                        f.css({
+                            'top': t.offset().top + (t.outerHeight() / 2) + 6 + 'px',
+                            'left': t.offset().left + t.outerWidth() + 4 + 'px'
+                        }).addClass('on-focus');
+                    } else if( t.data('mouse-control') == 'type-c' ){
+                        c.addClass('on-focus');
+                        f.css({
+                            'top': t.offset().top + 'px',
+                            'left': t.offset().left + 'px',
+                            'width': t.outerWidth() + 'px',
+                            'height': t.outerHeight() + 'px'
+                        }).addClass('on-focus');
+                    } else if( t.data('mouse-control') == 'type-d' ){
+                        mouseMove( c, e );
+                        mouseMove( f, e );
+                        f.removeClass('on-focus');
+                        c.removeClass('on-focus');
+                        f.css({
+                            'border-radius' : '0px',
+                            'border' : '0px',
+                            'border-bottom' : '4px solid rgba(255,0,0,1)',
+                            'top': t.offset().top + 'px',
+                            'left': t.offset().left + 'px',
+                            'width': t.outerWidth() + 'px',
+                            'height': t.outerHeight() + 'px',
+                        }).addClass('on-focus');
+                    }else if( t.data('mouse-control') == 'type-left' ){
+                        c.addClass('on-focus');
+                        mouseMove( f, e );
+                        f.css({
+                            'border-radius' : '0px',
+                            'border' : 'solid black',
+                            'border-width' : '0 3px 3px 0',
+                            'width': '20px',
+                            'height': '20px',
+                            'transform' : 'rotate(135deg)',
+                            '-webkit-transform' : 'rotate(135deg)'
+                        }).addClass('on-focus');
+                    }else if( t.data('mouse-control') == 'type-right' ){
+                        c.addClass('on-focus');
+                        mouseMove( f, e );
+                        f.css({
+                            'border-radius' : '0px',
+                            'border' : 'solid black',
+                            'border-width' : '0 3px 3px 0',
+                            'width': '20px',
+                            'height': '20px',
+                            'transform' : 'rotate(-45deg)',
+                            '-webkit-transform' : 'rotate(-45deg)'
+                        }).addClass('on-focus');
+                    }else {
+                        mouseMove( c, e );
+                        mouseMove( f, e );
+                        f.removeClass('on-focus');
+                        c.removeClass('on-focus');
+                    }
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>

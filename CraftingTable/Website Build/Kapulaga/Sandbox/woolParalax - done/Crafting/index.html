@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/paralax.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            window.onload = function () {
+                $('#wool-paralax').woolParalax();
+            }
+        </script>
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+            }
+            #wool-paralax {
+                width: 100%;
+                height: 600px;
+                position: relative;
+                overflow: hidden;
+                margin: 0 auto;
+                text-align: center;
+                background-color: green;
+            }
+
+            .wool-layer {
+                position: absolute;
+                top: 0;
+                left: 0;
+                text-align: center;
+                width: 100%;
+            }
+            .bg{
+                width: 100%;
+                height: 600px;
+            }
+            .bg img{
+                width: 110%;
+                height: 110%;
+                position:relative;
+                left: -10px;
+                top: -10px;
+                transition: 500ms filter linear;
+                -webkit-transition: 500ms -webkit-filter linear;
+                -moz-transition: 500ms -moz-filter linear;
+                -ms-transition: 500ms -ms-filter linear;
+                -o-transition: 500ms -o-filter linear;
+            }
+            .human{
+                /* background-color: red; */
+                text-align: left;
+                bottom: 0;
+            }
+            .human img{
+                height: 110%;
+                width: auto;
+                max-width: 80%;
+            }
+            #wool-paralax:hover .bg img{
+                filter: blur(5px);
+            }
+            .desc{
+                width: 300px;
+                margin: 100px auto;
+                position: relative; 
+            }
+            #wool-paralax::before{
+                content: "";
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                /* /* background-color: rgba(255, 0, 0, 0.2); */
+                background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0), rgba(0,0,0,0.5));
+                position: absolute;
+                z-index: 99;
+            }
+        </style>
+</head>
+<body>
+        <!--  -->
+        <div id="wool-paralax">
+            <div class="bg wool-layer" data-shift="0.01"><img src="img/bg.jpg" alt="" /></div>
+            <div class="human wool-layer" data-shift="0.03"> <img src="img/human.png" alt="" /> </div>
+            <div class="desc wool-layer" data-shift="0.02">
+                <h1>Lorem Ipsum</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid ratione eos dolor vitae rerum porro assumenda officia earum eaque delectus ad totam explicabo, quisquam soluta optio pariatur. Cum, illo modi!</p>
+            </div>
+        </div>
+
+</body>
+</html>
