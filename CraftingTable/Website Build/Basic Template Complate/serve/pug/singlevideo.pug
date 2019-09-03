@@ -1,0 +1,38 @@
+//- layout.pug
+extends ../template/layout.pug
+
+
+block main
+    header.video
+        video(playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop")
+            source(src="storage/Mt_Baker.mp4" type="video/mp4")
+        .container.h-100
+            .d-flex.h-100.text-center.align-items-center
+                .w-100.text-white
+                    h1 Video Header
+                    p.lead.mb-0 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla ea tempora quaerat assumenda at, iure provident, ab quam doloribus non aperiam distinctio in id! Et dolore quo possimus minima ipsum!
+    .container
+        .text-center.py-5.my-5
+            h1 Album Example
+            p.lead Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea pariatur laboriosam, explicabo reprehenderit temporibus nostrum similique ex voluptate cupiditate. Iure minima illum quae dignissimos fuga maiores a natus, ipsa pariatur!
+            p
+                a.btn.btn-primary.mx-1(href="#") Main Call to Action
+                a.btn.btn-secondary.mx-1(href="#") Secondary action
+        .row
+            each val in [1, 2, 3, 4, 5, 6]
+                .col-lg-4.mb-4
+                    .card.h-100
+                        img.img-fluid.rounded-top(src="http://placehold.it/300x300", alt="")
+                        .card-body
+                            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim sapiente mollitia blanditiis laboriosam voluptatem beatae ipsum rem asperiores quia nisi illo perferendis tenetur quasi distinctio, perspiciatis ea placeat itaque dignissimos.
+                            p.text-right
+                                small.text-muted 9 mins
+        
+        hr
+
+        .row.my-4
+            .col-lg-8
+                p.text-muted Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, facere nisi? Ad quam ab neque similique cupiditate fugit quae nobis, fugiat, reiciendis minima quasi tenetur blanditiis alias error. Laudantium, vitae. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            
+
+        
