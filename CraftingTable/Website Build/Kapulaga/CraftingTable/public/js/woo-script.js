@@ -22,16 +22,6 @@ $(function() {
 
 
 // owl
-$('.owl-carousel').owlCarousel({
-    loop:true,
-    margin:30,
-    nav:true,
-    responsive:{
-        0:{
-            items:1
-        },
-        600:{
-            items:3
-        }
-    }
-})
+window.onload = function () {
+    $('#wool-paralax').woolParalax();
+}

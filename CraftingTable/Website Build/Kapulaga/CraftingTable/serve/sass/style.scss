@@ -4,14 +4,92 @@
 
 
 body{
-    background-color: $black;
-    font-family: 'Raleway', 'sans-serif';
+    // font-family: 'Raleway', 'sans-serif';
+    // padding-top: -56px;
+}
+.carousel-item {
+    height: 65vh;
+    min-height: 300px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.portfolio-item {
+    margin-bottom: 30px;
+}
+nav{
+    &.bg-trans{
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+    }
+}
+
+.btn-bg-red{
+    background-color: #CF4854;
+    border: 0;
 }
 
 
-/*---------------------------------------------------------------------------------------
-
-2 Typography improvements
-
------------------------------------------------------------------------------------------*/
-@import 'components/typography';
+header{
+    &#wool-paralax{
+        width: 100%;
+        height: 600px;
+        position: relative;
+        overflow: hidden;
+        margin: 0 auto;
+        h1{
+            color: transparent;
+            font-weight: bold;
+            -webkit-text-stroke: 2px rgba($color: #FFFFFF, $alpha: 0.8);
+        }
+        p{
+            color: #FFFFFF;
+        }
+        .wool-layer{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            &.bg{
+                width: 100%;
+                height: 600px;
+                img{
+                    width: 110%;
+                    height: 110%;
+                    position:relative;
+                    left: -10px;
+                    top: -10px;
+                    transition: 500ms filter linear;
+                    -webkit-transition: 500ms -webkit-filter linear;
+                    -moz-transition: 500ms -moz-filter linear;
+                    -ms-transition: 500ms -ms-filter linear;
+                    -o-transition: 500ms -o-filter linear;
+                }
+                &::after{
+                    content: "";
+                    position: absolute;
+                    width: 120%;
+                    height: 120%;
+                    top: -10%;
+                    left: -10%;
+                    // background-color: rgba($color: #000000, $alpha: 0.8);
+                    background-image: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.4), rgba(0,0,0,1));
+                }
+            }
+            &.human{
+                text-align: left;
+                bottom: 0;
+                top: 10%;
+                img{
+                    height: 110%;
+                    width: auto;
+                    max-width: 80%;
+                }
+            }
+        }
+    }
+}

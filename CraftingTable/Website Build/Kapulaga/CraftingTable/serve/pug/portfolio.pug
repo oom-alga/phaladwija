@@ -1,0 +1,34 @@
+//- layout.pug
+extends ../template/layout.pug
+
+
+block main
+    article
+        .container 
+            h1.mt-4.md-3 Portfolio 1 
+                small Subheading
+            ol.breadcrumb
+                li.breadcrumb-item
+                    a(href="#") Home
+                li.breadcrumb-item.active Portfolio 1
+            each val in [1, 2, 3, 4]
+                .row.h-100.align-items-center.mt-4.mb-1.border-bottom
+                    .col-lg-7
+                        a(href="#")
+                            img.img-fluid.rounded.mb-4(src="http://placehold.it/700x300", alt="")
+                    .col-lg-5
+                        h3 Project One
+                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi accusantium facilis aperiam dolorum nulla iusto culpa, rem maxime illo. Aspernatur quidem aliquam illum in temporibus expedita ut ducimus consectetur delectus.
+                        a.btn.btn-primary(href="#") View Project
+            ul.pagination.justify-content-center.mt-4
+                li.page-item
+                    a.page-link(href="#" arial-label="Previous")
+                        span(aria-hidden="true") &laquo;
+                        span.sr-only Previous
+                each page in [1, 2, 3, 4]
+                    li.page-item
+                        a.page-link(href="#")= page
+                li.page-item
+                    a.page-link(href="#" arial-label="Next")
+                        span(aria-hidden="true") &raquo;
+                        span.sr-only Next

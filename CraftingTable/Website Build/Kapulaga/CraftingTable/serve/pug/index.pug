@@ -1,0 +1,20 @@
+//- layout.pug
+extends ../template/layout.pug
+
+
+block main
+    article
+        header#wool-paralax
+            .wool-layer.bg(data-shift="0.01")
+                img(src="storage/image/bg-animate1.jpg", alt="")
+            .wool-layer.human(data-shift="0.03")
+                img(src="storage/image/human.png", alt="")
+            .container.py-5.my-5
+                .row.justify-content-end
+                    .col-lg-6
+                        h1.display-1 Assassin's Creed
+                        p is a curated collection of Figma resources: UI kits, icons, website templates and all sorts of freebies created and shared by the Figma community
+                        button.btn.btn-primary.btn-bg-red.p-3.pr-5.rounded-0 BY Ubisoft Game Engine
+
+
+        
