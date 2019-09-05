@@ -24,4 +24,5 @@ $(function() {
 // owl
 window.onload = function () {
     $('#wool-paralax').woolParalax();
+    $('#wool-paralax-me').woolParalax();
 }
