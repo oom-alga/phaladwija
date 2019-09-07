@@ -25,4 +25,5 @@ $(function() {
 window.onload = function () {
     $('#wool-paralax').woolParalax();
     $('#wool-paralax-me').woolParalax();
+    $('#wool-paralax-about').woolParalax();
 }
