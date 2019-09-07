@@ -43,13 +43,50 @@ block main
                 .row.justify-content-center
                     #wool-paralax-about.col-lg-8
                         .wool-layer.bg(data-shift="0.005")
-                                .row
-                                    .col-lg-6
-                                        img.img-fluid(src="storage/image/bg-animate1.jpg", alt="")
-                                    .col-lg-6
-                                        img.img-fluid(src="storage/image/bg-animate1.jpg", alt="")
+                            .row
+                                .col-lg-6
+                                    img.img-fluid(src="storage/image/bg-animate1.jpg", alt="")
+                                .col-lg-6
+                                    img.img-fluid(src="storage/image/bg-animate1.jpg", alt="")
                         .wool-layer.human(data-shift="0.0")
                             img.img-fluid(src="storage/image/human2.png", alt="")
                 .row.justify-content-center.text-center
                     .col-lg-6
                         img.img-fluid(src="storage/image/human.png", alt="")
+
+        #coba
+            button.btn.btn-primary(type=button) Text
+            .card
+                .card-body
+                    h5.card-title Title
+                    p.card-text Content
+
+                img(src="", alt="alt")
+                .form-group
+                    label(for='my-input') Text
+                    input.custom-rangemy-input(type='range', min='0', max='100')
+                .alert.alert-primary(role='alert')
+                    | Content
+                .carousel.slide#eokw(data-ride='carousel')
+                    .carousel-inner
+                        .carousel-item.active
+                            img.d-block.w-100(src='storage/image/bg-animate1.jpg', alt='')
+                            .carousel-caption.d-none.d-md-block
+                                h5 Title
+                                p Text
+                        .carousel-item
+                            img.d-block.w-100(src='storage/image/bg-animate1.jpg', alt='')
+                            .carousel-caption.d-none.d-md-block
+                                h5 Title
+                                p Text
+                    a.carousel-control-prev(href='#eokw', data-slide='prev', role='button')
+                        span.carousel-control-prev-icon(aria-hidden='true')
+                        span.sr-only Previous
+                    a.carousel-control-next(href='#eokw', data-slide='next', role='button')
+                        span.carousel-control-next-icon(aria-hidden='true')
+                        span.sr-only Next
+                .jumbotron.jumbotron-fluid
+                    h1.display-4 waka
+                    p.lead Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    hr.my-4
+                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate in est illum autem qui magni sapiente, nisi officia fuga cupiditate a saepe doloremque, accusantium quasi architecto sit tempora, eius fugiat.
