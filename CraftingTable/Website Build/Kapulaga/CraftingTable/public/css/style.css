@@ -30,9 +30,7 @@ header#wool-paralax {
   header#wool-paralax h1 {
     color: transparent;
     font-weight: bold;
-    -webkit-text-stroke: 2px rgba(255, 255, 255, 0.8); }
-  header#wool-paralax p {
-    color: #FFFFFF; }
+    -webkit-text-stroke: 2px rgba(0, 0, 0, 0.8); }
   header#wool-paralax .wool-layer {
     position: absolute;
     top: 0;
@@ -59,7 +57,7 @@ header#wool-paralax {
         height: 120%;
         top: -10%;
         left: -10%;
-        background-image: linear-gradient(black, rgba(0, 0, 0, 0.4), black); }
+        background-color: rgba(255, 255, 255, 0.8); }
     header#wool-paralax .wool-layer.human {
       text-align: left;
       bottom: 0;
@@ -69,32 +67,54 @@ header#wool-paralax {
         width: auto;
         max-width: 80%; }
 
-#about-me {
-  background-color: #1A1A1A; }
-  #about-me .items {
-    position: relative;
+#about-me .items {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%; }
+  #about-me .items .wool-layer {
     top: 0;
     left: 0;
     width: 100%; }
-    #about-me .items .wool-layer {
-      top: 0;
-      left: 0;
-      width: 100%; }
-      #about-me .items .wool-layer.bg {
-        background-color: yellow; }
-        #about-me .items .wool-layer.bg img {
-          height: 500px; }
-      #about-me .items .wool-layer.human {
-        position: absolute;
-        top: 30px;
-        left: 50px;
-        height: 500px;
-        width: auto;
-        max-width: 80%; }
-      #about-me .items .wool-layer.square {
-        position: absolute;
-        top: 30px;
-        left: 30px;
-        width: 100%;
-        height: 100%;
-        border: 10px solid #cf4854; }
+    #about-me .items .wool-layer.bg {
+      background-color: yellow; }
+      #about-me .items .wool-layer.bg img {
+        height: 500px; }
+    #about-me .items .wool-layer.human {
+      position: absolute;
+      top: 30px;
+      left: 50px;
+      height: 500px;
+      width: auto;
+      max-width: 80%; }
+    #about-me .items .wool-layer.square {
+      position: absolute;
+      top: 30px;
+      left: 30px;
+      width: 100%;
+      height: 100%;
+      border: 10px solid #cf4854; }
+
+#about-us .bg .item::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 0%;
+  background-image: linear-gradient(white, rgba(255, 255, 255, 0.4), white); }
+
+#about-us .bg .item img {
+  height: 500px;
+  width: auto; }
+
+#about-us .desc {
+  bottom: 0px;
+  height: 500px;
+  width: auto; }
+
+#about-us .human img {
+  -webkit-filter: drop-shadow(5px 5px 5px #222);
+  filter: drop-shadow(5px 5px 5px #222);
+  height: 500px;
+  width: auto; }

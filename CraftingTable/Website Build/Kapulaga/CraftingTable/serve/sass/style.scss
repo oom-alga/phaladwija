@@ -34,7 +34,6 @@ nav{
 }
 
 
-
 header{
     &#wool-paralax{
         width: 100%;
@@ -45,10 +44,7 @@ header{
         h1{
             color: transparent;
             font-weight: bold;
-            -webkit-text-stroke: 2px rgba($color: #FFFFFF, $alpha: 0.8);
-        }
-        p{
-            color: #FFFFFF;
+            -webkit-text-stroke: 2px rgba($color: #000, $alpha: 0.8);
         }
         .wool-layer{
             position: absolute;
@@ -77,8 +73,8 @@ header{
                     height: 120%;
                     top: -10%;
                     left: -10%;
-                    // background-color: rgba($color: #000000, $alpha: 0.8);
-                    background-image: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.4), rgba(0,0,0,1));
+                    background-color: rgba($color:  #FFFFFF, $alpha: 0.8);
+                    // background-image: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.4), rgba(0,0,0,1));
                 }
             }
             &.human{
@@ -95,7 +91,7 @@ header{
     }
 }
 #about-me{
-    background-color: #1A1A1A;
+    // background-color: #1A1A1A;
     .items{
         position: relative;
         top: 0;
@@ -127,6 +123,39 @@ header{
                 height: 100%;
                 border: 10px solid rgba($color: #CF4854, $alpha: 1);
             }
+        }
+    }
+}
+#about-us{
+    .bg{
+        .item{
+            &::after{
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0%;
+                left: 0%;
+                // background-color: rgba($color:  #FFFFFF, $alpha: 0.5);
+                background-image: linear-gradient(rgba(255,255,255,1), rgba(255,255,255,0.4), rgba(255,255,255,1));
+            }
+            img{
+                height: 500px;
+                width: auto;
+            }
+        }
+    }
+    .desc{
+        bottom: 0px;
+        height: 500px;
+        width: auto;
+    }
+    .human{
+        img{
+            -webkit-filter: drop-shadow(5px 5px 5px #222);
+            filter: drop-shadow(5px 5px 5px #222);
+            height: 500px;
+            width: auto;
         }
     }
 }

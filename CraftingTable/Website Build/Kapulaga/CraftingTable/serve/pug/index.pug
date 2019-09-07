@@ -38,55 +38,43 @@ block main
                         p.text-muted GAME OVERVIEW
                         h2.display-4 LIVE THE EPIC ODYSSEY OF A LEGENDARY SPARTAN HERO
                         p Write your own epic odyssey and become a legendary Spartan hero in Assassin's Creed Odyssey, an inspiring adventure where you must forge your destiny and define your own path in a world on the brink of tearing itself apart. Influence how history unfolds as you experience a rich and ever-changing world shaped by your decisions.
+        //- #about-us
+        //-     .container.py-5
+        //-         #wool-paralax-about.row.justify-content-center
+        //-             .col-lg-8
+        //-                 .row.wool-layer.bg(data-shift="0.005")
+        //-                     .col-lg-6
+        //-                         img.img-fluid(src="storage/image/bg-animate1.jpg", alt="")
+        //-                     .col-lg-6
+        //-                         img.img-fluid(src="storage/image/bg-animate1.jpg", alt="")
+        //-             .col-lg-7.position-absolute
+        //-                 .row.wool-layer.human(data-shift="0.001")
+        //-                     img.img-fluid.mx-auto(src="storage/image/human2.png", alt="")
+
         #about-us
-            .container.py-5
+            .container.py-5.my-5
                 .row.justify-content-center
-                    #wool-paralax-about.col-lg-8
-                        .wool-layer.bg(data-shift="0.005")
-                            .row
-                                .col-lg-6
-                                    img.img-fluid(src="storage/image/bg-animate1.jpg", alt="")
-                                .col-lg-6
-                                    img.img-fluid(src="storage/image/bg-animate1.jpg", alt="")
-                        .wool-layer.human(data-shift="0.0")
-                            img.img-fluid(src="storage/image/human2.png", alt="")
-                .row.justify-content-center.text-center
                     .col-lg-6
-                        img.img-fluid(src="storage/image/human.png", alt="")
-
-        #coba
-            button.btn.btn-primary(type=button) Text
-            .card
-                .card-body
-                    h5.card-title Title
-                    p.card-text Content
-
-                img(src="", alt="alt")
-                .form-group
-                    label(for='my-input') Text
-                    input.custom-rangemy-input(type='range', min='0', max='100')
-                .alert.alert-primary(role='alert')
-                    | Content
-                .carousel.slide#eokw(data-ride='carousel')
-                    .carousel-inner
-                        .carousel-item.active
-                            img.d-block.w-100(src='storage/image/bg-animate1.jpg', alt='')
-                            .carousel-caption.d-none.d-md-block
-                                h5 Title
-                                p Text
-                        .carousel-item
-                            img.d-block.w-100(src='storage/image/bg-animate1.jpg', alt='')
-                            .carousel-caption.d-none.d-md-block
-                                h5 Title
-                                p Text
-                    a.carousel-control-prev(href='#eokw', data-slide='prev', role='button')
-                        span.carousel-control-prev-icon(aria-hidden='true')
-                        span.sr-only Previous
-                    a.carousel-control-next(href='#eokw', data-slide='next', role='button')
-                        span.carousel-control-next-icon(aria-hidden='true')
-                        span.sr-only Next
-                .jumbotron.jumbotron-fluid
-                    h1.display-4 waka
-                    p.lead Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    hr.my-4
-                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate in est illum autem qui magni sapiente, nisi officia fuga cupiditate a saepe doloremque, accusantium quasi architecto sit tempora, eius fugiat.
+                        .row.wool-layer.bg
+                            .col-lg-6.item
+                                img.img-fluid(src="storage/image/bg-animate1.jpg", alt="")
+                            .col-lg-6.item
+                                img.img-fluid(src="storage/image/bg-animate2.jpg", alt="")
+                    .col-lg-7.position-absolute
+                        .row.wool-layer.human
+                            img.img-fluid.mx-auto(src="storage/image/human4.png", alt="")
+        
+        #woo
+            .carousel.slide#my-carousel(data-ride='carousel')
+                .carousel-inner
+                    .carousel-item.active
+                        img.d-block.w-100(src='storage/image/bg-animate1.jpg', alt='')
+                        .carousel-caption.d-none.d-md-block
+                            h5 Title
+                            p Text
+                    .carousel-item
+                        img.d-block.w-100(src='storage/image/bg-animate2.jpg', alt='')
+                        .carousel-caption.d-none.d-md-block
+                            h5 Title
+                            p Text
+        

@@ -1,0 +1,237 @@
+// Global Foundation Settings
+@import "settings";
+
+// Comment out this import if you don't want to use normalize
+@import "normalize";
+
+// Comment out this import if you are customizing you imports below
+//@import "foundation";
+
+// Import specific parts of Foundation by commenting the import "foundation"
+// and uncommenting what you want below. You must uncomment the following if customizing
+@import "foundation/components/global"; // *always required
+@import "foundation/components/grid";
+@import "foundation/components/visibility";
+@import "foundation/components/block-grid";
+@import "foundation/components/type";
+@import "foundation/components/buttons";
+@import "foundation/components/forms"; // *requires components/buttons
+@import "foundation/components/custom-forms"; // *requires components/buttons, components/forms
+@import "foundation/components/button-groups"; // *requires components/buttons
+@import "foundation/components/dropdown-buttons"; // *requires components/buttons
+@import "foundation/components/split-buttons"; // *requires components/buttons
+// @import "foundation/components/flex-video";
+// @import "foundation/components/section";
+@import "foundation/components/top-bar";  // *requires components/grid
+// @import "foundation/components/orbit";
+// @import "foundation/components/reveal";
+// @import "foundation/components/joyride";
+// @import "foundation/components/clearing";
+@import "foundation/components/alert-boxes";
+@import "foundation/components/breadcrumbs";
+@import "foundation/components/keystrokes";
+@import "foundation/components/labels";
+@import "foundation/components/inline-lists";
+@import "foundation/components/pagination";
+@import "foundation/components/panels";
+// @import "foundation/components/pricing-tables";
+// @import "foundation/components/progress-bars";
+@import "foundation/components/side-nav";
+@import "foundation/components/sub-nav";
+@import "foundation/components/switch";
+// @import "foundation/components/magellan";
+@import "foundation/components/tables";
+@import "foundation/components/thumbs";
+@import "foundation/components/tooltips";
+@import "foundation/components/dropdown";
+
+
+h2.chunk {
+	margin-top:0;
+	margin-bottom:0;
+}
+.lnone {
+	list-style-type:none;
+}
+#content {
+	border-bottom:2px solid #333;
+}
+.lessWeight {
+	font-weight:100;
+	letter-spacing: 2pt;
+}
+.ptitle {
+	padding-bottom:0;
+	margin-top:0;
+}
+#content > ul > li  { list-style-type:none;}
+#content > ul > li:not(.active) {
+	display:none;
+}
+#breadcrumbs { text-align:center; }
+#breadcrumbs > ul { margin: 0; }
+#breadcrumbs > ul > li { list-style-type:none; display:inline-block;}
+#breadcrumbs > ul > li.active > a { color: #333; cursor: default; text-decoration:none; }
+.title { 
+	background-color:#b2b2b2;
+	text-align:center;
+}
+h2.chunk+hr {
+	margin: 10px 0;
+}
+.chunk{
+	font-family:'ChunkFiveRegular', Arial, sans-serif;
+}
+.chunk.small {
+	font: 24px 'ChunkFiveRegular', Arial, sans-serif;
+	text-align:center;
+}
+.bb {
+	border-bottom: 2px solid #ccc;
+	padding-bottom: 10px;
+}
+.lic {
+	border-width:0;
+	margin-right:10px;
+	vertical-align:text-bottom;
+}
+.github { padding:0; margin-top: 10px; text-align:center;}
+.github > li {
+	display:inline-block;
+	list-style-type:none;
+}
+footer {
+	text-align: center;
+	color: #6f6f6f;
+}
+footer > a img {
+	text-align: bottom-center;
+}
+/* -----------------------------------------
+   Font
+----------------------------------------- */
+@font-face {
+    font-family: 'ChunkFiveRegular';
+    src: url('fonts/Chunkfive-webfont.eot');
+    src: url('fonts/Chunkfive-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Chunkfive-webfont.woff') format('woff'),
+         url('fonts/Chunkfive-webfont.ttf') format('truetype'),
+         url('fonts/Chunkfive-webfont.svg#ChunkFiveRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* -----------------------------------------
+   Page Name 2
+----------------------------------------- */
+.download {
+  vertical-align: top;
+  width: 80%;
+  border-radius: 4px;
+  box-shadow: #439230 0 6px 0px, rgba(0, 0, 0, 0.3) 0 10px 3px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  padding: 10px 15px 12px;
+  margin: .5em .5em .5em 0;
+  cursor: pointer;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.4);
+  -webkit-transition: 0.1s linear;
+  -moz-transition: 0.1s linear;
+  -ms-transition: 0.1s linear;
+  -o-transition: 0.1s linear;
+  transition: 0.1s linear;
+
+  background: #82cc5d;
+  background: -moz-linear-gradient(top,  #82cc5d 0%, #53b73c 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#82cc5d), color-stop(100%,#53b73c));
+  background: -webkit-linear-gradient(top,  #82cc5d 0%,#53b73c 100%);
+  background: -ms-linear-gradient(top,  #82cc5d 0%,#53b73c 100%);
+  background: linear-gradient(to bottom,  #82cc5d 0%,#53b73c 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#82cc5d', endColorstr='#53b73c',GradientType=0 );
+  border: 1px solid #429E34;
+}
+
+.download:hover {
+  box-shadow: #439230 0 6px 0px, rgba(0, 0, 0, 0.3) 0 10px 3px;
+  color:#fff;
+  background: #99cc80;
+  background: -moz-linear-gradient(top,  #99cc80 0%, #53b73c 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#99cc80), color-stop(100%,#53b73c));
+  background: -webkit-linear-gradient(top,  #99cc80 0%,#53b73c 100%);
+  background: -ms-linear-gradient(top,  #99cc80 0%,#53b73c 100%);
+  background: linear-gradient(to bottom,  #99cc80 0%,#53b73c 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#99cc80', endColorstr='#53b73c',GradientType=0 );
+}
+
+.download:active {
+  box-shadow: #439230 0 3px 0, rgba(0, 0, 0, 0.2) 0 6px 3px;
+  position: relative;
+  top: 5px;
+}
+
+.download span {
+  margin-left: 5px;
+  color: #f0f0f0;
+  font-weight: normal;
+  font-size: 10px;
+  text-shadow: 0 none;
+}
+.download i {
+	margin-right: 10px;
+}
+// Ripin Nav-bar classes from f3 to f4 yo.
+.nav-bar { height: 40px; background: #4d4d4d; margin-left: 0; margin-top: 20px; padding: 0; }
+.nav-bar > li { float: left; display: block; position: relative; padding: 0; margin: 0; border: 1px solid #333333; border-right: none; line-height: 38px; -webkit-box-shadow: 1px 0 0 rgba(255, 255, 255, 0.2) inset; -moz-box-shadow: 1px 0 0 rgba(255, 255, 255, 0.2) inset; box-shadow: 1px 0 0 rgba(255, 255, 255, 0.2) inset; }
+.nav-bar > li:first-child { -webkit-box-shadow: 0 0 0; -moz-box-shadow: 0 0 0; box-shadow: 0 0 0; }
+.nav-bar > li:last-child { border-right: solid 1px #333333; -webkit-box-shadow: 1px 0 0 rgba(255, 255, 255, 0.2) inset, 1px 0 0 rgba(255, 255, 255, 0.2); -moz-box-shadow: 1px 0 0 rgba(255, 255, 255, 0.2) inset, 1px 0 0 rgba(255, 255, 255, 0.2); box-shadow: 1px 0 0 rgba(255, 255, 255, 0.2) inset, 1px 0 0 rgba(255, 255, 255, 0.2); }
+.nav-bar > li.active { background: #2ba6cb; border-color: #2284a1; }
+.nav-bar > li.active > a { color: white; cursor: default; }
+.nav-bar > li.active:hover { background: #2ba6cb; cursor: default; }
+.nav-bar > li:hover { background: #333333; }
+.nav-bar > li > a { color: #e6e6e6; }
+.nav-bar > li ul { margin-bottom: 0; }
+.nav-bar > li .flyout { display: none; }
+.nav-bar > li.has-flyout > a:first-child { padding-right: 40px; position: relative; }
+.nav-bar > li.has-flyout > a:first-child:after { content: ""; display: block; width: 0; height: 0; border: solid 4px; border-color: #e6e6e6 transparent transparent transparent; position: absolute; right: 20px; top: 17px; }
+.nav-bar > li.has-flyout > a.flyout-toggle { border-left: 0 !important; position: absolute; right: 0; top: 0; padding: 20px; z-index: 2; display: block; }
+.nav-bar > li.has-flyout.is-touch > a:first-child { padding-right: 55px; }
+.nav-bar > li.has-flyout.is-touch > a.flyout-toggle { border-left: 1px dashed #666666; }
+.nav-bar > li > a:first-child { position: relative; padding: 0 20px; display: block; text-decoration: none; font-size: 14px; }
+.nav-bar > li > input { margin: 0 10px; }
+.nav-bar.vertical { height: auto; margin-top: 0; }
+.nav-bar.vertical > li { float: none; border-bottom: none; border-right: solid 1px #333333; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; }
+.nav-bar.vertical > li.has-flyout > a:first-child:after { content: ""; display: block; width: 0; height: 0; border: solid 4px; border-color: transparent transparent transparent #e6e6e6; }
+.nav-bar.vertical > li .flyout { left: 100%; top: -1px; }
+.nav-bar.vertical > li .flyout.right { left: auto; right: 100%; }
+.nav-bar.vertical > li.active { border-right: solid 1px #2284a1; }
+.nav-bar.vertical > li:last-child { border-bottom: solid 1px #333333; }
+
+.flyout { background: #f2f2f2; padding: 20px; margin: 0; border: 1px solid #d9d9d9; position: absolute; top: 39px; left: -1px; width: 250px; z-index: 40; -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); /* remove margin on any first-child element */ /* remove margin on last element */ }
+.flyout p { line-height: 1.2; font-size: 13px; }
+.flyout *:first-child { margin-top: 0; }
+.flyout *:last-child { margin-bottom: 0; }
+.flyout.small { width: 166.66667px; }
+.flyout.large { width: 437.5px; }
+.flyout.right { left: auto; right: -2px; }
+.flyout.left { right: auto; left: -2px; }
+.flyout.up { top: auto; bottom: 39px; }
+
+ul.flyout, .nav-bar li ul { padding: 0; list-style: none; }
+ul.flyout li, .nav-bar li ul li { border-left: solid 3px #cccccc; }
+ul.flyout li a, .nav-bar li ul li a { background: #f2f2f2; border: 1px solid #e6e6e6; border-width: 1px 1px 0 0; color: #555; display: block; font-size: 14px; height: auto; line-height: 1; padding: 15px 20px; -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset; -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset; box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset; }
+ul.flyout li a:hover, ul.flyout li a:focus, .nav-bar li ul li a:hover, .nav-bar li ul li a:focus { background: #ebebeb; color: #333; }
+ul.flyout li.active, .nav-bar li ul li.active { margin-top: 0; border-top: 1px solid #4d4d4d; border-left: 4px solid #1a1a1a; }
+ul.flyout li.active a, .nav-bar li ul li.active a { background: #4d4d4d; border: none; color: #fff; height: auto; margin: 0; position: static; top: 0; -webkit-box-shadow: 0 0 0; -moz-box-shadow: 0 0 0; box-shadow: 0 0 0; }
+
+// new label notice
+
+.label.warning {
+    @include label;
+    background-color: darken(yellow,15%);
+}
+
