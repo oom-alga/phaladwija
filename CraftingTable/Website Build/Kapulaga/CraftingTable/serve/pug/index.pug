@@ -54,27 +54,35 @@ block main
         #about-us
             .container.py-5.my-5
                 .row.justify-content-center
-                    .col-lg-6
+                    .col-lg-12
                         .row.wool-layer.bg
-                            .col-lg-6.item
+                            .col-lg-3.item
                                 img.img-fluid(src="storage/image/bg-animate1.jpg", alt="")
-                            .col-lg-6.item
+                            .col-lg-3.item
+                                img.img-fluid(src="storage/image/bg-animate2.jpg", alt="")
+                            .col-lg-3.item
+                                img.img-fluid(src="storage/image/bg-animate1.jpg", alt="")
+                            .col-lg-3.item
                                 img.img-fluid(src="storage/image/bg-animate2.jpg", alt="")
                     .col-lg-7.position-absolute
                         .row.wool-layer.human
                             img.img-fluid.mx-auto(src="storage/image/human4.png", alt="")
         
-        #woo
-            .carousel.slide#my-carousel(data-ride='carousel')
-                .carousel-inner
-                    .carousel-item.active
-                        img.d-block.w-100(src='storage/image/bg-animate1.jpg', alt='')
-                        .carousel-caption.d-none.d-md-block
-                            h5 Title
-                            p Text
-                    .carousel-item
-                        img.d-block.w-100(src='storage/image/bg-animate2.jpg', alt='')
-                        .carousel-caption.d-none.d-md-block
-                            h5 Title
-                            p Text
-        
+        #project.position-relative.my-5.pt-5
+            .bg.position-absolute
+            .container.my-5.py-5
+                .row
+                    .col-lg-12.mb-4
+                        p.text-muted.mb-0.pb-0 GAME OVERVIEW
+                        h2.display-4 LIVE THE
+                .row
+                    each val in [1, 2, 3, 4, 5, 6]
+                        .col-lg-6.p-4
+                            .card.rounded-0.border-0.position-relative.hoho
+                                img.img-fluid(src="storage/image/bg-animate2.jpg", alt="")
+                                .card-body.position-absolute
+                                    h5.position-absolute.display-4.card-title.mb-4 Lorem ipsum
+                                    p.position-absolute.card-text Lorem ipsum dolor sit amet.
+                .row
+                    .col-lg-12.text-center.mt-4
+                        button.btn.btn-primary.btn-bg-red.p-3.px-5.rounded-0 BY Ubisoft Game Engine
