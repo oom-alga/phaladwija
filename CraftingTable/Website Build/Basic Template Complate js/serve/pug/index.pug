@@ -1,0 +1,83 @@
+//- layout.pug
+extends ../template/layout.pug
+
+
+block main
+    article
+        header
+            #carouselExampleIndicators.carousel.slide(data-ride="carousel")
+                ol.carousel-indicators
+                    li.active(data-target="#carouselExampleIndicators" data-slide-to="0")
+                    li(data-target="#carouselExampleIndicators" data-slide-to="1")
+                    li(data-target="#carouselExampleIndicators" data-slide-to="2")
+                .carousel-inner(role="listbox")
+                    .carousel-item.active(style="background-image: url('https://www.wallpaperup.com/uploads/wallpapers/2014/04/14/332540/97366126dfa33e5df83afa481696cafb.jpg')")
+                        .carousel-caption.d-none.d-md-block
+                            h3 First Slide
+                            p This is a description for the first slide.
+                    .carousel-item(style="background-image: url('http://placehold.it/1900x1080')")
+                        .carousel-caption.d-none.d-md-block
+                            h3 First Slide
+                            p This is a description for the second slide.
+                    .carousel-item(style="background-image: url('http://placehold.it/1900x1080')")
+                        .carousel-caption.d-none.d-md-block
+                            h3 First Slide
+                            p This is a description for the third slide.
+                    a.carousel-control-prev(href="#carouselExampleIndicators" role="button" data-slide="prev")
+                        span.carousel-control-prev-icon(aria-hidden="true")
+                        .sr-only Previous
+                    a.carousel-control-next(href="#carouselExampleIndicators" role="button" data-slide="next")
+                        span.carousel-control-next-icon(aria-hidden="true")
+                        .sr-only Next
+        .container
+            .row
+                .col-lg-12
+                    #demo 
+                        h1 alga kharismaa
+        .container
+            h1.my-4 Welcome to Modern Business
+            .row 
+                each val in [1, 2, 3]
+                    .col-lg-4.mb-4
+                        .card.h-100
+                            h4.card-header Card Title
+                            .card-body
+                                p.card-text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            .card-footer
+                                a.btn.btn-primary(href="#") Learn More
+            h1.my-4 Portfolio Heading
+            .row
+                each vas in [1, 2, 3]
+                    .col-lg-4.col-sm-6.portfolio-item
+                        .card.h-100
+                            a(href="#")
+                                img.card-img-top(src="http://placehold.it/700x400" alt="")
+                            .card-body
+                                h4
+                                    a(href="singlevideo.html") Project On
+                                p.card-text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+           
+            .row
+                .col-lg-6
+                    h2 Modern Business Features
+                    p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat enim nam, maxime ratione sint necessitatibus, at eveniet saepe sed placeat dolorum est quia odio recusandae voluptatum velit maiores cumque expedita.
+                    ul
+                        li 
+                            striong Bootstrap 4
+                        li jQuery
+                        li Font Awesome
+                        li Work Hard Play hard
+                        li Lorem ipsum dolor sit amet
+                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                .col-lg-6
+                    img.img-fluid.rounded(src="http://placehold.it/700x400" alt="")
+            
+            hr
+
+            .row.mb-4
+                .col-lg-8
+                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, facere nisi? Ad quam ab neque similique cupiditate fugit quae nobis, fugiat, reiciendis minima quasi tenetur blanditiis alias error. Laudantium, vitae. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                .col-lg-4
+                    a.btn.btn-lg.btn-secondary.btn-block(href="#") Call to Action
+
+        
