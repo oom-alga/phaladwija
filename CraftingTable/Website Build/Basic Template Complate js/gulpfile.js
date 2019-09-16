@@ -20,6 +20,7 @@ gulp.task('java', function(){
         "./node_modules/bootstrap/dist/js/bootstrap.min.js",
         "./node_modules/@fortawesome/fontawesome-free/js/all.js",
         "./node_modules/barba.js/dist/barba.min.js",
+        "./node_modules/swiper/dist/js/swiper.min.js",
         "./serve/js/*.js"
     ])
     .pipe(gulp.dest("./public/js"));
@@ -30,6 +31,7 @@ gulp.task('watch', function () {
         "./resource/assets/sass/**/*.scss",
         "./node_modules/bootstrap/scss/bootstrap.scss",
         "./node_modules/@fortawesome/fontawesome-free/css/all.css",
+        "./node_modules/swiper/dist/css/swiper.css"
     ])
     .pipe(sass.sync().on('error', sass.logError))
     .pipe(gulp.dest('./public/css'));

@@ -9,7 +9,31 @@ body{
     // font-family: 'Raleway', 'sans-serif';
     padding-top: 56px;
     background-color: #ffffff;
+    position: relative;
 }
+.swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
 .carousel-item {
     height: 65vh;
     min-height: 300px;
@@ -23,17 +47,7 @@ body{
 .portfolio-item {
     margin-bottom: 30px;
 }
-#demo{
-    background-color: blue;
-    color: purple;
-    width: 300px;
-}
 
-
-#demo{
-    background-color: blue;
-    color: purple;
-}
 .cursor, .cursor-follow {
     width: 5px;
     height: 5px;
@@ -43,11 +57,7 @@ body{
     transition-timing-function: ease-out;
     pointer-events: none;
     z-index: 99999;
-    // background-color: yellow;
     pointer-events: none;
-}
-.cursor-follow {
-    // background-color: blue;
 }
 .cursor{
     width: 40px;
@@ -55,20 +65,12 @@ body{
     position: absolute;
     border: 3px solid gray;
     border-radius: 50%;
-    // opacity: .5;
     top: -8px;
     left: -8px;
-    // animation: cursorAnim2 .5s infinite alternate;
     transition: all 0.2s;
 }
 .expand-click {
     animation: cursorAnim3 .5s alternate;
-}
-.expand-hover{
-    border-radius: 0%;
-    transform: rotate(-45deg);
-    -webkit-filter: invert(100%); /* Safari 6.0 - 9.0 */
-    filter: invert(100%);
 }
 .expand {
     animation: none;
@@ -77,17 +79,10 @@ body{
     background-size: auto;
     border: 0px;
     background-repeat: no-repeat;
-    z-index: 99;
-    -webkit-animation: rotation 2s infinite linear;
+    -webkit-animation: breathing 7s ease-out infinite normal;
+    animation: breathing 7s ease-out infinite normal;
 }
-@keyframes rotation {
-    from {
-            -webkit-transform: rotate(0deg);
-    }
-    to {
-            -webkit-transform: rotate(359deg);
-    }
-}
+
 @keyframes cursorAnim {
     from {
         transform: scale(1);
