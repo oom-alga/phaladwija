@@ -6,41 +6,18 @@
 body {
   padding-top: 56px;
   background-color: #ffffff;
-  position: relative; }
+  position: relative;
+  transition: 1s; }
 
-.swiper-container {
-  width: 100%;
-  height: 100%; }
+.load-page img {
+  position: absolute;
+  opacity: 0;
+  width: 40px;
+  height: auto; }
 
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-  /* Center slide text vertically */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center; }
-
-.carousel-item {
-  height: 65vh;
-  min-height: 300px;
-  background: no-repeat center center scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
-
-.portfolio-item {
-  margin-bottom: 30px; }
+.fade-in {
+  background-color: red;
+  transition: 1s; }
 
 .cursor, .cursor-follow {
   width: 5px;
@@ -65,16 +42,6 @@ body {
 
 .expand-click {
   animation: cursorAnim3 .5s alternate; }
-
-.expand {
-  animation: none;
-  background-image: url(../storage/loading_small.png);
-  background-position: center;
-  background-size: auto;
-  border: 0px;
-  background-repeat: no-repeat;
-  -webkit-animation: breathing 7s ease-out infinite normal;
-  animation: breathing 7s ease-out infinite normal; }
 
 @keyframes cursorAnim {
   from {

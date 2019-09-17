@@ -1,19 +1,13 @@
+
+
 $('document').ready(function(){
     var transEffect = Barba.BaseTransition.extend({
         start: function(){
           this.newContainerLoading.then(val => this.finish($(this.newContainer)));
           $("html, body").animate({ scrollTop: 0 }, "slow");
-          cursor.classList.add("bg-primary");
-          cursor.classList.add("expand"); 
-          $(".cursor").css({
-              "position": "fixed",
-              "width": "100%",
-              "height": "100vh",
-              "top": "0",
-              "left": "0",
-              "border-radius": 0,
-              "border": "3px solid transparent" 
-          });
+          $(".load-page img").css({
+            "opacity": "1",
+          }, "slow");
         },
         finish: function(nc) {
           nc.hide();
@@ -21,17 +15,9 @@ $('document').ready(function(){
           $(this.oldContainer).fadeOut(500).promise().done(() => { 
             nc.css('visibility','visible');
             nc.fadeIn(500, function(){
-                $(".cursor").css({
-                    "top": "50%",
-                    "left": "50%",
-                    "position": "absolute",
-                    "width": "20px",
-                    "height": "20px",
-                    "border-radius": "50%",
-                    "border": "3px solid gray"
-                });
-                cursor.classList.remove("expand"); 
-                cursor.classList.remove("bg-primary"); 
+                $(".load-page img").css({
+                  "opacity": "0",
+                }, "slow");
               _this.done();
             })
           });
@@ -45,35 +31,6 @@ $('document').ready(function(){
 
 
 
-
-  // var swiper = new Swiper('.swiper-container');
-  var swiper = new Swiper('.swiper-container', {
-    slidesPerView: 5,
-    spaceBetween: 50,
-    // init: false,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-    breakpoints: {
-      1024: {
-        slidesPerView: 4,
-        spaceBetween: 40,
-      },
-      768: {
-        slidesPerView: 3,
-        spaceBetween: 30,
-      },
-      640: {
-        slidesPerView: 2,
-        spaceBetween: 20,
-      },
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 10,
-      }
-    }
-  });
 
   const cursor = document.querySelector('.cursor');
   const cursors = document.querySelector('.cursor-follow');
@@ -93,3 +50,20 @@ $('document').ready(function(){
           cursor.classList.remove("expand-click");
       }, 500)
   })
+
+  $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:5
+        }
+    }
+})

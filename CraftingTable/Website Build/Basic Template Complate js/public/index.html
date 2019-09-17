@@ -14,7 +14,7 @@
     <!-- Bootstrap-->
     <link rel="stylesheet" href="css/bootstrap.css">
     <!-- Style-->
-    <link rel="stylesheet" href="css/swiper.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
     <!-- Style-->
     <link rel="stylesheet" href="css/style.css">
     <!-- Favicons-->
@@ -32,6 +32,7 @@
     <div class="cursor"></div>
     <div class="cursor-follow bg-danger"></div>
     <main id="barba-wrapper">
+      <div class="load-page"><img class="mx-3" src="storage/load1.gif" alt=""></div>
       <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container"><a class="navbar-brand" id="logo" href="index.html">Start Bootstrap</a>
           <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -41,6 +42,9 @@
               <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
               <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
               <li class="nav-item"><a class="nav-link" href="album.html">Album</a></li>
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdownPortfolio" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Fiture</a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio"><a class="dropdown-item" href="pageowl.html">Owl Slider</a></div>
+              </li>
               <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdownPortfolio" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Portfolio</a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio"><a class="dropdown-item" href="#">1 Column Portfolio</a><a class="dropdown-item" href="#">2 Column Portfolio</a><a class="dropdown-item" href="#">3 Column Portfolio</a><a class="dropdown-item" href="#">Single Portfolio Item</a></div>
               </li>
@@ -56,37 +60,7 @@
       </nav>
       <div class="barba-container">
         <article>
-          <header>
-            <div class="carousel slide" id="carouselExampleIndicators" data-ride="carousel">
-              <ol class="carousel-indicators">
-                <li class="active" data-target="#carouselExampleIndicators" data-slide-to="0"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-              </ol>
-              <div class="carousel-inner" role="listbox">
-                <div class="carousel-item active" style="background-image: url('https://www.wallpaperup.com/uploads/wallpapers/2014/04/14/332540/97366126dfa33e5df83afa481696cafb.jpg')">
-                  <div class="carousel-caption d-none d-md-block">
-                    <h3>First Slide</h3>
-                    <p>This is a description for the first slide.</p>
-                  </div>
-                </div>
-                <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">
-                  <div class="carousel-caption d-none d-md-block">
-                    <h3>First Slide</h3>
-                    <p>This is a description for the second slide.</p>
-                  </div>
-                </div>
-                <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">
-                  <div class="carousel-caption d-none d-md-block">
-                    <h3>First Slide</h3>
-                    <p>This is a description for the third slide.</p>
-                  </div>
-                </div><a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <div class="sr-only">Previous</div></a><a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <div class="sr-only">Next</div></a>
-              </div>
-            </div>
-          </header>
+          <header></header>
           <div class="container">
             <h1 class="my-4">Welcome to Modern Business</h1>
             <div class="row"> 
@@ -120,7 +94,7 @@
             </div>
             <h1 class="my-4">Portfolio Heading</h1>
             <div class="row">
-              <div class="col-lg-4 col-sm-6 portfolio-item">
+              <div class="col-lg-4 col-sm-6 mb-5">
                 <div class="card h-100"><a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
                   <div class="card-body">
                     <h4><a href="singlevideo.html">Project On</a></h4>
@@ -128,7 +102,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-lg-4 col-sm-6 portfolio-item">
+              <div class="col-lg-4 col-sm-6 mb-5">
                 <div class="card h-100"><a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
                   <div class="card-body">
                     <h4><a href="singlevideo.html">Project On</a></h4>
@@ -136,7 +110,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-lg-4 col-sm-6 portfolio-item">
+              <div class="col-lg-4 col-sm-6 mb-5">
                 <div class="card h-100"><a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
                   <div class="card-body">
                     <h4><a href="singlevideo.html">Project On</a></h4>
@@ -186,9 +160,15 @@
     <!-- Bootstrap-->
     <script src="js/bootstrap.min.js"></script>
     <!--Script-->
-    <script src="js/swiper.min.js"></script>
+    <script src="js/ScrollMagic.min.js"></script>
+    <!--Script-->
+    <script src="js/animation.gsap.min.js"></script>
+    <!--Script-->
+    <script src="js/debug.addIndicators.min.js"></script>
     <!--Script-->
     <script src="js/barba.min.js"></script>
+    <!--Script-->
+    <script src="js/owl.carousel.min.js"></script>
     <!--Script-->
     <script src="js/woo-script.js"></script>
   </body>

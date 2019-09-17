@@ -7,8 +7,11 @@ html(lang='en')
       .cursor
       .cursor-follow.bg-danger
       main#barba-wrapper
+        .load-page
+          img.mx-3(src="storage/load1.gif", alt="")
         include components/_nav.pug
         .barba-container
           block main
       include components/_footer.pug
       include components/_scripts.pug
+      block scriptAdd

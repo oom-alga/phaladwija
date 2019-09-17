@@ -1,0 +1,19 @@
+//- layout.pug
+extends ../template/layout.pug
+
+
+block main
+    article
+        .container
+            .row
+                .col-lg-12
+                    p.text-center
+                        | Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim pariatur blanditiis ut non cupiditate magni vel et animi explicabo necessitatibus distinctio dolores temporibus ex error perferendis, deserunt eos, adipisci eius?
+        .container
+            .row.owl-theme.owl-carousel
+                each items in [1, 2, 3, 4, 5]
+                    .col-lg-12.item.text-center hohohoho
+            .row
+                .col-lg-12
+                    p.text-center
+                        | Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim pariatur blanditiis ut non cupiditate magni vel et animi explicabo necessitatibus distinctio dolores temporibus ex error perferendis, deserunt eos, adipisci eius?

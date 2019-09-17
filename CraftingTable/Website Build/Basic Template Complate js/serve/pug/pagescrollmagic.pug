@@ -1,0 +1,30 @@
+//- layout.pug
+extends ../template/layout.pug
+
+
+block main
+    article
+        .container
+            .row
+                .col-lg-12.my-5.py-5
+                    p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit reiciendis expedita ad delectus corrupti a mollitia molestiae possimus eos nobis laborum neque quas, aliquam dolorum illo doloribus assumenda voluptatibus nulla!
+                .col-lg-12.my-5.py-5
+                    p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit reiciendis expedita ad delectus corrupti a mollitia molestiae possimus eos nobis laborum neque quas, aliquam dolorum illo doloribus assumenda voluptatibus nulla!
+                .col-lg-12.my-5.py-5
+                    .s2
+                    #triad
+                        h1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum distinctio nisi molestiae itaque officia odit eligendi minus laboriosam veritatis ipsum harum, eaque pariatur, id illo! Ad aperiam provident beatae porro.
+                    #animate1.box2.skin
+                        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat deserunt reiciendis similique! Dignissimos tempore quisquam illo suscipit. Quibusdam quia aut aliquam illo provident voluptatibus dolore suscipit dolorem, qui aliquid distinctio.
+
+block scriptAdd
+    script. 
+        $('document').ready(function(){
+        var controller = new ScrollMagic.Controller();
+        new ScrollMagic.Scene({
+            triggerElement: ".s2"
+        })
+        .setClassToggle("body", "fade-in") // add class toggle
+        .addIndicators() // add indicators (requires plugin)
+        .addTo(controller);
+        });

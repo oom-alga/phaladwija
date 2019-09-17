@@ -20,7 +20,10 @@ gulp.task('java', function(){
         "./node_modules/bootstrap/dist/js/bootstrap.min.js",
         "./node_modules/@fortawesome/fontawesome-free/js/all.js",
         "./node_modules/barba.js/dist/barba.min.js",
-        "./node_modules/swiper/dist/js/swiper.min.js",
+        "./node_modules/owl.carousel2/dist/owl.carousel.min.js",
+        "./node_modules/scrollmagic/scrollmagic/minified/ScrollMagic.min.js",
+        "./node_modules/scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js",
+        "./node_modules/scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js",
         "./serve/js/*.js"
     ])
     .pipe(gulp.dest("./public/js"));
@@ -29,9 +32,10 @@ gulp.task('java', function(){
 gulp.task('watch', function () {
     return gulp.src([
         "./resource/assets/sass/**/*.scss",
+        "./node_modules/owl.carousel2/dist/assets/s",
         "./node_modules/bootstrap/scss/bootstrap.scss",
         "./node_modules/@fortawesome/fontawesome-free/css/all.css",
-        "./node_modules/swiper/dist/css/swiper.css"
+        "./node_modules/scrollmagic/scrollmagic/css/all.css",
     ])
     .pipe(sass.sync().on('error', sass.logError))
     .pipe(gulp.dest('./public/css'));
