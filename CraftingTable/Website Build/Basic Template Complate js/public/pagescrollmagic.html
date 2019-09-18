@@ -43,7 +43,7 @@
               <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
               <li class="nav-item"><a class="nav-link" href="album.html">Album</a></li>
               <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdownPortfolio" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Fiture</a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio"><a class="dropdown-item" href="pageowl.html">Owl Slider</a></div>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio"><a class="dropdown-item" href="pageowl.html">Owl Slider</a><a class="dropdown-item" href="pagescrollmagic.html">Scroll Magic</a></div>
               </li>
               <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdownPortfolio" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Portfolio</a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio"><a class="dropdown-item" href="#">1 Column Portfolio</a><a class="dropdown-item" href="#">2 Column Portfolio</a><a class="dropdown-item" href="#">3 Column Portfolio</a><a class="dropdown-item" href="#">Single Portfolio Item</a></div>
@@ -108,13 +108,13 @@
     <script src="js/woo-script.js"></script>
     <script>
       $('document').ready(function(){
-      var controller = new ScrollMagic.Controller();
-      new ScrollMagic.Scene({
-          triggerElement: ".s2"
-      })
-      .setClassToggle("body", "fade-in") // add class toggle
-      .addIndicators() // add indicators (requires plugin)
-      .addTo(controller);
+          var controller = new ScrollMagic.Controller();
+          new ScrollMagic.Scene({
+              triggerElement: ".s2"
+          })
+          .setClassToggle("body", "black-fade-in") 
+          .addIndicators() 
+          .addTo(controller);
       });
     </script>
   </body>

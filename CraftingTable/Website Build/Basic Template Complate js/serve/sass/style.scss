@@ -22,10 +22,16 @@ body{
     }
 }
 
-.fade-in{
-    background-color: red;
-    transition: 1s;
+.black-fade-in{
+    background-color: #1a1a1a;;
+    transition: 0.5s;
+    p{
+        transition: 2s;
+        color: rgba($color: #fff, $alpha: 0.6);
+    }
 }
+
+
 #triad{
 }
 .cursor, .cursor-follow {

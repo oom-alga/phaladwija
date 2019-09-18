@@ -1,5 +1,3 @@
-
-
 $('document').ready(function(){
     var transEffect = Barba.BaseTransition.extend({
         start: function(){

@@ -15,9 +15,12 @@ body {
   width: 40px;
   height: auto; }
 
-.fade-in {
-  background-color: red;
-  transition: 1s; }
+.black-fade-in {
+  background-color: #1a1a1a;
+  transition: 0.5s; }
+  .black-fade-in p {
+    transition: 2s;
+    color: rgba(255, 255, 255, 0.6); }
 
 .cursor, .cursor-follow {
   width: 5px;

@@ -20,11 +20,11 @@ block main
 block scriptAdd
     script. 
         $('document').ready(function(){
-        var controller = new ScrollMagic.Controller();
-        new ScrollMagic.Scene({
-            triggerElement: ".s2"
-        })
-        .setClassToggle("body", "fade-in") // add class toggle
-        .addIndicators() // add indicators (requires plugin)
-        .addTo(controller);
+            var controller = new ScrollMagic.Controller();
+            new ScrollMagic.Scene({
+                triggerElement: ".s2"
+            })
+            .setClassToggle("body", "black-fade-in") 
+            .addIndicators() 
+            .addTo(controller);
         });
