@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+
+    <style>
+        button{
+            position: absolute;
+            padding: 30px;
+            top: 0;
+            left: 0;
+        }
+        .wii{
+            /* background-color: yellow; */
+        }
+        .woo{
+            right: 0;
+            position: relative;
+        }
+        .woo img{
+            position: absolute;
+            width: 80%;
+            right: 0;
+            transform: scaleX(0);
+            transform-origin: right;
+        }
+        .woo .content{
+            position: absolute;
+            top: 30%;
+            width: 50%;
+            opacity: 0;
+        }
+        .woo .content p{
+            /* background-color: red; */
+            transform: scaleY(0);
+            opacity: 0;
+            transition: all 0.2s;
+            transform-origin: bottom;
+        }
+        .woo :hover p{
+            opacity: 1;
+            transform: scaleY(1);
+        }
+    </style>
+</head>
+<body>
+
+<div class="jumbotron text-center">
+  <h1>My First Bootstrap Page</h1>
+  <p>Resize this responsive page to see the effect!</p> 
+</div>
+  
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4 wii">
+        <h1 id="cta">My First Bootstrap Page</h1>
+    </div>
+    <div class="col-lg-8 woo">
+      <img class="img-fluid woo-img" src="bg.jpg" alt="">
+      <div class="content">
+        <p class="mb-0">hohohohohoho asdi</p>
+        <h1 class="mt-0">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
+      </div>  
+    </div>
+  </div>
+</div>
+    <script>
+        document.getElementById('cta').addEventListener('click', function(){
+            TweenMax.to('.woo img', 0.5, {scaleX: 1, ease: Expo.easeOut});
+            TweenMax.to('.woo .content', 0.5, {opacity: 1, y: 20, delay: 0.4, ease: Bounce.easeOut});
+        })
+    </script>
+</body>
+</html>
