@@ -11,21 +11,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
 
     <style>
-        button{
-            position: absolute;
-            padding: 30px;
-            top: 0;
-            left: 0;
-        }
-        .wii{
-            /* background-color: yellow; */
-        }
         .woo{
             right: 0;
             position: relative;
         }
         .woo img{
-            position: absolute;
+            position: relative;
             width: 80%;
             right: 0;
             transform: scaleX(0);
@@ -33,9 +24,15 @@
         }
         .woo .content{
             position: absolute;
-            top: 30%;
-            width: 50%;
+            top: 10%;
+            width: 60%;
             opacity: 0;
+            mix-blend-mode: screen;
+        }
+        .woo .content h1{
+            color: black;
+            text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+            font-weight: bold;
         }
         .woo .content p{
             /* background-color: red; */
@@ -44,7 +41,7 @@
             transition: all 0.2s;
             transform-origin: bottom;
         }
-        .woo :hover p{
+        .woo:hover p{
             opacity: 1;
             transform: scaleY(1);
         }
@@ -58,16 +55,27 @@
 </div>
   
 <div class="container">
-  <div class="row">
-    <div class="col-lg-4 wii">
-        <h1 id="cta">My First Bootstrap Page</h1>
+  <div class="row clearfix">
+    <div class="col-lg-2 wii">
+        <button id="cta" class="btn btn-primary" type="button">Text</button>
     </div>
-    <div class="col-lg-8 woo">
-      <img class="img-fluid woo-img" src="bg.jpg" alt="">
+    <div class="col-lg-10 woo">
+      <img class="img-fluid woo-img float-right" src="bg.jpg" alt="">
       <div class="content">
         <p class="mb-0">hohohohohoho asdi</p>
         <h1 class="mt-0">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
       </div>  
+    </div>
+  </div>
+</div>
+<hr>
+<div class="container clearfix">
+  <div class="row">
+    <div class="float-left col-lg-2">
+        Lorem, ipsum dolor sit amet c
+    </div>
+    <div class="col-lg-2 float-right">
+        <p class="position-absolute">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi voluptas ipsa sit vel vitae ipsum, quos error, beatae rem facilis eaque dolores explicabo iste recusandae unde placeat et! Dolores, velit?</p>
     </div>
   </div>
 </div>
