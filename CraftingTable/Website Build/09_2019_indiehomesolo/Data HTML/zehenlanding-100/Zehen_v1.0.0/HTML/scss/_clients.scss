@@ -1,0 +1,47 @@
+  //
+// clients.scss
+//
+
+.client-img{
+    img {
+        width: 90px;
+    }
+}
+
+
+.client-icon {
+    i {
+        display: block;
+        height: 50px;
+        width: 50px;
+        font-size: 30px;
+        line-height: 50px;
+        background-color: $custom;
+        color: $white;
+        margin: 0 auto;
+    }
+}
+
+.owl-theme .owl-controls .owl-page span {
+    display: block;
+    width: 12px;
+    height: 5px;
+    margin: 7px 7px;
+    border: 1px solid $custom;
+    background-color: $custom;
+}
+
+.client-position{
+    font-weight: 500;
+}
+
+.client-txt {
+    font-size: 16px;
+}
+
+
+
+// client logo
+.client-logo{
+    background-color: lighten($primary, 2%);
+}

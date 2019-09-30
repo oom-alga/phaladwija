@@ -1,0 +1,64 @@
+  //
+// pricing.scss
+//
+
+
+
+
+.price-box {
+    padding: 40px 30px;
+    border: 2px solid #f7f7f9;
+}
+
+.plan-price {
+    margin: 20px -30px;
+    padding: 20px 0px 10px 0px;
+    position: relative;
+    background-color: $light;
+    h1 {
+        span {
+            font-size: 16px;
+        }
+        
+    }
+    span {
+        font-size: 15px;
+        color: $dark;
+        font-weight: 400;
+    }
+    h2{
+        font-size: 40px;
+    }
+}
+
+
+.price-features {
+    i {
+        height: 20px;
+        width: 20px;
+        display: inline-block;
+        text-align: center;
+        line-height: 20px;
+        font-size: 14px;
+        border-radius: 50%;
+        margin-right: 20px;
+        color: $custom;
+        background-color: rgba($custom, 0.1);
+    }
+}
+
+.pricing-name {
+    span{
+        font-size: 13px;
+    }
+}
+
+.plan-price {
+    .dolar {
+        color: $dark;
+        font-size: 20px;
+        display: inline-block;
+        transform: translateY(-20px)translateX(5px);
+    }
+    
+}

@@ -1,0 +1,29 @@
+  //
+// features.scss
+//
+
+
+
+.card{
+    border: none;
+    background: $white;
+}
+
+ .collapse.show{
+    background: $white;
+}
+
+.card-header{
+    background-color: transparent;
+    border: none;
+    h5{
+            font-size: 16px;
+            color: $dark;
+        
+    }
+}
+
+.accordion .card:last-of-type {
+    border-bottom: none;
+}
+

@@ -1,0 +1,68 @@
+/* Theme Name: Glamium - Responsive Landing Page Template
+   Author: Themesdesign
+   Version: 1.0.0
+   File Description: Main CSS file of the template
+*/
+
+.btn-outline:hover,
+.btn-outline:focus,
+.btn-outline:active,
+.btn-outline.active,
+.btn-outline.focus,
+.btn-outline:active,
+.btn-outline:focus,
+.btn-outline:hover,
+.open>.dropdown-toggle .btn-outline,.text-custom,.variation-2 .about-title:hover,.services-title a:hover,.read-more,.testimonial-icon i,.team-social a:hover,
+.blog-4-content a:hover,.team-email,.read-more,.blog-5-title:hover,.footer-link a:hover,.social-icon li a:hover,#topnav .has-submenu.active .submenu li.active > a,
+.navigation-menu .has-submenu.active a,.navbar-sticky .navigation-menu li a:hover,
+.navbar-sticky .navigation-menu li a:focus,
+.navbar-sticky .navigation-menu li a:active, #topnav .navigation-menu > li .submenu li a:hover,
+    #topnav .navigation-menu .has-submenu .submenu > li:hover > a, #topnav .navigation-menu > li:hover > a, #topnav .navigation-menu > li > a:hover,
+    #topnav .navigation-menu > li .submenu li a:hover,
+    #topnav .navigation-menu > li.has-submenu.open > a,
+    #topnav .menu-extras .menu-item .cart > a:hover,
+    #topnav .menu-extras .menu-item .search > a:hover,#topnav .has-submenu.active a, #topnav .navigation-menu .submenu.open .has-submenu.open > a {
+    color: #8a4df0 !important;
+}
+
+
+.btn-custom,.bg-custom, .title-border,.variation-3 .home-title,.progress-bar,.about-5-icon i,.services-icon,.services-4-icon,.counter-border,.testi-lable p,
+.team-content a,.team-border,.play-icon-circle,.blog-lable,.blog-highlight,.blog-5-lable a,.blog-6-lable,#topnav .navbar-toggle.open span:hover,
+#topnav .navigation-menu > li:hover > .menu-arrow {
+    background-color: #8a4df0;
+}
+
+
+
+
+.btn-custom,.services-icon,.ser-6-content,.counter-6-box,.testi-6-box,.team-img img,.custom-form .form-control:focus,#topnav .has-submenu.active .menu-arrow
+ {
+    border-color: #8a4df0;
+}
+
+
+
+.title-heading:before, .title-heading:after,.owl-theme .owl-controls .owl-page span,#owl-demo-4.owl-theme .owl-controls .owl-buttons div,
+.team-4-social a:hover{
+    background:#8a4df0 ;
+}
+
+
+.btn-custom:hover,
+.btn-custom:focus,
+.btn-custom:active,
+.btn-custom.active,
+.btn-custom.focus,
+.btn-custom:active,
+.btn-custom:focus,
+.btn-custom:hover,
+.open>.dropdown-toggle .btn-custom {
+    color: #ffffff;
+    border: 2px solid #651dde;
+    background-color: #651dde;
+}
+
+
+
+
+

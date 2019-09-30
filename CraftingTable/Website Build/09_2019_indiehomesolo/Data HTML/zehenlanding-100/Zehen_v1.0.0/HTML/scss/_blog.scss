@@ -1,0 +1,14 @@
+  //
+// blog.scss
+//
+
+.blog-title{
+  a{
+      color: #282828;
+      &:hover{
+        color: $custom;
+        transition: all 0.5s;
+      }
+    }
+    
+}
