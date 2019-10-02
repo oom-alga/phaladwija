@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+
+    <style>
+      *{
+        cursor:none;
+      }
+body {
+  background: #000;
+}
+.link, .link2 {
+  display:inline-block;
+  background-color: red;
+  padding: 30px;
+  margin: 50px;
+  border: 3px solid #fff;
+}
+.circle {
+    position: fixed;
+    background-color: #fff;
+    width: 5px;
+    height: 5px;
+    left:-2px;
+    top:-2px;
+    border-radius: 100%;
+    z-index: 1;
+    z-index: 10000;
+    transform: scale(1);
+}
+
+.circle-follow {
+    position: fixed;
+    border:1px solid #fff;
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 15px;
+    height: 15px;
+    left:-7px;
+    top:-7px;
+    /* border-radius: 100%; */
+    z-index: 1;
+    user-select: none;
+    pointer-events: none;
+    z-index: 10000;
+    transform: scale(1) rotate(45deg);
+}
+    </style>
+</head>
+<body>
+  <div class="circle"></div>
+  <div class="circle-follow"></div>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <a href="#" class="link">TEST ME OUT!</a>
+  <p>&nbsp;</p>
+  <a href="#" class="link2">TEST ME OUT!</a>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  
+  
+
+    <script>
+        // http://ahrengot.com/tutorials/greensock-javascript-animation
+
+        var $circle = $('.circle'),
+            $follow = $('.circle-follow');
+
+        function moveCircle(e) {
+          var testDiv = document.getElementById("test");
+          TweenLite.to($circle, 0.3, {
+              x: e.clientX,
+              y: e.clientY
+          });
+          TweenLite.to($follow, 0.4, {
+              x: e.clientX,
+              y: e.clientY
+          });  
+        }
+
+        function hoverFunc(e) {
+          TweenLite.to($circle, 0.3, {
+            opacity: 1,
+            scale: 1
+          });
+          TweenLite.to($follow, 0.5, {
+              scale: 0,
+              ease: Bounce.easeOut
+          });  
+        }
+
+        function unhoverFunc(e) {
+          TweenLite.to($circle, 0.3, {
+            opacity: 1,
+            scale: 1
+          });
+          TweenLite.to($follow, 0.5, {
+              scale: 1,
+              ease: Bounce.easeOut,
+          });  
+        }
+
+
+        function hoverFunc2(e) {
+          TweenLite.to($circle, 0.3, {
+            opacity: 0,
+            scale: 0
+          });
+          TweenLite.to($follow, 0.5, {
+              scale: 3,
+              rotation: 0,
+              ease: Bounce.easeOut
+          });  
+        }
+
+        function unhoverFunc2(e) {
+          TweenLite.to($circle, 0.3, {
+            opacity: 1,
+            scale: 1
+          });
+          TweenLite.to($follow, 0.5, {
+              scale: 1,
+              rotation: 45,
+              ease: Bounce.easeOut,
+          });  
+        }
+
+        function click(e) {
+          TweenLite.to($follow, 0.5, {
+              scale: 2,
+              ease: Bounce.easeOut,
+          });  
+          TweenLite.to($follow, 0.5, {
+              scale: 1,
+              delay: 0.3,
+              ease: Bounce.easeOut,
+          });  
+        }
+
+        $(window).on('mousemove', moveCircle);
+        $(window).on('click', click);
+        $(".link").hover(hoverFunc, unhoverFunc);
+        $(".link2").hover(hoverFunc2, unhoverFunc2);
+    </script>
+</body>
+</html>
