@@ -1,8 +1,4 @@
-/* Theme Name: Glamium - Responsive Landing Page Template
-   Author: Themesdesign
-   Version: 1.0.0
-   File Description: Main JS file of the template
-*/
+AOS.init();
 
 
 $(function() {

@@ -127,6 +127,28 @@ width: 100%;
     margin-bottom: 30px;
 }
   
+.line-thumb{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: -1;
+}
+.grid{
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    .col-lg-3{
+        height: 100vh;
+        border-left: 1px solid rgba(0, 0, 0, .3);
+        &:last-child{
+            border-right: 1px solid rgba(0, 0, 0, .3);
+        }
+    }
+}
+
 header{
     &.video{
         &::after{
@@ -163,6 +185,7 @@ header{
             z-index: 2;
         }
     }
+<<<<<<< HEAD
 }
   
 
@@ -177,4 +200,6 @@ header{
     will-change: transform;
     transform: scaleY(0);
     transform-origin: 0px 0px;
+=======
+>>>>>>> cf8f85559dcc0dc7c4cb6e5f4ccf8a22b9903198
 }

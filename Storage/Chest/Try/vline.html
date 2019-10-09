@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Document</title>
+    <style>
+        .line-thumb{
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            z-index: 10;
+        }
+        .grid{
+            top: 0;
+            height: 100vh;
+            width: 100%;
+        }
+        .grid .col-lg-3{
+            height: 100vh;
+            border-left: 1px solid rgba(0, 0, 0, .1);
+        }
+        .grid .col-lg-3:last-child{
+            border-right: 1px solid rgba(0, 0, 0, .1);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container line-thumb">
+    <div class="grid">
+        <div class="row justify-content-center">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-3"></div>
+            <div class="col-lg-3"></div>
+            <div class="col-lg-3"></div>
+        </div>
+    </div>
+</div>
+<div class="jumbotron text-center">
+  <h1>My First Bootstrap Page</h1>
+  <p>Resize this responsive page to see the effect!</p> 
+</div>
+  
+<div class="container mb-5">
+  <div class="row">
+    <div class="col-sm-4 p-1 m-0">
+      <img class="img-fluid" src="https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2016/02/WooRevisedTNW-1200x609.jpg" alt="">
+    </div>
+    <div class="col-sm-4">
+        <div class="bg-success p-3">
+            <h3>Column 2</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+        </div>
+    </div>
+  </div>
+</div> 
+
+<div class="container hohoho">
+    <div class="row">
+        <div class="col-sm-3 p-1">
+        <img class="img-fluid" src="https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2016/02/WooRevisedTNW-1200x609.jpg" alt="">
+        </div>
+        <div class="col-sm-9 p-0">
+            <div class="bg-info p-5 text-center text-white">
+                <h1>lorem ipsum dolor sit amet</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque obcaecati, repudiandae eum cumque consequatur doloribus totam aspernatur consequuntur nulla! Inventore aliquid, atque iste adipisci aperiam vel vero. Quasi, est ipsam.</p>
+            </div>
+        </div>
+    </div>
+</div> 
+</body>
+</html>
