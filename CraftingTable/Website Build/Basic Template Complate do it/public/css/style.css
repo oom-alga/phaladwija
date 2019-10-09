@@ -1,8 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:200,400,700,900");
 @import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900");
-body {
-  padding-top: 56px; }
-
 .load-page img {
   position: absolute;
   opacity: 0;
@@ -36,6 +33,51 @@ body {
     background-color: #cd58eb; }
   .items-scroll:nth-child(6) {
     background-color: #b84b4b; }
+
+#viewport {
+  overflow: hidden;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; }
+  #viewport #smoothScroll {
+    position: absolute;
+    overflow: hidden;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    backface-visibility: hidden;
+    transform-style: preserve-3d; }
+
+body::-webkit-scrollbar {
+  width: 5px; }
+
+body::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 5px solid slategrey;
+  border-radius: 3px;
+  left: 0;
+  position: absolute; }
+
+.header-scroll {
+  position: fixed;
+  bottom: 10%;
+  right: 100px;
+  width: 2px;
+  z-index: 100; }
+
+.progress-container {
+  background-color: rgba(150, 150, 150, 0.6);
+  height: 100px;
+  width: 2px; }
+
+.progress-bar {
+  background-color: #2196f3;
+  height: 0%;
+  width: 100%; }
 
 .black-fade-in {
   background-color: red; }
@@ -83,3 +125,15 @@ header.video {
   header.video .container {
     position: relative;
     z-index: 2; }
+
+#progress-bar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 10px;
+  height: 100vh;
+  z-index: 20;
+  background: #673ab7;
+  will-change: transform;
+  transform: scaleY(0);
+  transform-origin: 0px 0px; }
