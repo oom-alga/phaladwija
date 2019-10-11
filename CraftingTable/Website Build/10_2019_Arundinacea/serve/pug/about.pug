@@ -1,0 +1,40 @@
+//- layout.pug
+extends ../template/layout.pug
+
+
+block main
+    .barba-container(data-namespace="homepage")
+        article
+            .container 
+                h1.mt-4.md-3 about 
+                    small Subheading
+                ol.breadcrumb
+                    li.breadcrumb-item
+                        a(href="#") Home
+                    li.breadcrumb-item.active About
+                .row
+                    .col-lg-6
+                        img.img-fluid.rounded.mb-4(src="http://placehold.it/750x450", alt="")
+                    .col-lg-6
+                        h2 About Modern Business
+                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate reprehenderit accusamus perspiciatis magni laborum eos nam optio sit. Quia deserunt repudiandae eveniet quo. Obcaecati culpa corporis doloremque illo reprehenderit dignissimos.
+                        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum ducimus beatae animi ad alias expedita veniam recusandae. Tempora laborum fugit saepe qui, nam praesentium necessitatibus sequi error, suscipit id neque!
+                        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum dicta impedit quisquam quaerat, reiciendis similique nobis nam odio. Minus ea aspernatur quaerat ratione corporis unde pariatur maxime laborum commodi beatae.
+
+                h2 Our Team
+                .row
+                    each val in [1, 2, 3]
+                        .col-lg-4.mb-4
+                            .card.h-100.text-center
+                                img.card-img-top(src="http://placehold.it/750x450", alt="")
+                                .card-body
+                                    h4.card-title Team Member
+                                    h6.card-subtitle.mb-2.text-muted Position
+                                    p.card-text Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure consectetur excepturi porro a ullam, aperiam deleniti voluptatem? Adipisci tenetur quos eveniet voluptates nam maiores eos commodi incidunt dolore! Impedit, nulla.
+                                .card-footer   
+                                    a(href="#") name@example.com
+                h2 Our Customers
+                .row
+                    each val in [1, 2, 3, 4, 5, 6]
+                        .col-lg-2.col-sm-4.mb-4
+                            img.img-fluid(src="http://placehold.it/500x300", alt="")

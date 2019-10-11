@@ -1,0 +1,73 @@
+//==========================
+//  OWL Slider style Start
+//==========================
+.owl-carousel-index-header{
+    position: relative;
+    .item{
+        padding-top: 150px;
+        position: relative;
+        .title{
+            margin-left: 15%;
+            width: 50%;
+            z-index: 99;
+            color: #000;
+            text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+            mix-blend-mode: screen;
+            font-size: 15vw;
+        }
+        .background{
+            right: 0;
+            width: 70%;
+            margin-left: 30%;
+            top: 100px;
+        }
+        .btn{
+            margin-left: 20%;
+            position: absolute;
+            bottom: 100px;
+            left: 100px;
+            font-size: 24px;
+            border-radius: 30px;
+            text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+            mix-blend-mode: screen;
+            padding:{
+                bottom: 10px;
+                left: 75px;
+                right: 75px;
+            }
+        }
+    }
+    .owl-nav{
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        padding: 30px;
+        span{
+            color: #000;
+            text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+            mix-blend-mode: screen;
+            font-size: 150px;
+            padding: 15px;
+        }
+    }
+    .owl-dots{
+        position: absolute;
+        left: 0;
+        bottom: 10px;
+        margin-left: 30%;
+        z-index: 3;
+        button.owl-dot{
+            -webkit-border-radius: 0;
+            -moz-border-radius: 0;
+            border-radius: 0;
+            width: 100px;
+            height: 3   px;
+            margin-left: 2px;
+            margin-right: 2px;
+            background: #000;
+            &.active{
+                background-color: red;
+            }
+        }
+    }
+}

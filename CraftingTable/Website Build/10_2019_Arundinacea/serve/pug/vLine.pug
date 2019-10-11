@@ -1,0 +1,22 @@
+//- layout.pug
+extends ../template/layout.pug
+
+
+block main
+    .barba-container(data-namespace="ScrollMagic")
+        .container.line-thumb
+            .grid
+                .row.justify-content-center
+                    each val in[1, 2, 3, 4]
+                        .col-lg-3
+        .container.my-5
+            .row
+                .col-lg-3.p-1
+                    img.img-fluid(src="http://placehold.it/700x400", alt="")
+                .col-lg-9.pt-1.px-1
+                    .bg-info.text-white.p-3
+                        p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi ab accusamus, repellendus, facere ea amet perspiciatis ex possimus consectetur minus architecto unde neque ratione expedita doloribus iusto quidem optio quam.
+                        p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi ab accusamus, repellendus, facere ea amet perspiciatis ex possimus consectetur minus architecto unde neque ratione expedita doloribus iusto quidem optio quam.
+                        p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi ab accusamus, repellendus, facere ea amet perspiciatis ex possimus consectetur minus architecto unde neque ratione expedita doloribus iusto quidem optio quam.
+                        p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi ab accusamus, repellendus, facere ea amet perspiciatis ex possimus consectetur minus architecto unde neque ratione expedita doloribus iusto quidem optio quam.
+                        p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi ab accusamus, repellendus, facere ea amet perspiciatis ex possimus consectetur minus architecto unde neque ratione expedita doloribus iusto quidem optio quam.

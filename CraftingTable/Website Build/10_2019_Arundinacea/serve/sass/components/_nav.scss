@@ -1,0 +1,20 @@
+//==========================
+//  navigation style Start
+//==========================
+nav{
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Raleway', Arial;
+    z-index: 99;
+    width: 100%;
+    .navbar-nav{
+        .nav-item{
+            a{
+                color: #000;
+                &:hover{
+                    color: red;
+                }
+            }
+        }
+    }
+}
