@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="index.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div class="element_on_main_page">Replace me, please.</div>
+    <button class="the_replacer">Replace them.</button>
+    <script src="index.js"></script>
+</body>
+
+<script>
+    document.querySelector(".the_replacer").addEventListener("click", () => {
+        fetch("https://wallpapercave.com/new-wallpaper-downlode")
+            .then((response) => response.text())
+            .then((text) => {
+                const otherDoc = document.implementation.createHTMLDocument("Foo").documentElement;
+                otherDoc.innerHTML = text;
+                document.querySelector(".element_on_main_page").textContent = otherDoc.querySelector("#albuminfo").textContent;
+            });
+    });
+</script>
+
+</html>

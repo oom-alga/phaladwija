@@ -76,6 +76,56 @@ nav {
       .owl-carousel-index-header .owl-dots button.owl-dot.active {
         background-color: red; }
 
+.owl-carousel-basic {
+  position: relative; }
+  .owl-carousel-basic .owl-nav {
+    position: absolute;
+    bottom: 0;
+    left: 15%; }
+    .owl-carousel-basic .owl-nav span {
+      color: #000;
+      text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+      mix-blend-mode: screen;
+      font-size: 150px;
+      padding: 10px; }
+
+.owl-carousel-work {
+  position: relative;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/1/19/OYO_Rooms_%28logo%29.png");
+  background-size: 100%;
+  background-position: center; }
+  .owl-carousel-work img {
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222); }
+    .owl-carousel-work img.desc {
+      position: absolute;
+      top: 0; }
+  .owl-carousel-work .owl-nav {
+    position: absolute;
+    bottom: 0;
+    left: 10%; }
+    .owl-carousel-work .owl-nav button {
+      background-color: red; }
+    .owl-carousel-work .owl-nav span {
+      color: #000;
+      text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+      mix-blend-mode: screen;
+      font-size: 25vw;
+      padding-left: 10px; }
+
+#about {
+  position: relative; }
+  #about .slide-scroll {
+    position: absolute;
+    bottom: 30px; }
+
+#text-me .title {
+  color: white; }
+
+#text-me p {
+  line-height: 250%;
+  font-size: 24px; }
+
 .load-page img {
   position: absolute;
   opacity: 0;
@@ -199,16 +249,25 @@ body::-webkit-scrollbar-thumb {
   bottom: 0;
   margin: auto;
   z-index: -1; }
-
-.grid {
-  top: 0;
-  height: 100vh;
-  width: 100%; }
-  .grid .col-lg-3 {
+  .line-thumb .grid {
+    top: 0;
     height: 100vh;
-    border-left: 1px solid rgba(0, 0, 0, 0.3); }
-    .grid .col-lg-3:last-child {
-      border-right: 1px solid rgba(0, 0, 0, 0.3); }
+    width: 100%; }
+    .line-thumb .grid .col-lg-3 {
+      height: 100vh;
+      border-left: 1px solid rgba(0, 0, 0, 0.05); }
+      .line-thumb .grid .col-lg-3:last-child {
+        border-right: 1px solid rgba(0, 0, 0, 0.05); }
+
+.owl-carousel-basic {
+  background-color: red; }
+  .owl-carousel-basic .item {
+    background-color: green;
+    transition: all 2s;
+    height: 2px; }
+  .owl-carousel-basic .active.center .item {
+    background-color: yellow;
+    height: 300px; }
 
 header.video {
   position: relative;

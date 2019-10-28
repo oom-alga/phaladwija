@@ -71,3 +71,47 @@
         }
     }
 }
+.owl-carousel-basic{
+    position: relative;
+    .owl-nav{
+        position: absolute;
+        bottom: 0;
+        left: 15%;
+        span{
+            color: #000;
+            text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+            mix-blend-mode: screen;
+            font-size: 150px;
+            padding: 10px;
+        }
+    }
+}
+.owl-carousel-work{
+    position: relative;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/1/19/OYO_Rooms_%28logo%29.png');
+    background-size: 100%;
+    background-position: center;
+    img{
+        -webkit-filter: drop-shadow(5px 5px 5px #222);
+        filter:         drop-shadow(5px 5px 5px #222); 
+        &.desc{
+            position: absolute;
+            top: 0;
+        }
+    }
+    .owl-nav{
+        position: absolute;
+        bottom: 0;
+        left: 10%;
+        button{
+            background-color: red;
+        }
+        span{
+            color: #000;
+            text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+            mix-blend-mode: screen;
+            font-size: 25vw;
+            padding-left: 10px;
+        }
+    }  
+}

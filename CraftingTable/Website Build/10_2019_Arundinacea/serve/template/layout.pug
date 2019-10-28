@@ -4,6 +4,11 @@ html(lang='en')
     include components/_head.pug
     
     body
+      .container.line-thumb
+          .grid
+              .row.justify-content-center
+                  each val in[1, 2, 3, 4]
+                      .col-lg-3
       .header-scroll
         .progress-container
           #progressBar.progress-bar

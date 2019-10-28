@@ -78,23 +78,22 @@ window.onscroll = function () {
 
 // owl Slider
 function owl() {
-  $('.owl-carousel-basic').owlCarousel({
-    loop:true,
-    margin:30,
-    nav:true,
-    responsive:{
-        0:{
-            items:1
-        },
-        600:{
-            items:2
-        }
-    }
-  });
   $('.owl-carousel-index-header').owlCarousel({
     loop:true,
     nav:true,
     items:1
+  });
+  $('.owl-carousel-work').owlCarousel({
+    loop:true,
+    nav:true,
+    items:1
+  });
+  $('.owl-carousel-basic').owlCarousel({
+    loop:false,
+    margin:10,
+    nav:true,
+    center: true,
+    items:2
   });
 }
 

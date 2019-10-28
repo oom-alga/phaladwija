@@ -1,0 +1,21 @@
+//==========================
+//  Selector and Page About style Start
+//==========================
+#about{
+    // background-color: red;
+    position: relative;
+    .slide-scroll{
+        position: absolute;
+        bottom: 30px;
+        // opacity: 0.2;
+    }
+}
+#text-me{
+    .title{
+        color: white;
+    }
+    p{
+        line-height: 250%;
+        font-size: 24px;
+    }
+}

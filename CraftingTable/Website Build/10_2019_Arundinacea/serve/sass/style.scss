@@ -8,10 +8,18 @@ body{
 }
 a{
     text-decoration: none;
+    
 }
 
 @import 'components/_nav';
 @import 'components/_owl';
+
+
+
+// Selector and Page Style 
+@import 'pages/_about';
+
+
 
 .load-page{
     img{
@@ -168,20 +176,33 @@ width: 100%;
     bottom: 0;
     margin: auto;
     z-index: -1;
-}
-.grid{
-    top: 0;
-    height: 100vh;
-    width: 100%;
-    .col-lg-3{
+    .grid{
+        top: 0;
         height: 100vh;
-        border-left: 1px solid rgba(0, 0, 0, .3);
-        &:last-child{
-            border-right: 1px solid rgba(0, 0, 0, .3);
+        width: 100%;
+        .col-lg-3{
+            height: 100vh;
+            border-left: 1px solid rgba(0, 0, 0, .05);
+            &:last-child{
+                border-right: 1px solid rgba(0, 0, 0, .05);
+            }
         }
     }
 }
-
+.owl-carousel-basic{
+    background-color: red;
+    .item{
+        background-color: green;
+        transition: all 2s;
+        height: 2px;
+    }
+    .active.center{
+        .item{
+            background-color: yellow;
+            height: 300px;
+        }
+    }
+}
 header{
     &.video{
         &::after{
