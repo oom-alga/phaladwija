@@ -113,6 +113,18 @@ nav {
       font-size: 25vw;
       padding-left: 10px; }
 
+.owl-carousel-services .item img {
+  background-color: red;
+  -moz-box-shadow: inset 0 0 100px #ffffff;
+  -webkit-box-shadow: inset 0 0 100px #ffffff;
+  box-shadow: inset 0 0 100px #ffffff; }
+
+.owl-carousel-services.owl-grab .item img {
+  transition: all 0.5s;
+  -moz-box-shadow: inset 0 0 100px #ffffff;
+  -webkit-box-shadow: inset 0 0 100px #ffffff;
+  box-shadow: inset 0 0 100px #ffffff; }
+
 #about {
   position: relative; }
   #about .slide-scroll {

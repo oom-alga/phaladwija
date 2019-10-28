@@ -64,7 +64,22 @@ block main
                                     img.img-fluid.background(src="https://www.wvth.nl//img/TM-02-min.png", alt="")
                                     img.img-fluid.desc(src="https://www.wvth.nl//img/TM-04-min.png", alt="")
             
-           
+            #services
+                .container
+                    .row.my-5
+                        .col-lg-9.wrap-parallax
+                            .owl-carousel.owl-carousel-services.w-100
+                                each item in [1, 2, 3, 4, 5]
+                                    .item.hover-fade-in-overlay.hover-color
+                                        img(src="https://r1.ilikewallpaper.net/iphone-x-wallpapers/download/74619/nightlight-iphone-x-wallpaper-ilikewallpaper_com.jpg", alt="")
+                                        .overlay-50
+                                            .overlay-container
+                                                p.display-7.text-light.my-auto.text-uppercase.lp-1.img-fluid.desc It is a butterfly!
+                        .col-lg-3.my-auto
+                            h1 Hi, meetCure.
+                            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, nisi sed quidem minus, tempora in assumenda nostrum quam illum, eos neque hic suscipit praesentium nesciunt omnis non quod! Voluptate, ut!
+                        
+                        
             .container
                 h1.my-4 Welcome to Modern Business
                 .row

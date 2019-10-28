@@ -115,3 +115,24 @@
         }
     }  
 }
+.owl-carousel-services{
+    .item{
+        img{
+            background-color: red;
+            -moz-box-shadow:    inset 0 0 100px #ffffff;
+            -webkit-box-shadow: inset 0 0 100px #ffffff;
+            box-shadow:         inset 0 0 100px #ffffff;
+        }
+    }
+    &.owl-grab{
+        // background-color: red;
+        .item{
+            img{
+                transition: all 0.5s;
+                -moz-box-shadow:    inset 0 0 100px #ffffff;
+                -webkit-box-shadow: inset 0 0 100px #ffffff;
+                box-shadow:         inset 0 0 100px #ffffff;
+            }
+        }
+    }
+}

@@ -95,6 +95,12 @@ function owl() {
     center: true,
     items:2
   });
+  $('.owl-carousel-services').owlCarousel({
+    loop:false,
+    margin:30,
+    nav:false,
+    items:3
+  });
 }
 
 
