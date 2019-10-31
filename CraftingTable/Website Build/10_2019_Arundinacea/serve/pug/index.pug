@@ -3,7 +3,7 @@ extends ../template/layout.pug
 
 
 block main
-    .barba-container(data-namespace="OwlCarousel")
+    .barba-container(data-namespace="homepage")
         article
             header
                 .owl-carousel.owl-carousel-index-header.hover-color
@@ -13,7 +13,8 @@ block main
                                 .col-lg-12.wrap-parallax.text-right
                                     h1.title.font-weight-bold.position-absolute Plannica
                                     img.background.img-fluid(src="https://www.wallpaperup.com/uploads/wallpapers/2014/12/12/551581/9d61d305d4362e8796737a5b52fbbf1b-1000.jpg", alt="")
-                                    button.desc.btn.btn-dark wooow
+                                    button.desc.btn.btn-dark wooowss
+                                
             #about
                 .container-fluid
                     p.display-1.slide-scroll.font-weight-bolder.text-white CAHN WILSON
@@ -23,6 +24,7 @@ block main
                         .col-lg-4.pt-5.my-auto
                             blockquote.blockquote.font-weight-light Legendary brands create products that draw on their most powerful natures and strengths. Wolf&Whale is a digital design consultancy that helps brands discover what will make them more memorable, impactful, and profitable.
                                 footer.blockquote-footer From WWF's website
+            
             #work
                 .container 
                     .row.justify-content-start.p-5.my-5
@@ -54,8 +56,7 @@ block main
                         .col-lg-6
                             p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur suscipit odit delectus error incidunt, consequatur quia, optio esse corrupti sapiente amet quis sit laborum in. Autem eius ex saepe! Dignissimos!
                             p Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, inventore ullam ea consequuntur debitis porro itaque rerum sunt ut, repellendus saepe, eveniet dolor? Et at molestias quas quasi optio error! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum ipsam facere voluptate cumque voluptates provident nemo amet illum? Aliquam odio sunt ducimus velit est neque pariatur quibusdam incidunt porro asperiores.
-                            p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum magni eaque nobis pariatur ea maxime! Ad, voluptas alias incidunt consequatur hic vero asperiores. Accusantium sunt delectus maxime sed dignissimos rem!
-                
+                            p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum magni eaque nobis pariatur ea maxime! Ad, voluptas alias incidunt consequatur hic vero asperiores. Accusantium sunt delectus maxime sed dignissimos rem!               
                 .container.wrap-parallax
                     .row.justify-content-end
                         .owl-carousel.owl-carousel-work
@@ -66,64 +67,27 @@ block main
             
             #services
                 .container
-                    .row.my-5
+                    .row
                         .col-lg-9.wrap-parallax
                             .owl-carousel.owl-carousel-services.w-100
                                 each item in [1, 2, 3, 4, 5]
                                     .item.hover-fade-in-overlay.hover-color
                                         img(src="https://r1.ilikewallpaper.net/iphone-x-wallpapers/download/74619/nightlight-iphone-x-wallpaper-ilikewallpaper_com.jpg", alt="")
-                                        .overlay-50
-                                            .overlay-container
-                                                p.display-7.text-light.my-auto.text-uppercase.lp-1.img-fluid.desc It is a butterfly!
+                                        .overlay-100
+                                            img.fixed-bottom.img-fluid.desc(src="http://esensifiksi.com/tf/akar/assets/img/team/2.png", alt="")
                         .col-lg-3.my-auto
                             h1 Hi, meetCure.
-                            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, nisi sed quidem minus, tempora in assumenda nostrum quam illum, eos neque hic suscipit praesentium nesciunt omnis non quod! Voluptate, ut!
+                            p Lorem ipsum dolossr sit amet consectetur adipisicing elit. Nulla, nisi sed quidem minus, tempora in assumenda nostrum quam illum, eos neque hic suscipit praesentium nesciunt omnis non quod! Voluptate, ut!
                         
-                        
-            .container
-                h1.my-4 Welcome to Modern Business
-                .row
-                    each val in [1, 2, 3]
-                        .col-lg-4.mb-4
-                            .card.h-100
-                                h4.card-header Card Title
-                                .card-body
-                                    p.card-text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                .card-footer
-                                    a.btn.btn-primary(href="#") Learn More
-                h1.my-4 Portfolio Heading
-                .row
-                    each vas in [1, 2, 3]
-                        .col-lg-4.col-sm-6.portfolio-item
-                            .card.h-100
-                                a(href="#")
-                                    img.card-img-top(src="http://placehold.it/700x400" alt="")
-                                .card-body
-                                    h4
-                                        a(href="#") Project On
-                                    p.card-text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            #circle
+                .container
+                    .row.justify-content-between
+                        p.display-1.slide-scroll.font-weight-bolder.text-white CAHN WILSON
+                        .col-lg-3
+                            h1 Circle We
+                            p Lorem ipsums dolor sit amet consectetur adipisicing elit. Expedita, architecto deleniti, rem distinctio pariatur iusto eius perferendis veritatis ipsam velit, ex reiciendis minima laudantium magni sapiente! Omnis velit numquam ut.
+                        .col-lg-3.my-auto
+                            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, architecto deleniti, rem distinctio pariatur iusto eius perferendis veritatis ipsam velit, ex reiciendis minima laudantium magni sapiente! Omnis velit numquam ut.
+                        .col-lg-6.p-0
+                            img.img-fluid(src="https://www.wallpaperup.com/uploads/wallpapers/2018/04/02/1252096/8977a7c9b8705e9eb9ee8effa0c2d566-1400.jpg", alt="")
             
-                .row
-                    .col-lg-6
-                        h2 Modern Business Features
-                        p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat enim nam, maxime ratione sint necessitatibus, at eveniet saepe sed placeat dolorum est quia odio recusandae voluptatum velit maiores cumque expedita.
-                        ul
-                            li 
-                                striong Bootstrap 4
-                            li jQuerys
-                            li Font Awesome
-                            li Work Hard Play hard
-                            li Lorem ipsum dolor sit amet
-                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    .col-lg-6
-                        img.img-fluid.rounded(src="http://placehold.it/700x400" alt="")
-                
-                hr
-
-                .row.mb-4
-                    .col-lg-8
-                        p Lorem ipsum dolor sit amet consectetur adispisicing elit. Facilis, facere nisi? Ad quam ab neque similique cupiditate fugit quae nobis, fugiat, reiciendis minima quasi tenetur blanditiis alias error. Laudantium, vitae. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    .col-lg-4
-                        a.btn.btn-lg.btn-secondary.btn-block(href="#") Call to Action
-                
-                hr

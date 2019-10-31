@@ -1,8 +1,8 @@
 initBarba();
 
 // SmoothScroll
-// new SmoothScroll(document,50,20)
-new SmoothScroll(document,50,15)
+
+new SmoothScroll(document,50,15)  // new SmoothScroll(document,50,20)
 function SmoothScroll(target, speed, smooth) {
 	if (target === document)
 		target = (document.scrollingElement 
@@ -61,8 +61,6 @@ function SmoothScroll(target, speed, smooth) {
 		);
 	}()
 }
-
-
 // progressBarScroll
 function progressBarScroll() {
   let winScroll   = document.body.scrollTop || document.documentElement.scrollTop,
@@ -70,11 +68,9 @@ function progressBarScroll() {
       scrolled    = (winScroll / height) * 100;
   document.getElementById("progressBar").style.height = scrolled + "%";
 }
-
 window.onscroll = function () {
   progressBarScroll();
 };
-
 
 // owl Slider
 function owl() {
@@ -102,25 +98,70 @@ function owl() {
     items:3
   });
 }
+function indexPage() {
+  var ctrl = new ScrollMagic.Controller();
+  $(".wrap-parallax").each(function(i) {
+    var outer = $(this).find('.background');
+    var inner = $(this).find('.title');
+    var tk = new TimelineMax();
+    tk.from(outer, 0.5, {scaleX: 0, ease: Expo.easeOut});
+    tk.from(inner, 0.65, { yPercent: 100, ease: Back.easeOut });
+    new ScrollMagic.Scene({
+      triggerElement: this,
+      triggerHook: 0.75
+    })
+      .setTween(tk)
+      .addIndicators() 
+      .addTo(ctrl);
+  });
+
+  $("#about").each(function(i) {
+    var outer = $(this).find('h1');
+    var tk = new TimelineMax();
+    tk.from(outer, 0.65, { yPercent: -20, ease: Back.easeOut });
+    new ScrollMagic.Scene({
+      triggerElement: this,
+      triggerHook: 0.75
+    })
+      .setTween(tk)
+      .addIndicators() 
+      .addTo(ctrl);
+  });
+
+  $(".owl-carousel-basic").each(function(i) {
+    var outer = $(this).find('.item');
+    var tk = new TimelineMax();
+    tk.from(outer, 0.65, { xPercent: 100, ease: Back.easeOut });
+    new ScrollMagic.Scene({
+      triggerElement: this,
+      triggerHook: 0.75
+    })
+      .setTween(tk)
+      .addIndicators() 
+      .addTo(ctrl);
+  });
+}
+
+// parallax image
+function parallax(){
+  $.fn.parallax = function(resistance, mouse) {
+    $el = $(this);
+    TweenLite.to($el, 0.2, {
+      x: -((mouse.clientX - window.innerWidth / 2) / resistance),
+      y: -((mouse.clientY - window.innerHeight / 2) / resistance)
+    });
+  };
+  $(".wrap-parallax").mousemove(function(e) {
+    $(".background", this).parallax(-30, e);
+    $(".title", this).parallax(30, e);
+    $(".desc", this).parallax(25, e);
+  });
+}
 
 
 // scrollMagic
 function scrollMagic() {
   var ctrl = new ScrollMagic.Controller();
-  $(".items-scroll").each(function(i) {
-    var inner = $(this).find(".inner");
-    var outer = $(this).find(".outer");
-    var tl = new TimelineMax();
-    tl.from(outer, 0.25, { scaleX: 0 });
-    tl.from(inner, 0.65, { yPercent: 100, ease: Back.easeOut });
-    new ScrollMagic.Scene({
-      triggerElement: this,
-      triggerHook: 0.15
-    })
-      .setTween(tl)
-      // .addIndicators() 
-      .addTo(ctrl);
-  });
   $(".wrap-parallax").each(function(i) {
     var outer = $(this).find('.background');
     var tk = new TimelineMax();
@@ -135,29 +176,14 @@ function scrollMagic() {
   });
 }
 
+
 function handleAnimations() {
   var Homepage = Barba.BaseView.extend({
     namespace: 'homepage',
     onEnter: function() {
       parallax();
-      console.log("onEnter");
-    },
-    onEnterCompleted: function() {
-      console.log("onEnterCompleted");
-    },
-    onLeave: function() {
-      console.log("onLeave");
-    },
-    onLeaveCompleted: function() {
-      console.log("onLeaveCompleted");
-    }
-  });
-
-  var OwlCarousel = Barba.BaseView.extend({
-    namespace: 'OwlCarousel',
-    onEnter: function() {
       owl();
-      parallax();
+      scrollMagic();
       console.log("onEnter");
     },
     onEnterCompleted: function() {
@@ -168,33 +194,11 @@ function handleAnimations() {
     },
     onLeaveCompleted: function() {
       console.log("onLeaveCompleted");
-    }
-  });
-
-  var ScrollMagic = Barba.BaseView.extend({
-    namespace: 'ScrollMagic',
-    onEnter: function() {
-      scrollMagic();
-      parallax();
-      console.log("onEnter ScrollMagic");
-    },
-    onEnterCompleted: function() {
-      console.log("onEnterCompleted ScrollMagic");
-    },
-    onLeave: function() {
-      console.log("onLeave ScrollMagic");
-    },
-    onLeaveCompleted: function() {
-      console.log("onLeaveCompleted ScrollMagic");
     }
   });
   
   Homepage.init();
-  OwlCarousel.init();
-  ScrollMagic.init();
-
 }
-
 
 // Barba
 function initBarba() {
@@ -228,22 +232,4 @@ function initBarba() {
   handleAnimations();
   Barba.Pjax.cacheEnabled = false;
   Barba.Pjax.start();
-}
-
-
-
-// parallax image
-function parallax(){
-  $.fn.parallax = function(resistance, mouse) {
-    $el = $(this);
-    TweenLite.to($el, 0.2, {
-      x: -((mouse.clientX - window.innerWidth / 2) / resistance),
-      y: -((mouse.clientY - window.innerHeight / 2) / resistance)
-    });
-  };
-  $(".wrap-parallax").mousemove(function(e) {
-    $(".background", this).parallax(-30, e);
-    $(".title", this).parallax(30, e);
-    $(".desc", this).parallax(25, e);
-  });
 }

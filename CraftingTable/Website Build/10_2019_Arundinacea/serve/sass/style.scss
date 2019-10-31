@@ -6,14 +6,16 @@
 body{
     background-color: #f5f5f5;
 }
-a{
+button, button:active, button:hover, button:focus,
+input, input:active, input:hover, input:focus,
+a, a:active, a:hover, a:focus{
     text-decoration: none;
-    
+    outline:none;
 }
 
+@import 'components/_variables';
 @import 'components/_nav';
 @import 'components/_owl';
-
 
 
 // Selector and Page Style 
@@ -189,20 +191,7 @@ width: 100%;
         }
     }
 }
-.owl-carousel-basic{
-    background-color: red;
-    .item{
-        background-color: green;
-        transition: all 2s;
-        height: 2px;
-    }
-    .active.center{
-        .item{
-            background-color: yellow;
-            height: 300px;
-        }
-    }
-}
+
 header{
     &.video{
         &::after{
