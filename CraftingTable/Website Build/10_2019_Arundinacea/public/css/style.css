@@ -133,6 +133,10 @@ nav {
     position: absolute;
     bottom: 30px; }
 
+#about .title {
+  background-color: red;
+  width: 100%; }
+
 #text-me .title {
   color: white; }
 

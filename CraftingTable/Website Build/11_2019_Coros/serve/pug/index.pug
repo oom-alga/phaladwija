@@ -1,0 +1,193 @@
+//- layout.pug
+extends ../template/layout.pug
+
+
+block main
+    .barba-container(data-namespace="homepage")
+        article
+            .header-text.container-fluid.owl-carousel.owl-carousel-indexHeader
+                .row.justify-content-end.soo.item.align-items-center.min-vh-100
+                    .col-lg-2
+                    .col-lg-10  
+                        h1.text-uppercase The standard Lorem Ipsum passage
+                        p.text-muted Written by Cicero in 45 BC
+                .row.justify-content-end.soo.item.align-items-center.min-vh-100
+                    .col-lg-2
+                    .col-lg-10  
+                        h1.text-uppercase The standard Lorem Ipsum passage
+                        p.text-muted Written by Cicero in 45 BC
+                .row.justify-content-end.soo.item.align-items-center.min-vh-100
+                    .col-lg-2
+                    .col-lg-10  
+                        h1.text-uppercase The standard Lorem Ipsum passage
+                        p.text-muted Written by Cicero in 45 BC
+                .row.justify-content-end.soo.item.align-items-center.min-vh-100
+                    .col-lg-2
+                    .col-lg-10  
+                        h1.text-uppercase The standard Lorem Ipsum passage
+                        p.text-muted Written by Cicero in 45 BC
+                .row.justify-content-end.soo.item.align-items-center.min-vh-100
+                    .col-lg-2
+                    .col-lg-10  
+                        h1.text-uppercase The standard Lorem Ipsum passage
+                        p.text-muted Written by Cicero in 45 BC
+
+            #about.my-5.py-5
+                .bg-text
+                .container
+                    .row.justify-content-end
+                        .col-lg-10  
+                            p.text-muted Your vision. Unrestricted.
+                    .row.justify-content-end
+                            .row
+                                .col-lg-3
+                                .col-lg-4.pt-5
+                                    p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+                                .col-lg-5
+                                    h1.px-5 rationally -- encounter consequences
+            #project.my-5.py-5
+                .container-fluid
+                    .row.justify-content-end
+                        .col-lg-10
+                            h1 de Finibus orum et Malorum
+                    .row.justify-content-end
+                        .col-lg-10.content.mt-n5
+                            .row
+                                .col-lg-9.col-md-push-2
+                                    img.img-fluid(src="https://www.wallpaperup.com/uploads/wallpapers/2013/03/21/55775/27d37194d7a47bbd4efb42d66ed54b54-1000.jpg", alt="")
+                                .col-lg-3.mt-8.col-md-pull-8
+                                    p.text-muted 1914 translation by H. Rackham
+                                    .title 
+                                        p Workflow
+            #projectList
+                .container
+                    .row.justify-content-end
+                        .col-lg-10
+                            h2 rationally
+                    .row.justify-content-end
+                        .col-lg-3
+                            h4 Weyerhauser. Seattle, WA.
+                        .col-lg-3   
+                            h4 Brushed. Anodized. Veneer. Powder Coated.
+                        .col-lg-3
+                            h4 Single, Double, and Curved glazed systems
+
+            br
+            br
+            br
+            br
+            br
+            br
+            br
+            br
+            br
+            br
+            br
+            br
+            br
+            br
+            br
+            br
+            br
+            br
+            br
+            br
+            br
+            br
+            br
+            br
+            br
+            br
+            br
+            br
+            br
+            br
+            br
+            br
+            br
+            br
+            br
+            br
+            br
+            br
+            br
+            br
+            br
+            br
+            br
+            
+
+            header
+                #carouselExampleIndicators.carousel.slide(data-ride="carousel")
+                    ol.carousel-indicators
+                        li.active(data-target="#carouselExampleIndicators" data-slide-to="0")
+                        li(data-target="#carouselExampleIndicators" data-slide-to="1")
+                        li(data-target="#carouselExampleIndicators" data-slide-to="2")
+                    .carousel-inner(role="listbox")
+                        .carousel-item.active(style="background-image: url('http://placehold.it/1900x1080')")
+                            .carousel-caption.d-none.d-md-block
+                                h3 First Slides
+                                p This is a description for the first slide.
+                        .carousel-item(style="background-image: url('http://placehold.it/1900x1080')")
+                            .carousel-caption.d-none.d-md-block
+                                h3 First Slide
+                                p This is a description for the second slide.
+                        .carousel-item(style="background-image: url('http://placehold.it/1900x1080')")
+                            .carousel-caption.d-none.d-md-block
+                                h3 First Slide
+                                p This is a description for the third slide.
+                        a.carousel-control-prev(href="#carouselExampleIndicators" role="button" data-slide="prev")
+                            span.carousel-control-prev-icon(aria-hidden="true")
+                            .sr-only Previous
+                        a.carousel-control-next(href="#carouselExampleIndicators" role="button" data-slide="next")
+                            span.carousel-control-next-icon(aria-hidden="true")
+                            .sr-only Next
+            .container-fluid
+                .row.justify-content-end
+                    .col-lg-10
+                        h1.my-4 Welcome to Modern Business
+                        .row 
+                            each val in [1, 2, 3]
+                                .col-lg-4.mb-4
+                                    .card.h-100
+                                        h4.card-header Card Title
+                                        .card-body
+                                            p.card-text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                        .card-footer
+                                            a.btn.btn-primary(href="#") Learn More
+                h1.my-4 Portfolio Heading
+                .row
+                    each vas in [1, 2, 3]
+                        .col-lg-4.col-sm-6.portfolio-item
+                            .card.h-100
+                                a(href="#")
+                                    img.card-img-top(src="http://placehold.it/700x400" alt="")
+                                .card-body
+                                    h4
+                                        a(href="#") Project On
+                                    p.card-text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            
+                .row
+                    .col-lg-6
+                        h2 Modern Business Features
+                        p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat enim nam, maxime ratione sint necessitatibus, at eveniet saepe sed placeat dolorum est quia odio recusandae voluptatum velit maiores cumque expedita.
+                        ul
+                            li 
+                                striong Bootstrap 4
+                            li jQuerys
+                            li Font Awesome
+                            li Work Hard Play hard
+                            li Lorem ipsum dolor sit amet
+                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    .col-lg-6
+                        img.img-fluid.rounded(src="http://placehold.it/700x400" alt="")
+                
+                hr
+
+                .row.mb-4
+                    .col-lg-8
+                        p Lorem ipsum dolor sit amet consectetur adispisicing elit. Facilis, facere nisi? Ad quam ab neque similique cupiditate fugit quae nobis, fugiat, reiciendis minima quasi tenetur blanditiis alias error. Laudantium, vitae. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    .col-lg-4
+                        a.btn.btn-lg.btn-secondary.btn-block(href="#") Call to Action
+                
+                hr

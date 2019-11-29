@@ -128,7 +128,23 @@ function scrollMagic() {
     new ScrollMagic.Scene({
       triggerElement: this,
       triggerHook: 0.5,
-      duration: 250,
+      duration: 350,
+      offset: 250
+    })
+      .setTween(tk)
+      .addIndicators() 
+      .addTo(ctrl);
+  });
+
+  $("#about").each(function(i){
+    var title = $(this).find('.title');
+    var tk = new TimelineMax();
+    // tk.from(title, 1, { yPercent: 300, ease: Back.easeNone });
+    tk.from(title, 1, {width: "25%"});
+    new ScrollMagic.Scene({
+      triggerElement: this,
+      triggerHook: 0.5,
+      duration: 350,
       offset: 250
     })
       .setTween(tk)
