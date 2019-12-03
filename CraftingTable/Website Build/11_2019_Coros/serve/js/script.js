@@ -2,6 +2,11 @@ initBarba();
 
 // SmoothScroll
 // new SmoothScroll(document,50,20)
+
+
+$("#cobaalah").fitText(0.9);
+$(".textBigTitle").fitText(0.97);
+
 new SmoothScroll(document,50,15)
 function SmoothScroll(target, speed, smooth) {
 	if (target === document)
@@ -231,3 +236,5 @@ function parallax(){
     $(".desc", this).parallax(15, e);
   });
 }
+
+

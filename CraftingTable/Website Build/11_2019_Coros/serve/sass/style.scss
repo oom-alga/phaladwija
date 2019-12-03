@@ -10,6 +10,11 @@ body{
     font-family: 'Roboto', sans-serif;  
 }
 button:focus {outline:0 !important;}
+a, p{
+    margin: 0;
+    letter-spacing: 0;
+    padding: 0;
+}
 a {
     text-decoration: none;
     &:hover{
@@ -17,8 +22,6 @@ a {
     }
 }
 @mixin text-big-title($light: false){
-    font-size: 120px;
-    line-height: 120%;
     letter-spacing: 22px;
     font-weight: bold;
     -webkit-text-stroke-width: 5px;
@@ -32,14 +35,12 @@ a {
 }
 @mixin text-title(){
     font-family: 'Roboto', sans-serif;  
-    font-size: 72px;
     -webkit-text-stroke-width: 3px;
     -webkit-text-stroke-color: #212529;
     text-transform: uppercase;
 }
 @mixin text-content(){
     font-family: 'Reem Kufi', sans-serif;  
-    font-size: 18px;
     line-height: 150%;
 }
 @mixin underline(){
@@ -49,17 +50,21 @@ a {
     background-repeat: no-repeat;
     background-position: 0 50%;
     transition: background .5s;
-    padding:{
+    padding{
         left:  2%;
         right:  2%;
     }
-    &:hover, {
+    &:hover{
         background-size: 150% 30%;
         background-image: linear-gradient(to right, yellow 0, yellow 100%);
     }
 }
 @mixin space(){
     letter-spacing: 12px;
+}
+@mixin vertical-center {
+    display: flex;
+    align-items: center;
 }
 
 // body {
@@ -91,7 +96,6 @@ a {
             @include underline;
             @include space;
             margin: 10px;
-            font-size: 30px;
             padding: 30px;
         }
     }
@@ -100,8 +104,8 @@ a {
 
 // nav
 .menus{
+    display: none;
     position: fixed;
-    width: 100%;
     height: 100vh;
     z-index: 3;
     .navbar-fixed-left {
@@ -151,7 +155,6 @@ a {
     }
     p{
         @include space;
-        font-size: 18px;     
         font-family: 'Reem Kufi', sans-serif;  
     }
 }
@@ -183,87 +186,63 @@ a {
     }
 }
 #projectList{
-    background-image: url(https://www.wallpaperup.com/uploads/wallpapers/2013/03/21/55775/27d37194d7a47bbd4efb42d66ed54b54-1000.jpg);
-    min-height: 550px;
-    background-position: center;
-    background-size: cover;
-    h2{
-        @include text-title();
-    }
-    h4{
-        @include underline;
-    }
-}
-
-
-
-
-.items-scroll{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    text-transform: uppercase;
-    font-weight: 700;
-    .inner {
-        position: relative; 
-    }
-    .outer {
-        border-bottom: solid white 2px;
-        overflow: hidden;
-    }
-    &:nth-child(1) {
-        background-color: #84c186;
-    }
-    &:nth-child(2) {
-        background-color: #8b6c4c;
-    }
-    &:nth-child(3) {
-        background-color: #39a3ee;
-    }
-    &:nth-child(4) {
-        background-color: #ef9144;
-    }
-    &:nth-child(5) {
-        background-color: #cd58eb;
-    }
-    &:nth-child(6) {
-        background-color: #b84b4b;
-    }
-}
-.wrap-parallax{
+    background-color: #c4c4c4;
+    // background-color: purple;
     position: relative;
-    width: 100%;
-    height: 100%;
-    .background{
-        transform: scaleX(1);
-        transform-origin: right;
-    }
-    .item-1{
-        position: absolute;
-        top: 20px;
-        left: 0;
-        h1{
-            color: black;
-            text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
-            font-weight: bold;
-            mix-blend-mode: screen;
+    z-index: 4;
+    .items{
+        height: 80vh;
+        position: relative;
+        .img-bg{
+            background-color: green;
+            width: 100%;
+            height: 90%;
+            margin-top: 4%;
+            position: absolute;
+            background-image: url(../image/dummy.jpg);
+            background-position: center;
+            background-size: cover;
         }
-        p{
-            color: #000;
-            transition: all 0.2s;
-            transform-origin: bottom;
+        h2{
+            @include text-big-title();
         }
-    }
-    .item-2{
-        position: absolute;
-        top: 20px;
-        left: 0;
+        .content{
+            height: 50vh;
+            h4{
+                a{
+                    @include underline;
+                }  
+            }
+        }
     }
 }
+#brand{
+    h2{
+        @include text-big-title();
+    }
+}
+#menus{
+    min-height: 100vh;
+    background-color: red;
+    @include vertical-center();
+    h3{
+        background-color: yellow;
+        @include text-big-title();
+        display: inline-block;
+    }
+}
+footer{
+    background-color: green;
+    .backTop, .copyright{
+        margin-top: 30px;
+        background-color: purple;
+    }
+    a{
+        background-color: blue;
+    }
+}
+
+
 
 .header-scroll {
     position: fixed;
@@ -308,35 +287,8 @@ body::-webkit-scrollbar-thumb {
     z-index: 100;
 }
 
-.progress-container {
-    background-color: rgba(150, 150, 150, 0.6);
-    height: 100px;
-    width: 2px;
-}
 
-.progress-bar {
-background-color: #2196f3;
-height: 0%;
-width: 100%;
-}
 
-.black-fade-in{
-    background-color: red;
-}
-.carousel-item {
-    height: 65vh;
-    min-height: 300px;
-    background: no-repeat center center scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
-.portfolio-item {
-    margin-bottom: 30px;
-}
-  
 .line-thumb{
     position: fixed;
     top: 0;
@@ -357,59 +309,4 @@ width: 100%;
             border-right: 1px solid rgba(0, 0, 0, .3);
         }
     }
-}
-
-header{
-    position: relative;
-    z-index: 4;
-    box-shadow: 0px 0px 50px 50px white;
-    &.video{
-        &::after{
-            content: " ";
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            background-color: rgba($color: #000000, $alpha: 0.5);
-        }
-        position: relative;
-        background-color: black;
-        height: 75vh;
-        min-height: 25rem;
-        width: 100%;
-        overflow: hidden;
-        video{
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
-            z-index: 0;
-            -ms-transform: translateX(-50%) translateY(-50%);
-            -moz-transform: translateX(-50%) translateY(-50%);
-            -webkit-transform: translateX(-50%) translateY(-50%);
-            transform: translateX(-50%) translateY(-50%);
-        }
-        .container{
-            position: relative;
-            z-index: 2;
-        }
-    }
-}
-  
-
-#progress-bar {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 10px;
-    height: 100vh;
-    z-index: 20;
-    background: rgba(103,58,183,1);
-    will-change: transform;
-    transform: scaleY(0);
-    transform-origin: 0px 0px;
 }
