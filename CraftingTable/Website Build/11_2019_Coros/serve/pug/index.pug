@@ -5,61 +5,55 @@ extends ../template/layout.pug
 block main
     .barba-container(data-namespace="homepage")
         article
-            .header-text.container-fluid.owl-carousel.owl-carousel-indexHeader
+            .header-text.container.owl-carousel.owl-carousel-indexHeader
                 .row.justify-content-end.soo.item.align-items-center.min-vh-100
-                    .col-lg-2
-                    .col-lg-10  
+                    .col-lg-12
                         h1.textBigTitle.text-uppercase The standard Lorem Ipsum passage
                         p.text-muted Written by Cicero in 45 BC
                 .row.justify-content-end.soo.item.align-items-center.min-vh-100
-                    .col-lg-2
-                    .col-lg-10  
+                    .col-lg-12
                         h1.textBigTitle.text-uppercase The standard Lorem Ipsum passage
                         p.text-muted Written by Cicero in 45 BC
                 .row.justify-content-end.soo.item.align-items-center.min-vh-100
-                    .col-lg-2
-                    .col-lg-10  
+                    .col-lg-12
                         h1.textBigTitle.text-uppercase The standard Lorem Ipsum passage
                         p.text-muted Written by Cicero in 45 BC
                 .row.justify-content-end.soo.item.align-items-center.min-vh-100
-                    .col-lg-2
-                    .col-lg-10  
+                    .col-lg-12
                         h1.textBigTitle.text-uppercase The standard Lorem Ipsum passage
                         p.text-muted Written by Cicero in 45 BC
                 .row.justify-content-end.soo.item.align-items-center.min-vh-100
-                    .col-lg-2
-                    .col-lg-10  
+                    .col-lg-12
                         h1.textBigTitle.text-uppercase The standard Lorem Ipsum passage
                         p.text-muted Written by Cicero in 45 BC
 
             #about.my-5.py-5
                 .container
-                    .row.justify-content-end
-                        .col-lg-10  
+                    .row
+                        .col-lg-12
                             p.text-muted Your vision. Unrestricted.
                     .row.justify-content-end
-                            .row
-                                .col-lg-3
-                                .col-lg-4.pt-5
-                                    p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
-                                .col-lg-5
-                                    h1.px-5 rationally -- encounter consequences
+                        .col-lg-4.pt-5
+                            p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+                        .col-lg-5
+                            h1.px-5 Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure dolore perspiciatis, 
             #project.my-5.py-5
-                .container-fluid
-                    .row.justify-content-end
-                        .col-lg-10
-                            h1.textBigTitle de Finibus orum et Malorum
-                    .row.justify-content-end
-                        .col-lg-10.content.mt-n5
+                .container
+                    .row
+                        .col-lg-12.text-right
+                            h3.textBigTitle Lorem ipsum dolor sit amet.
+            #projectItem
+                #itemSlide
+                    each titleProject in ['rude', 'monkey', 'dance', 'popow', 'mels']
+                        .item.container-fluid
                             .row
-                                .col-lg-9.col-md-push-2
-                                    img.img-fluid(src="image/dummy.jpg", alt="")
-                                .col-lg-3.mt-8.col-md-pull-8
-                                    p.text-muted 1914 translation by H. Rackham
-                                    .title 
-                                        p Workflow
+                                .col-lg-8.col-lg-push-3
+                                    img.img-fluid(src="image/dummy.jpg", alt="woownan")
+                                .col-lg-4.col-lg-pull-7.text-right.pt-5.mt-5
+                                    p Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    h4.textTitle= titleProject
             #projectList
-                each val in ['zero', 'utility', 'element’s']
+                each val in ['zero', 'utility', 'elem']
                     .items.my-7
                         .container-fluid.img-bg
                         .container                    
@@ -98,26 +92,28 @@ block main
                                 .col-lg-2
                                     img.img-fluid(src="image/dummy.jpg", alt="woownan")
             #menus  
-                .container-fluid
-                    .row.vertical-center
-                        h3.display-2 Musea
-                        h3.display-2 Own
-                        h3.display-2 exhibi
+                .container-fluid.owl-carousel.owl-carousel-indexBottomMenu
+                    .row.vertical-center.textBigTitle
+                        .item   
+                            .col-lg-12
+                                h3.display-2.px-5(data-bgcolor="#DCC6E0") Musea
+                    .row.vertical-center.textBigTitle
+                        .item   
+                            .col-lg-12
+                                h3.display-2.px-5(data-bg="image/dummy.jpg") Own
 
-            #cowoba
-                .container
-                    .row
-                        .col-lg-12
-                            h1#cobaalah Lorems ipssum dolor sit amet consectetur, adipisicing elit. Ratione illum est nesciunt, dolores molestiae molestias? Necessitatibus, amet dolorum suscipit quis et optio perspiciatis voluptate reiciendis veritatis ipsa deserunt possimus delectus.
-            footer
-                .container-fluid
-                    .row
-                        .col-lg-2.backTop
-                            p Back Top
-                        .col-lg-8.text-center.copyright
-                            p © Copyright Kelas. All-Right Reserved
-                        .col-lg-2
-                            p share
-                            a(href="#") Fb. Ig. tw.
+                    .row.vertical-center.textBigTitle
+                        .item   
+                            .col-lg-12
+                                h3.display-2.px-5(data-bgcolor="#FDE3A7") exhibi
 
-            
+                    .row.vertical-center.textBigTitle
+                        .item   
+                            .col-lg-12
+                                h3.display-2.px-5(data-bg="image/dummy.jpg") Museas
+
+                    .row.vertical-center.textBigTitle
+                        .item   
+                            .col-lg-12
+                                h3.display-2.px-5(data-bgcolor="#E0C6C6") Owns
+

@@ -4,8 +4,8 @@ initBarba();
 // new SmoothScroll(document,50,20)
 
 
-$("#cobaalah").fitText(0.9);
 $(".textBigTitle").fitText(0.97);
+$(".textTitle").fitText(0.3);
 
 new SmoothScroll(document,50,15)
 function SmoothScroll(target, speed, smooth) {
@@ -89,6 +89,11 @@ function owl() {
     items:1,
     nav:true,
     navText: ['Next', 'Prev']
+  });
+  $('.owl-carousel-indexBottomMenu').owlCarousel({
+    items:4,
+    center:true,
+    autoWidth:true,
   });
 }
 
@@ -238,3 +243,36 @@ function parallax(){
 }
 
 
+$(function () { // wait for document ready
+  
+  var controller = new ScrollMagic.Controller();
+  
+  var horizontalSlide = new TimelineMax()
+  // animate panels
+  .to("#itemSlide", 1,   {x: "-20%"})	
+  .to("#itemSlide", 1,   {x: "-40%"})
+  .to("#itemSlide", 1,   {x: "-60%"})
+  .to("#itemSlide", 1,   {x: "-80%"})
+
+
+  // create scene to pin and link animation
+  new ScrollMagic.Scene({
+    triggerElement: "#projectItem",
+    triggerHook: "onLeave",
+    duration: "500%"
+  })
+    .setPin("#projectItem")
+    .setTween(horizontalSlide)
+    .addIndicators({name: "1 (duration: 300)"})
+    .addIndicators() // add indicators (requires plugin)
+    .addTo(controller);
+});
+
+
+$("#menus h3").hover(function() {
+	$this = $(this);
+	$("#menus").css('background-color', function() {
+		return $this.data('bgcolor');
+	});
+	$("#menus").css("background-image", "url(" + $(this).data("bg") + ")");
+});

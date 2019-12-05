@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:200,400,700,900");
 @import url("https://fonts.googleapis.com/css?family=Reem+Kufi:300,400,700,900");
 body {
+  height: 100%;
   background-color: #c4c4c4;
   font-family: 'Roboto', sans-serif; }
 
@@ -35,7 +36,7 @@ a {
       transition: background .5s;
       letter-spacing: 12px;
       margin: 10px;
-      padding: 30px; }
+      background-color: red; }
       .owl-carousel-indexHeader .owl-nav button.owl-next padding,
       .owl-carousel-indexHeader .owl-nav button.owl-prev padding {
         left: 2%;
@@ -118,7 +119,7 @@ a {
   -webkit-text-stroke-color: #212529;
   text-transform: uppercase; }
 
-#project h1 {
+#project h3 {
   letter-spacing: 22px;
   font-weight: bold;
   -webkit-text-stroke-width: 5px;
@@ -128,11 +129,22 @@ a {
   text-transform: uppercase;
   -webkit-text-stroke-color: #ffffff; }
 
-#project .content .title {
-  font-family: 'Roboto', sans-serif;
-  -webkit-text-stroke-width: 3px;
-  -webkit-text-stroke-color: #212529;
-  text-transform: uppercase; }
+#projectItem {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  perspective: 1000;
+  position: relative; }
+  #projectItem #itemSlide {
+    width: 500%;
+    height: 100vh; }
+    #projectItem #itemSlide .item {
+      display: flex;
+      align-items: center;
+      height: 100vh;
+      width: calc(100% / 5);
+      float: left;
+      position: relative; }
 
 #projectList {
   background-color: #c4c4c4;
@@ -184,12 +196,14 @@ a {
   text-transform: uppercase; }
 
 #menus {
-  min-height: 100vh;
   background-color: red;
+  min-height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-color: purple;
   display: flex;
   align-items: center; }
   #menus h3 {
-    background-color: yellow;
     letter-spacing: 22px;
     font-weight: bold;
     -webkit-text-stroke-width: 5px;
@@ -199,13 +213,8 @@ a {
     text-transform: uppercase;
     display: inline-block; }
 
-footer {
-  background-color: green; }
-  footer .backTop, footer .copyright {
-    margin-top: 30px;
-    background-color: purple; }
-  footer a {
-    background-color: blue; }
+footer .backTop, footer .copyright {
+  margin-top: 20px; }
 
 .header-scroll {
   position: fixed;

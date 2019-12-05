@@ -1,0 +1,97 @@
+//- layout.pug
+extends ../template/layout.pug
+
+
+block main
+    .barba-container(data-namespace="homepage")
+        article
+            .header-text.container-fluid.owl-carousel.owl-carousel-indexHeader
+                .row.justify-content-end.soo.item.align-items-center.min-vh-100
+                    .col-lg-2
+                    .col-lg-10  
+                        h1.textBigTitle.text-uppercase The standard Lorem Ipsum passage
+                        p.text-muted Written by Cicero in 45 BC
+                .row.justify-content-end.soo.item.align-items-center.min-vh-100
+                    .col-lg-2
+                    .col-lg-10  
+                        h1.textBigTitle.text-uppercase The standard Lorem Ipsum passage
+                        p.text-muted Written by Cicero in 45 BC
+                .row.justify-content-end.soo.item.align-items-center.min-vh-100
+                    .col-lg-2
+                    .col-lg-10  
+                        h1.textBigTitle.text-uppercase The standard Lorem Ipsum passage
+                        p.text-muted Written by Cicero in 45 BC
+                .row.justify-content-end.soo.item.align-items-center.min-vh-100
+                    .col-lg-2
+                    .col-lg-10  
+                        h1.textBigTitle.text-uppercase The standard Lorem Ipsum passage
+                        p.text-muted Written by Cicero in 45 BC
+                .row.justify-content-end.soo.item.align-items-center.min-vh-100
+                    .col-lg-2
+                    .col-lg-10  
+                        h1.textBigTitle.text-uppercase The standard Lorem Ipsum passage
+                        p.text-muted Written by Cicero in 45 BC
+
+            #about.my-5.py-5
+                .container
+                    .row.justify-content-end
+                        .col-lg-10  
+                            p.text-muted Your vision. Unrestricted.
+                    .row.justify-content-end
+                            .row
+                                .col-lg-3
+                                .col-lg-4.pt-5
+                                    p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+                                .col-lg-5
+                                    h1.px-5 rationally -- encounter consequences
+            #project
+                #js-wrapper
+                    #js-slideContainer
+                        each info in ['zero', 'utility', 'element’s', 'element’s', 'element’s']
+                            .items
+                                img.img-fluid(src="image/dummy.jpg", alt="")
+            #projectList
+                each val in ['zero', 'utility', 'element’s']
+                    .items.my-7
+                        .container-fluid.img-bg
+                        .container                    
+                            .row.justify-content-end
+                                .col-lg-10
+                                    h2.textBigTitle= val
+                            .row.justify-content-end.align-items-end.content
+                                .col-lg-3
+                                    h4 
+                                        a Weyerhauser. Seattle, WA.
+                                .col-lg-3   
+                                    h4  
+                                        a Brushed. Anodized. Veneer. Powder Coated.
+                                .col-lg-3
+                                    h4  
+                                        a Single, Double, and Curved glazed systems
+
+            #brand
+                .container
+                    .row.justify-content-end
+                        .col-lg-10  
+                            h2.textBigTitle brands we work with
+                    .row.justify-content-end.py-5
+                        .col-lg-10  
+                            .row
+                                .col-lg-2
+                                    img.img-fluid(src="image/dummy.jpg", alt="woownan")
+                                .col-lg-2
+                                    img.img-fluid(src="image/dummy.jpg", alt="woownan")
+                                .col-lg-2
+                                    img.img-fluid(src="image/dummy.jpg", alt="woownan")
+                                .col-lg-2
+                                    img.img-fluid(src="image/dummy.jpg", alt="woownan")
+                                .col-lg-2
+                                    img.img-fluid(src="image/dummy.jpg", alt="woownan")
+                                .col-lg-2
+                                    img.img-fluid(src="image/dummy.jpg", alt="woownan")
+            #menus  
+                .container-fluid
+                    .row.vertical-center
+                        h3.display-2 Musea
+                        h3.display-2 Own
+                        h3.display-2 exhibi

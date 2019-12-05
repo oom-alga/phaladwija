@@ -6,6 +6,7 @@
 body{
     // font-family: 'Raleway', 'sans-serif';
     // padding-top: 56px;
+    height: 100%;
     background-color: #c4c4c4;
     font-family: 'Roboto', sans-serif;  
 }
@@ -96,7 +97,7 @@ a {
             @include underline;
             @include space;
             margin: 10px;
-            padding: 30px;
+            background-color: red;
         }
     }
 }
@@ -176,12 +177,25 @@ a {
     }
 }
 #project{
-    h1{
+    h3{
         @include text-big-title($light: true);
     }
-    .content{
-        .title{
-            @include text-title();
+}
+#projectItem{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    perspective: 1000;
+    position: relative;
+    #itemSlide{
+        width: 500%;
+        height: 100vh;
+        .item{
+            @include vertical-center();
+            height: 100vh;
+            width: calc(100% / 5);
+            float: left;
+            position: relative;
         }
     }
 }
@@ -222,23 +236,20 @@ a {
     }
 }
 #menus{
-    min-height: 100vh;
     background-color: red;
+    min-height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-color: purple;
     @include vertical-center();
     h3{
-        background-color: yellow;
         @include text-big-title();
         display: inline-block;
     }
 }
 footer{
-    background-color: green;
     .backTop, .copyright{
-        margin-top: 30px;
-        background-color: purple;
-    }
-    a{
-        background-color: blue;
+        margin-top: 20px;
     }
 }
 
