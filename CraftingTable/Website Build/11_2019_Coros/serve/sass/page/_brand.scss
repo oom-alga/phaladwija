@@ -1,0 +1,7 @@
+#brand{
+    &.one{
+        h2{
+            @include text-big-title();
+        }
+    }
+}

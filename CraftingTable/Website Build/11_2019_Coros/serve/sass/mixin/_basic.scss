@@ -1,0 +1,46 @@
+@mixin text-big-title($light: false){
+    letter-spacing: 22px;
+    font-weight: bold;
+    -webkit-text-stroke-width: 5px;
+    -webkit-text-stroke-color: #212529;
+    font-family: 'Roboto', 'sans-serif';
+    color: transparent;
+    text-transform: uppercase;
+    @if $light {
+        -webkit-text-stroke-color: #ffffff;
+    }
+}
+@mixin text-title(){
+    font-family: 'Roboto', sans-serif;  
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: #212529;
+    text-transform: uppercase;
+}
+@mixin text-content(){
+    font-family: 'Reem Kufi', sans-serif;  
+    line-height: 150%;
+}
+@mixin underline(){
+    color: black;
+    background-image: linear-gradient(to right, yellow 0, yellow 100%);
+    background-size: 0% 30%;
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+    transition: background .5s;
+    padding{
+        left:  2%;
+        right:  2%;
+    }
+    &:hover{
+        background-size: 150% 30%;
+        background-image: linear-gradient(to right, yellow 0, yellow 100%);
+    }
+}
+@mixin space(){
+    letter-spacing: 12px;
+}
+@mixin vertical-center {
+    display: flex;
+    align-items: center;
+}
+

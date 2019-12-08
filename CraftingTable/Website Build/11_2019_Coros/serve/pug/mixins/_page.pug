@@ -1,0 +1,18 @@
+mixin page(version)
+    -var item = version
+
+    if (version == "one")
+        .container
+            .row
+                .col-lg-12
+                    p= item
+    if (version == "two")
+        .container
+            .row
+                .col-lg-12
+                    h1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita rerum dignissimos unde odio hic molestiae sequi possimus laborum et voluptatibus excepturi, error, animi enim sed fuga asperiores beatae laudantium praesentium.
+    if (version == "three")
+        .container
+            .row
+                .col-lg-12
+                    img.img-fluid(src="image/dummy.jpg", alt="")

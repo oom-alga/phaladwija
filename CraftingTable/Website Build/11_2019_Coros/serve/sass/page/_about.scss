@@ -1,0 +1,13 @@
+#about{
+    &.one{
+        // background-color: green;
+    }
+    &.two{
+        h2{
+            &.textBigTitle{
+                @include text-big-title($light: false);
+            }
+            // @include text-title;
+        }
+    }
+}

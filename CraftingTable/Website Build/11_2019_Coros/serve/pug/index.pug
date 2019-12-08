@@ -1,119 +1,15 @@
 //- layout.pug
 extends ../template/layout.pug
 
+include mixins/_demo-page.pug
 
 block main
-    .barba-container(data-namespace="homepage")
-        article
-            .header-text.container.owl-carousel.owl-carousel-indexHeader
-                .row.justify-content-end.soo.item.align-items-center.min-vh-100
-                    .col-lg-12
-                        h1.textBigTitle.text-uppercase The standard Lorem Ipsum passage
-                        p.text-muted Written by Cicero in 45 BC
-                .row.justify-content-end.soo.item.align-items-center.min-vh-100
-                    .col-lg-12
-                        h1.textBigTitle.text-uppercase The standard Lorem Ipsum passage
-                        p.text-muted Written by Cicero in 45 BC
-                .row.justify-content-end.soo.item.align-items-center.min-vh-100
-                    .col-lg-12
-                        h1.textBigTitle.text-uppercase The standard Lorem Ipsum passage
-                        p.text-muted Written by Cicero in 45 BC
-                .row.justify-content-end.soo.item.align-items-center.min-vh-100
-                    .col-lg-12
-                        h1.textBigTitle.text-uppercase The standard Lorem Ipsum passage
-                        p.text-muted Written by Cicero in 45 BC
-                .row.justify-content-end.soo.item.align-items-center.min-vh-100
-                    .col-lg-12
-                        h1.textBigTitle.text-uppercase The standard Lorem Ipsum passage
-                        p.text-muted Written by Cicero in 45 BC
-
-            #about.my-5.py-5
-                .container
-                    .row
-                        .col-lg-12
-                            p.text-muted Your vision. Unrestricted.
-                    .row.justify-content-end
-                        .col-lg-4.pt-5
-                            p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
-                        .col-lg-5
-                            h1.px-5 Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure dolore perspiciatis, 
-            #project.my-5.py-5
-                .container
-                    .row
-                        .col-lg-12.text-right
-                            h3.textBigTitle Lorem ipsum dolor sit amet.
-            #projectItem
-                #itemSlide
-                    each titleProject in ['rude', 'monkey', 'dance', 'popow', 'mels']
-                        .item.container-fluid
-                            .row
-                                .col-lg-8.col-lg-push-3
-                                    img.img-fluid(src="image/dummy.jpg", alt="woownan")
-                                .col-lg-4.col-lg-pull-7.text-right.pt-5.mt-5
-                                    p Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    h4.textTitle= titleProject
-            #projectList
-                each val in ['zero', 'utility', 'elem']
-                    .items.my-7
-                        .container-fluid.img-bg
-                        .container                    
-                            .row.justify-content-end
-                                .col-lg-10
-                                    h2.textBigTitle= val
-                            .row.justify-content-end.align-items-end.content
-                                .col-lg-3
-                                    h4 
-                                        a Weyerhauser. Seattle, WA.
-                                .col-lg-3   
-                                    h4  
-                                        a Brushed. Anodized. Veneer. Powder Coated.
-                                .col-lg-3
-                                    h4  
-                                        a Single, Double, and Curved glazed systems
-
-            #brand
-                .container
-                    .row.justify-content-end
-                        .col-lg-10  
-                            h2.textBigTitle brands we work with
-                    .row.justify-content-end.py-5
-                        .col-lg-10  
-                            .row
-                                .col-lg-2
-                                    img.img-fluid(src="image/dummy.jpg", alt="woownan")
-                                .col-lg-2
-                                    img.img-fluid(src="image/dummy.jpg", alt="woownan")
-                                .col-lg-2
-                                    img.img-fluid(src="image/dummy.jpg", alt="woownan")
-                                .col-lg-2
-                                    img.img-fluid(src="image/dummy.jpg", alt="woownan")
-                                .col-lg-2
-                                    img.img-fluid(src="image/dummy.jpg", alt="woownan")
-                                .col-lg-2
-                                    img.img-fluid(src="image/dummy.jpg", alt="woownan")
-            #menus  
-                .container-fluid.owl-carousel.owl-carousel-indexBottomMenu
-                    .row.vertical-center.textBigTitle
-                        .item   
-                            .col-lg-12
-                                h3.display-2.px-5(data-bgcolor="#DCC6E0") Musea
-                    .row.vertical-center.textBigTitle
-                        .item   
-                            .col-lg-12
-                                h3.display-2.px-5(data-bg="image/dummy.jpg") Own
-
-                    .row.vertical-center.textBigTitle
-                        .item   
-                            .col-lg-12
-                                h3.display-2.px-5(data-bgcolor="#FDE3A7") exhibi
-
-                    .row.vertical-center.textBigTitle
-                        .item   
-                            .col-lg-12
-                                h3.display-2.px-5(data-bg="image/dummy.jpg") Museas
-
-                    .row.vertical-center.textBigTitle
-                        .item   
-                            .col-lg-12
-                                h3.display-2.px-5(data-bgcolor="#E0C6C6") Owns
-
+    .container
+        .row.justify-content-center
+            .col-lg-6.text-center.my-5
+                h1 Coros
+                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quae harum corrupti, hic similique nobis maxime dignissimos exercitationem odio beatae esse cupiditate quasi! Facere beatae consequuntur, similique nulla aperiam necessitatibus!
+    .container
+        .row
+            +demo-page(true)
+            +demo-page(false)

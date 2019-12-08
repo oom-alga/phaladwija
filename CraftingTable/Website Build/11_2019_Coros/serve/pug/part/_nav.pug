@@ -1,0 +1,57 @@
+mixin nav(version)
+    -var item = version
+
+    if (version == "one")
+        nav.one.navbar.navbar-expand-lg.navbar-light
+            .container
+                button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarNavAltMarkup' aria-controls='navbarNavAltMarkup' aria-expanded='false' aria-label='Toggle navigation')
+                    span.navbar-toggler-icon
+                #navbarNavAltMarkup.collapse.navbar-collapse
+                    a.nav-item.text-dark.nav-link(href='#') Features
+                    a.nav-item.text-dark.nav-link(href='#') Pricing
+                    a.nav-item.text-dark.nav-link.disabled(href='#') Disabled
+    
+    if (version == "two")
+        nav.two.navbar.navbar-expand-lg.navbar-light
+            .container
+                button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarNavAltMarkup' aria-controls='navbarNavAltMarkup' aria-expanded='false' aria-label='Toggle navigation')
+                    span.navbar-toggler-icon
+                #navbarNavAltMarkup.collapse.navbar-collapse
+                    a.nav-item.text-dark.nav-link(href='#') Features
+                    a.nav-item.text-dark.nav-link(href='#') Pricing
+                    a.nav-item.text-dark.nav-link.disabled(href='#') Disabled
+        .menus.container.my-5.py-5
+            .row
+                .col-md-12
+                    ul
+                        li Team
+                        li Workshops
+                        li Blog
+                        li contact
+    
+    if (version == "three")
+        nav.three
+            .container-fluid.owl-carousel.owl-carousel-indexBottomMenu
+                .row.vertical-center.textBigTitle
+                    .item   
+                        .col-lg-12
+                            h3.display-2.p-5(data-bgcolor="#DCC6E0") Musea
+                .row.vertical-center.textBigTitle
+                    .item   
+                        .col-lg-12
+                            h3.display-2.p-5(data-bg="image/dummy.jpg") Own
+
+                .row.vertical-center.textBigTitle
+                    .item   
+                        .col-lg-12
+                            h3.display-2.p-5(data-bgcolor="#FDE3A7") exhibi
+
+                .row.vertical-center.textBigTitle
+                    .item   
+                        .col-lg-12
+                            h3.display-2.p-5(data-bg="image/dummy.jpg") Museas
+
+                .row.vertical-center.textBigTitle
+                    .item   
+                        .col-lg-12
+                            h3.display-2.p-5(data-bgcolor="#E0C6C6") Owns

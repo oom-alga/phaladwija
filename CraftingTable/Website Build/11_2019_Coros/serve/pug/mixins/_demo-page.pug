@@ -1,0 +1,18 @@
+mixin demo-page(version)
+    .col-md-6
+        if (version)
+            .card
+                img.img-fluid(src="image/dummy.jpg", alt="")
+                .card-body
+                    h3.card-title Card title
+                    p.card-text Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    hr
+                    a.btn.btn-primary(href="index-classic-light.html") Go somewhere
+        else
+            .card.bg-dark.text-light
+                img.img-fluid(src="image/dummy.jpg", alt="")
+                .card-body
+                    h3.card-title Card title
+                    p.card-text Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    hr
+                    a.btn.btn-primary(href="index-classic-dark.html") Go somewhere

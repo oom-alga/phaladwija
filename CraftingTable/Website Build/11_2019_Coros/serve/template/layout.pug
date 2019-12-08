@@ -3,14 +3,16 @@ html(lang='en')
 
     include components/_head.pug
     
-    body
-      .header-scroll
-        .progress-container
-          #progressBar.progress-bar
-      main#barba-wrapper
-        .load-page
-          img.mx-3(src="storage/load1.gif", alt="")
-        include components/_nav.pug
-        block main
+    block vars
+        - var bodyClass = '' // empty or dark
+        - var menu = 'classic' // classic or overlay
+
+    body(class=bodyClass)
+      // Main container where all the pages are going to be loaded
+      block main
+
+      // Footer
       include components/_footer.pug
+
+      // Script
       include components/_scripts.pug

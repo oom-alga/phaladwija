@@ -1,0 +1,35 @@
+
+nav{
+    &.two{
+        .menus{
+            ul{
+                position: relative;
+                padding:{
+                    left: 10px;
+                }
+                li{
+                    list-style: none;
+                }
+                &::after{
+                    content: "";
+                    width: 5%;
+                    height: 3px;
+                    background-color: red;    
+                    position: absolute;
+                    bottom: -40px;
+                    left: 10px;
+                }
+            }
+        }
+    }
+    &.three{
+        min-height: 100vh;
+        background-position: center;
+        background-size: cover;
+        @include vertical-center();
+        h3{
+            @include text-big-title();
+            display: inline-block;
+        }  
+    }
+}

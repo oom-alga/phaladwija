@@ -1,0 +1,15 @@
+mixin brand(version)
+    -var item = version
+
+    if (version == "one")   
+        #brand.one.pb-5.mb-5
+            .container
+                .row.justify-content-end
+                    .col-lg-10  
+                        h2.textBigTitle brands we work with
+                .row.justify-content-end.py-5
+                    .col-lg-10  
+                        .row
+                            each items in [1,2,3,4,5,6]
+                                .col-lg-2
+                                    img.img-fluid(src="image/dummy.jpg", alt="woownan")

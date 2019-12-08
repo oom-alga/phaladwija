@@ -1,0 +1,35 @@
+mixin item(version)
+    -var item = version
+
+    if (version == "one")
+        #projectItem.one
+            #itemSlide
+                each titleProject in ['rude', 'mkey', 'dance', 'popow', 'mels']
+                    .item.container-fluid
+                        .row
+                            .col-lg-8.col-lg-push-3
+                                img.img-fluid(src="image/dummy.jpg", alt="woownan")
+                            .col-lg-4.col-lg-pull-7.text-right.pt-5.mt-5
+                                p Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                h4.textTitle= titleProject
+
+    if (version == "two")  
+        #projectItem.two
+            each val in ['zero', 'utility', 'elem']
+                .items.my-7
+                    .wrap-parallax
+                        .container-fluid.img-bg
+                        .container                  
+                            .row.justify-content-end
+                                .col-lg-12
+                                    h2.title.mt-n5.textBigTitle= val
+                            .row.justify-content-end.align-items-end.content
+                                .col-lg-3.py-3.px-5
+                                    h4
+                                        a Weyerhauser. Seattle, WA. Santo Rio
+                                .col-lg-3.py-3.px-5
+                                    h4
+                                        a Brushed. Anodized. Veneer. Powder Coated.
+                                .col-lg-3.py-3.px-5
+                                    h4 
+                                        a Single, Double, and Curved glazed systems

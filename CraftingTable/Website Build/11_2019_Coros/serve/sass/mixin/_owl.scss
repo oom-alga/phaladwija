@@ -1,0 +1,16 @@
+.owl-carousel-indexHeader{
+    position: relative;
+    .owl-nav{
+        text-align: right;
+        top: 15%;
+        position: absolute;
+        right: 20%;
+        font-family: 'Reem Kufi', sans-serif;  
+        button.owl-next, 
+        button.owl-prev{
+            @include underline;
+            @include space;
+            margin: 10px;
+        }
+    }
+}

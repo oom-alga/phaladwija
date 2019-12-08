@@ -2,13 +2,10 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:200,400,700,900');
 @import url('https://fonts.googleapis.com/css?family=Reem+Kufi:300,400,700,900');
 
+@import 'components/materialize-colors';
 
-body{
-    // font-family: 'Raleway', 'sans-serif';
-    // padding-top: 56px;
-    height: 100%;
-    background-color: #c4c4c4;
-    font-family: 'Roboto', sans-serif;  
+*{
+    font-family: 'Reem Kufi';
 }
 button:focus {outline:0 !important;}
 a, p{
@@ -22,302 +19,50 @@ a {
         text-decoration: none;
     }
 }
-@mixin text-big-title($light: false){
-    letter-spacing: 22px;
-    font-weight: bold;
-    -webkit-text-stroke-width: 5px;
-    -webkit-text-stroke-color: #212529;
-    font-family: 'Roboto', 'sans-serif';
-    color: transparent;
-    text-transform: uppercase;
-    @if $light {
-        -webkit-text-stroke-color: #ffffff;
-    }
-}
-@mixin text-title(){
-    font-family: 'Roboto', sans-serif;  
-    -webkit-text-stroke-width: 3px;
-    -webkit-text-stroke-color: #212529;
-    text-transform: uppercase;
-}
-@mixin text-content(){
-    font-family: 'Reem Kufi', sans-serif;  
-    line-height: 150%;
-}
-@mixin underline(){
-    color: black;
-    background-image: linear-gradient(to right, yellow 0, yellow 100%);
-    background-size: 0% 30%;
-    background-repeat: no-repeat;
-    background-position: 0 50%;
-    transition: background .5s;
-    padding{
-        left:  2%;
-        right:  2%;
-    }
-    &:hover{
-        background-size: 150% 30%;
-        background-image: linear-gradient(to right, yellow 0, yellow 100%);
-    }
-}
-@mixin space(){
-    letter-spacing: 12px;
-}
-@mixin vertical-center {
-    display: flex;
-    align-items: center;
+body{
+    height: 100%;
+    background-color: color('grey', 'lighten-5');
 }
 
-// body {
-//     font-family: 'Source Code Pro', sans-serif;
-//   }
-//   .wrap {
-//     padding: 10% 20%;
-//   }
-//   h2 {
-//     margin-top: 3em;
-//     color: grey;
-//     &:first-child {
-//       margin-top: 0;
+
+// .wrap-parallax{
+//     position: relative;
+//     width: 100%;
+//     height: 100%;
+//     .background{
+//         transform: scaleX(1);
+//         transform-origin: right;
 //     }
-//   }
-  
-  // Now that is interesting
-
-.owl-carousel-indexHeader{
-    position: relative;
-    .owl-nav{
-        text-align: right;
-        top: 15%;
-        position: absolute;
-        right: 20%;
-        font-family: 'Reem Kufi', sans-serif;  
-        button.owl-next, 
-        button.owl-prev{
-            @include underline;
-            @include space;
-            margin: 10px;
-            background-color: red;
-        }
-    }
-}
-  
-
-// nav
-.menus{
-    display: none;
-    position: fixed;
-    height: 100vh;
-    z-index: 3;
-    .navbar-fixed-left {
-        height: 100%;
-    }
-    .menu, .sosmed{
-        display: inline-block;
-        padding: 0;
-        width: 100%;
-        float: left;
-        li{
-            list-style: none;
-            a{
-               @include underline;
-               font-family: 'Reem Kufi', sans-serif;  
-            }
-        }
-    }
-    .menu{
-        font-size: 16px;
-        line-height: 188%;
-        font-family: 'Source Code Pro', sans-serif;
-        @include space;
-    }
-    .sosmed{
-        font-size: 12px;
-        li{
-            float: left;
-        }
-    }
-    .logo{
-        position: absolute;
-        bottom: 0;
-    }
-}
-
-.header-text{
-    // background-image: url('https://www.wallpaperup.com/uploads/wallpapers/2013/03/21/55775/27d37194d7a47bbd4efb42d66ed54b54-1000.jpg');
-    // background-position: center;
-    // background-attachment: fixed;
-    // background-size: cover;
-    .item{
-        z-index: 99;
-    }
-    h1{
-        @include text-big-title($light: false);
-    }
-    p{
-        @include space;
-        font-family: 'Reem Kufi', sans-serif;  
-    }
-}
-  
-.load-page{
-    img{
-        position: absolute;
-        opacity: 0;
-        width: 40px;
-        height: auto;
-    }
-}
-#about{
-    p{
-        @include text-content();
-    }
-    h1{
-        @include text-title();
-    }
-}
-#project{
-    h3{
-        @include text-big-title($light: true);
-    }
-}
-#projectItem{
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    perspective: 1000;
-    position: relative;
-    #itemSlide{
-        width: 500%;
-        height: 100vh;
-        .item{
-            @include vertical-center();
-            height: 100vh;
-            width: calc(100% / 5);
-            float: left;
-            position: relative;
-        }
-    }
-}
-#projectList{
-    background-color: #c4c4c4;
-    // background-color: purple;
-    position: relative;
-    z-index: 4;
-    .items{
-        height: 80vh;
-        position: relative;
-        .img-bg{
-            background-color: green;
-            width: 100%;
-            height: 90%;
-            margin-top: 4%;
-            position: absolute;
-            background-image: url(../image/dummy.jpg);
-            background-position: center;
-            background-size: cover;
-        }
-        h2{
-            @include text-big-title();
-        }
-        .content{
-            height: 50vh;
-            h4{
-                a{
-                    @include underline;
-                }  
-            }
-        }
-    }
-}
-#brand{
-    h2{
-        @include text-big-title();
-    }
-}
-#menus{
-    background-color: red;
-    min-height: 100vh;
-    background-position: center;
-    background-size: cover;
-    background-color: purple;
-    @include vertical-center();
-    h3{
-        @include text-big-title();
-        display: inline-block;
-    }
-}
-footer{
-    .backTop, .copyright{
-        margin-top: 20px;
-    }
-}
+//     .item-1{
+//         position: absolute;
+//         top: 20px;
+//         left: 0;
+//         h1{
+//             color: black;
+//             text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+//             font-weight: bold;
+//             mix-blend-mode: screen;
+//         }
+//         p{
+//             color: #000;
+//             transition: all 0.2s;
+//             transform-origin: bottom;
+//         }
+//     }
+//     .item-2{
+//         position: absolute;
+//         top: 20px;
+//         left: 0;
+//     }
+// }
 
 
+@import 'mixin/_basic';
+@import 'mixin/_owl';
 
-.header-scroll {
-    position: fixed;
-    top: 20%;
-    width: 2px;
-    z-index: 99;
-    .progress-container {
-        background-color: rgba(150, 150, 150, 0.6);
-        height: 100px;
-        width: 2px;
-        .progress-bar {
-            background-color: #2196f3;
-            height: 0%;
-            width: 100%;
-        }
-    }
-}
-
-
-body::-webkit-scrollbar {
-    width: 5px;
-}
- 
-body::-webkit-scrollbar-track {
-    // -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-}
- 
-body::-webkit-scrollbar-thumb {
-  background-color: darkgrey;
-  outline: 5px solid slategrey;
-  border-radius: 3px;
-  left: 0;
-  position: absolute;
-}
-
-
-.header-scroll {
-    position: fixed;
-    bottom: 10%;
-    right: 100px;
-    width: 2px;
-    z-index: 100;
-}
-
-
-
-.line-thumb{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    z-index: -1;
-}
-.grid{
-    top: 0;
-    height: 100vh;
-    width: 100%;
-    .col-lg-3{
-        height: 100vh;
-        border-left: 1px solid rgba(0, 0, 0, .3);
-        &:last-child{
-            border-right: 1px solid rgba(0, 0, 0, .3);
-        }
-    }
-}
+@import 'page/_nav';
+@import 'page/_header';
+@import 'page/_about';
+@import 'page/_project';
+@import 'page/_item';
+@import 'page/_brand';

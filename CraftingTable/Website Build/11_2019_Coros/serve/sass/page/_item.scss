@@ -1,0 +1,47 @@
+#projectItem{
+    &.one{
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        perspective: 1000;
+        position: relative;
+        #itemSlide{
+            width: 500%;
+            height: 100vh;
+            .item{
+                @include vertical-center();
+                height: 100vh;
+                width: calc(100% / 5);
+                float: left;
+                position: relative;
+            }
+        }
+    }
+    &.two{
+        position: relative;
+        z-index: 4;
+        .items{
+            height: 80vh;
+            position: relative;
+            .img-bg{
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                background-image: url(../image/dummy.jpg);
+                background-position: center;
+                background-size: cover;
+            }
+            h2{
+                @include text-big-title();
+            }
+            .content{
+                height: 68vh;
+                h4{
+                    a{
+                        @include underline;
+                    }  
+                }
+            }
+        }
+    }
+}
