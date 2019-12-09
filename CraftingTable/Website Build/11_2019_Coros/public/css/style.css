@@ -20,6 +20,10 @@ body {
   height: 100%;
   background-color: #fafafa; }
 
+.wrapItemScroll .background-Scroll {
+  transform: scaleX(1);
+  transform-origin: left; }
+
 .owl-carousel-indexHeader {
   position: relative; }
   .owl-carousel-indexHeader .owl-nav {

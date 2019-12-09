@@ -4,23 +4,8 @@ mixin header(version)
     if (version == "one")
         #header
             .header-text.container.owl-carousel.owl-carousel-indexHeader
-                .row.justify-content-end.soo.item.align-items-center.min-vh-100
-                    .col-lg-12 
-                        h3.textBigTitle.text-uppercase The standards Lorem Ipsum passage
-                        p.text-muted Written by Cicero in 45 BC
-                .row.justify-content-end.soo.item.align-items-center.min-vh-100
-                    .col-lg-12 
-                        h3.textBigTitle.text-uppercase The standards Lorem Ipsum passage
-                        p.text-muted Written by Cicero in 45 BC
-                .row.justify-content-end.soo.item.align-items-center.min-vh-100
-                    .col-lg-12 
-                        h3.textBigTitle.text-uppercase The standards Lorem Ipsum passage
-                        p.text-muted Written by Cicero in 45 BC
-                .row.justify-content-end.soo.item.align-items-center.min-vh-100
-                    .col-lg-12 
-                        h3.textBigTitle.text-uppercase The standards Lorem Ipsum passage
-                        p.text-muted Written by Cicero in 45 BC
-                .row.justify-content-end.soo.item.align-items-center.min-vh-100
-                    .col-lg-12 
-                        h3.textBigTitle.text-uppercase The standards Lorem Ipsum passage
-                        p.text-muted Written by Cicero in 45 BC
+                each item in [1,2,3,4,5]
+                    .row.justify-content-end.soo.item.align-items-center.min-vh-100
+                        .col-lg-12 
+                            h3.textBigTitle.text-uppercase The standards Lorem Ipsum passage
+                            p.text-muted Written by Cicero in 45 BC

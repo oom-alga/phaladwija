@@ -3,8 +3,10 @@ text();
 itemSlide();
 menus();
 parallax();
+item();
 // owl Slider
 function owl() {
+  var menus = $('.owl-carousel-indexBottomMenu');
   $('.owl-carousel-indexHeader').owlCarousel({
     loop:true,
     margin:10,
@@ -12,11 +14,12 @@ function owl() {
     nav:true,
     navText: ['Next', 'Prev']
   });
-  $('.owl-carousel-indexBottomMenu').owlCarousel({
+  menus.owlCarousel({
     items:4,
     center:true,
     autoWidth:true,
   });
+  
 }
 
 function text(){
@@ -61,5 +64,22 @@ function parallax(){
     $(".background", this).parallax(-10, e);
     $(".title", this).parallax(10, e);
     $(".desc", this).parallax(15, e);
+  });
+}
+
+function item(){
+  
+  var ctrl = new ScrollMagic.Controller();
+  $(".wrapItemScroll").each(function(i) {
+    var outer = $(this).find('.background-Scroll');
+    var tk = new TimelineMax();
+    tk.from(outer, 0.5, {scaleX: 0, ease: Expo.easeOut});
+    new ScrollMagic.Scene({
+      triggerElement: this,
+      triggerHook: "onCenter",
+    })
+      .setTween(tk)
+      .addIndicators() 
+      .addTo(ctrl);
   });
 }

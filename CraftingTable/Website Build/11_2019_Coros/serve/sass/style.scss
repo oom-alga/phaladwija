@@ -25,36 +25,12 @@ body{
 }
 
 
-// .wrap-parallax{
-//     position: relative;
-//     width: 100%;
-//     height: 100%;
-//     .background{
-//         transform: scaleX(1);
-//         transform-origin: right;
-//     }
-//     .item-1{
-//         position: absolute;
-//         top: 20px;
-//         left: 0;
-//         h1{
-//             color: black;
-//             text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
-//             font-weight: bold;
-//             mix-blend-mode: screen;
-//         }
-//         p{
-//             color: #000;
-//             transition: all 0.2s;
-//             transform-origin: bottom;
-//         }
-//     }
-//     .item-2{
-//         position: absolute;
-//         top: 20px;
-//         left: 0;
-//     }
-// }
+.wrapItemScroll{
+    .background-Scroll{
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+}
 
 
 @import 'mixin/_basic';
