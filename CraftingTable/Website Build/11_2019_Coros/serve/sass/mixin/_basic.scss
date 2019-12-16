@@ -1,7 +1,7 @@
-@mixin text-big-title($light: false){
+@mixin text-big-title($stroke, $light:false){
     letter-spacing: 22px;
     font-weight: bold;
-    -webkit-text-stroke-width: 5px;
+    -webkit-text-stroke-width: $stroke;
     -webkit-text-stroke-color: #212529;
     font-family: 'Roboto', 'sans-serif';
     color: transparent;

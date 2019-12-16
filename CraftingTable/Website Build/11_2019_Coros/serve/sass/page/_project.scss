@@ -1,5 +1,5 @@
 #project{
     h3{
-        @include text-big-title($light: false);
+        @include text-big-title(5px, $light:false);
     }
 }

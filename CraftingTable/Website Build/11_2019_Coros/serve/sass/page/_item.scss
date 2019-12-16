@@ -32,7 +32,7 @@
                 background-size: cover;
             }
             h2{
-                @include text-big-title();
+                @include text-big-title(5px, $light:false);
             }
             .content{
                 height: 68vh;
@@ -40,6 +40,27 @@
                     a{
                         @include underline;
                     }  
+                }
+            }
+        }
+    }
+    &.three{
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        perspective: 1000;
+        position: relative;
+        #itemSlide{
+            width: 500%;
+            height: 100vh;
+            .item{
+                @include vertical-center();
+                height: 100vh;
+                width: calc(100% / 5);
+                float: left;
+                position: relative;
+                h4{
+                    @include text-big-title(2px, $light:false);
                 }
             }
         }

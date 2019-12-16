@@ -6,7 +6,6 @@ parallax();
 item();
 // owl Slider
 function owl() {
-  var menus = $('.owl-carousel-indexBottomMenu');
   $('.owl-carousel-indexHeader').owlCarousel({
     loop:true,
     margin:10,
@@ -14,11 +13,27 @@ function owl() {
     nav:true,
     navText: ['Next', 'Prev']
   });
-  menus.owlCarousel({
+  $('.owl-carousel-indexBottomMenu').owlCarousel({
     items:4,
     center:true,
     autoWidth:true,
   });
+
+  $('.owl-carousel-indexHeaderTwo').owlCarousel({
+    loop:true,
+    margin:0,
+    items:1,
+    nav:false
+  });
+
+  $('.owl-carousel-indexItemThree').owlCarousel({
+    loop:true,
+    margin:0,
+    items:2,
+    center:true,
+    nav:false
+  });
+  
   
 }
 
@@ -37,8 +52,8 @@ function itemSlide() {
   .to("#itemSlide", 1,   {x: "-80%"})
 
   // create scene to pin and link animation
-  new ScrollMagic.Scene({triggerElement: "#projectItem.one",triggerHook: "onLeave",duration: "500%"})
-  .setPin("#projectItem.one").setTween(horizontalSlide).addIndicators({name: "1 (duration: 300)"}).addTo(controller);
+  new ScrollMagic.Scene({triggerElement: "#projectItem.one, #projectItem.three",triggerHook: "onLeave",duration: "500%"})
+  .setPin("#projectItem.one, #projectItem.three").setTween(horizontalSlide).addIndicators({name: "1 (duration: 300)"}).addTo(controller);
 
 }
  

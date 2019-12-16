@@ -55,3 +55,13 @@ mixin nav(version)
                     .item   
                         .col-lg-12
                             h3.display-2.p-5(data-bgcolor="#E0C6C6") Me.
+    if (version == "four") 
+        nav.four.position-absolute
+            .container-fluid
+                .row
+                    .col-lg-3.menus
+                        ul
+                            li.display-8 Team
+                            li.display-8 Workshops
+                            li.display-8 Blog
+                            li.display-8 Contact

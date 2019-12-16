@@ -1,4 +1,4 @@
-mixin demo-page(version)
+mixin demo-page(version, href)
     .col-md-6
         if (version)
             .card
@@ -7,7 +7,7 @@ mixin demo-page(version)
                     h3.card-title Card title
                     p.card-text Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     hr
-                    a.btn.btn-primary(href="index-classic-light.html") Go somewhere
+                    a.btn.btn-primary(href=href) Go somewhere
         else
             .card.bg-dark.text-light
                 img.img-fluid(src="image/dummy.jpg", alt="")
@@ -15,4 +15,4 @@ mixin demo-page(version)
                     h3.card-title Card title
                     p.card-text Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     hr
-                    a.btn.btn-primary(href="index-classic-dark.html") Go somewhere
+                    a.btn.btn-primary(href=href) Go somewhere

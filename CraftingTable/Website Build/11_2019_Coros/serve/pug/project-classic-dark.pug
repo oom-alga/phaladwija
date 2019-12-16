@@ -1,0 +1,18 @@
+
+extends ../template/layout.pug
+
+include mixins/_page.pug
+
+include part/_nav.pug
+include part/_header.pug
+include part/_item.pug
+
+
+block vars
+    - var bodyClass = ''
+    - var menu = 'classic'
+
+block main
+    +nav('four')
+    +header('two')
+    +item('three')

@@ -2,10 +2,26 @@ mixin header(version)
     -var item = version
 
     if (version == "one")
-        #header
+        #header.one
             .header-text.container.owl-carousel.owl-carousel-indexHeader
                 each item in [1,2,3,4,5]
                     .row.justify-content-end.soo.item.align-items-center.min-vh-100
                         .col-lg-12 
                             h3.textBigTitle.text-uppercase The standards Lorem Ipsum passage
                             p.text-muted Written by Cicero in 45 BC
+    if (version == "two")
+        #header.two
+            .owl-carousel.owl-carousel-indexHeaderTwo.wrap-parallax
+                each item in [1,2,3,4,5]
+                    .item
+                        .container
+                            .row.item
+                                .col-md-6.col-md-push-2.title
+                                    .row
+                                        .col-lg-12
+                                            p We are
+                                            h1.display-2 Creative Agency
+                                            p Digital agency based in Klaten, Indonesia that loves to craft attractive experiences for the web.
+                                .col-md-6.background
+                                    img.img-fluid(src="image/hero.png", alt="")
+                        

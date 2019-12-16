@@ -28,8 +28,20 @@ nav{
         background-size: cover;
         @include vertical-center();
         h3{
-            @include text-big-title();
+            @include text-big-title(5px, $light:false);
             display: inline-block;
         }  
+    }
+    &.four{
+        z-index: 99;
+        height: 100vh;
+        @include vertical-center();
+        ul{
+            padding: 0;
+            li{
+                // @include text-big-title(1px, $light:false);
+                list-style: none;
+            }
+        }
     }
 }

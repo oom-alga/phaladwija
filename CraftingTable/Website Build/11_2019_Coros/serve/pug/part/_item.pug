@@ -14,7 +14,7 @@ mixin item(version)
                                     p.desc Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                     h4.textTitle.title= titleProject
 
-    if (version == "two")  
+    if (version == "two")
         #projectItem.two
             each val in ['zero', 'utility', 'elem']
                 .items.my-7
@@ -34,3 +34,15 @@ mixin item(version)
                                 .col-lg-3.py-3.px-5
                                     h4 
                                         a Single, Double, and Curved glazed systems
+    if (version == "three")
+        #projectItem.three
+            #itemSlide
+                each titleProject in ['waka', 'mkey', 'dance', 'popow', 'mels']
+                    .item.container-fluid
+                        .wrap-parallax
+                            .row
+                                .col-lg-8.col-lg-push-3
+                                    img.img-fluid.background(src="image/dummy.jpg", alt="woownan")
+                                .col-lg-4.col-lg-pull-7.text-right.pt-5.mt-5
+                                    h4.display-4.title= titleProject
+                                    p.desc Lorem ipsum dolor sit amet consectetur adipisicing elit.
