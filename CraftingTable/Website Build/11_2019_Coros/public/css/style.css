@@ -121,6 +121,12 @@ nav.four {
     width: auto;
     right: 10vw; }
 
+#header.three .title {
+  font-family: 'Roboto', sans-serif;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: #212529;
+  text-transform: uppercase; }
+
 #about.two h2.textBigTitle {
   letter-spacing: 22px;
   font-weight: bold;

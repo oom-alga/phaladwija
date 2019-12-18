@@ -1,0 +1,27 @@
+
+
+.grid {
+	padding: 15rem 4rem;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(2,calc(50% - 5vw));
+	grid-column-gap: 10vw;
+	grid-row-gap: 25vh;
+	max-width: 1300px;
+}
+
+.grid__item {
+	height: 45vh;
+	position: relative;
+}
+
+
+.grid__item-img {
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	filter: grayscale(1);
+}
+.grid__item-title{
+	opacity: 1;
+}
