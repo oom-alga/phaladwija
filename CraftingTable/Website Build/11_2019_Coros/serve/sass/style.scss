@@ -39,6 +39,12 @@ body{
 @import 'page/_nav';
 @import 'page/_header';
 @import 'page/_about';
-@import 'page/_project';
 @import 'page/_item';
 @import 'page/_brand';
+.coba{
+    .row{
+        h1{
+            background-color: red;
+        }
+    }
+}

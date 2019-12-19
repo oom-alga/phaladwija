@@ -30,7 +30,7 @@ body {
     text-align: right;
     top: 15%;
     position: absolute;
-    right: 20%;
+    right: 0%;
     font-family: 'Reem Kufi', sans-serif; }
     .owl-carousel-indexHeader .owl-nav button.owl-next,
     .owl-carousel-indexHeader .owl-nav button.owl-prev {
@@ -77,7 +77,7 @@ nav.three {
   align-items: center; }
   nav.three h3 {
     letter-spacing: 22px;
-    font-weight: bold;
+    font-weight: 900;
     -webkit-text-stroke-width: 5px;
     -webkit-text-stroke-color: #212529;
     font-family: 'Roboto', 'sans-serif';
@@ -97,8 +97,8 @@ nav.four {
 
 #header.one h3 {
   letter-spacing: 22px;
-  font-weight: bold;
-  -webkit-text-stroke-width: 5px;
+  font-weight: 900;
+  -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: #212529;
   font-family: 'Roboto', 'sans-serif';
   color: transparent;
@@ -109,7 +109,7 @@ nav.four {
   position: relative; }
   #header.two .item h1 {
     letter-spacing: 22px;
-    font-weight: bold;
+    font-weight: 900;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #212529;
     font-family: 'Roboto', 'sans-serif';
@@ -129,16 +129,7 @@ nav.four {
 
 #about.two h2.textBigTitle {
   letter-spacing: 22px;
-  font-weight: bold;
-  -webkit-text-stroke-width: 5px;
-  -webkit-text-stroke-color: #212529;
-  font-family: 'Roboto', 'sans-serif';
-  color: transparent;
-  text-transform: uppercase; }
-
-#project h3 {
-  letter-spacing: 22px;
-  font-weight: bold;
+  font-weight: 900;
   -webkit-text-stroke-width: 5px;
   -webkit-text-stroke-color: #212529;
   font-family: 'Roboto', 'sans-serif';
@@ -161,6 +152,22 @@ nav.four {
       width: calc(100% / 5);
       float: left;
       position: relative; }
+      #projectItem.one #itemSlide .item p {
+        color: black;
+        font-weight: bold;
+        mix-blend-mode: screen; }
+      #projectItem.one #itemSlide .item h4 {
+        letter-spacing: 22px;
+        font-weight: 900;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #212529;
+        font-family: 'Roboto', 'sans-serif';
+        color: transparent;
+        text-transform: uppercase;
+        -webkit-text-stroke-color: #ffffff;
+        color: black;
+        font-weight: bold;
+        mix-blend-mode: screen; }
 
 #projectItem.two {
   position: relative;
@@ -177,7 +184,7 @@ nav.four {
       background-size: cover; }
     #projectItem.two .items h2 {
       letter-spacing: 22px;
-      font-weight: bold;
+      font-weight: 900;
       -webkit-text-stroke-width: 5px;
       -webkit-text-stroke-color: #212529;
       font-family: 'Roboto', 'sans-serif';
@@ -217,7 +224,7 @@ nav.four {
       position: relative; }
       #projectItem.three #itemSlide .item h4 {
         letter-spacing: 22px;
-        font-weight: bold;
+        font-weight: 900;
         -webkit-text-stroke-width: 2px;
         -webkit-text-stroke-color: #212529;
         font-family: 'Roboto', 'sans-serif';
@@ -226,9 +233,12 @@ nav.four {
 
 #brand.one h2 {
   letter-spacing: 22px;
-  font-weight: bold;
+  font-weight: 900;
   -webkit-text-stroke-width: 5px;
   -webkit-text-stroke-color: #212529;
   font-family: 'Roboto', 'sans-serif';
   color: transparent;
   text-transform: uppercase; }
+
+.coba .row h1 {
+  background-color: red; }

@@ -1,6 +1,6 @@
 @mixin text-big-title($stroke, $light:false){
     letter-spacing: 22px;
-    font-weight: bold;
+    font-weight: 900;
     -webkit-text-stroke-width: $stroke;
     -webkit-text-stroke-color: #212529;
     font-family: 'Roboto', 'sans-serif';

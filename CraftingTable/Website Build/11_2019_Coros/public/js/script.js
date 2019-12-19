@@ -10,8 +10,7 @@ function owl() {
     loop:true,
     margin:10,
     items:1,
-    nav:true,
-    navText: ['Next', 'Prev']
+    nav:false
   });
   $('.owl-carousel-indexBottomMenu').owlCarousel({
     items:4,
@@ -38,7 +37,7 @@ function owl() {
 }
 
 function text(){
-  $(".textBigTitle").fitText(0.97);
+  $(".textBigTitle").fitText(0.999);
   $(".textTitle").fitText(0.3);
 }
 
@@ -97,4 +96,26 @@ function item(){
       .addIndicators() 
       .addTo(ctrl);
   });
+}
+
+woow();
+function woow(){
+  $(function() {
+    shuffleRows($('#shuffle .row'))
+  })
+  
+  function shuffleMe(o) {
+    for (var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+    return o;
+  }
+  function shuffleRows($rows) {
+    console.log($rows)
+    var $items = $rows.children(),
+      num_cols = $rows.eq(0).children().length;
+      shuffleMe($items);
+    for (var i = 0, j = 0; i < $items.length; i += num_cols, j++) {
+      $rows.eq(j).append($items.slice(i, i + num_cols + 1))
+    }
+
+  }
 }
