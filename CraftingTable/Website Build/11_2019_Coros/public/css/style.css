@@ -169,42 +169,48 @@ nav.four {
         font-weight: bold;
         mix-blend-mode: screen; }
 
-#projectItem.two {
-  position: relative;
-  z-index: 4; }
-  #projectItem.two .items {
-    height: 80vh;
-    position: relative; }
-    #projectItem.two .items .img-bg {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      background-image: url(../image/dummy.jpg);
-      background-position: center;
-      background-size: cover; }
-    #projectItem.two .items h2 {
-      letter-spacing: 22px;
-      font-weight: 900;
-      -webkit-text-stroke-width: 5px;
-      -webkit-text-stroke-color: #212529;
-      font-family: 'Roboto', 'sans-serif';
-      color: transparent;
-      text-transform: uppercase; }
-    #projectItem.two .items .content {
-      height: 68vh; }
-      #projectItem.two .items .content h4 a {
-        color: black;
-        background-image: linear-gradient(to right, yellow 0, yellow 100%);
-        background-size: 0% 30%;
-        background-repeat: no-repeat;
-        background-position: 0 50%;
-        transition: background .5s; }
-        #projectItem.two .items .content h4 a padding {
-          left: 2%;
-          right: 2%; }
-        #projectItem.two .items .content h4 a:hover {
-          background-size: 150% 30%;
-          background-image: linear-gradient(to right, yellow 0, yellow 100%); }
+#projectItem.two .item .imageItem::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+  background: #000;
+  background: -moz-linear-gradient(45deg, #000 0%, rgba(255, 255, 255, 0) 100%);
+  background: -webkit-gradient(left bottom, right top, color-stop(0%, #000), color-stop(100%, rgba(255, 255, 255, 0)));
+  background: -webkit-linear-gradient(45deg, #000 0%, rgba(255, 255, 255, 0) 100%);
+  background: -o-linear-gradient(45deg, #000 0%, rgba(255, 255, 255, 0) 100%);
+  background: -ms-linear-gradient(45deg, #000 0%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(45deg, #000 0%, rgba(255, 255, 255, 0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f84e30', endColorstr='#ffffff', GradientType=1 ); }
+
+#projectItem.two .item .content {
+  color: #616161;
+  bottom: 0;
+  max-width: 30%; }
+  #projectItem.two .item .content .title {
+    display: block;
+    letter-spacing: 22px;
+    font-weight: 900;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #212529;
+    font-family: 'Roboto', 'sans-serif';
+    color: transparent;
+    text-transform: uppercase;
+    -webkit-text-stroke-color: #ffffff;
+    color: black;
+    font-weight: bold;
+    mix-blend-mode: screen; }
+    #projectItem.two .item .content .title::after {
+      content: " ";
+      width: 30%;
+      height: 2px;
+      background-color: #757575;
+      display: block;
+      margin-top: 10%;
+      margin-bottom: 10%; }
 
 #projectItem.three {
   width: 100%;

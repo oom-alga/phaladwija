@@ -15,25 +15,16 @@ mixin item(version)
                                     h4.textTitle.title= titleProject
 
     if (version == "two")
-        #projectItem.two
-            each val in ['zero', 'utility', 'elem']
-                .items.my-7
-                    .wrapItemScroll.wrap-parallax
-                        .container-fluid.img-bg.background-Scroll
-                        .container                  
-                            .row.justify-content-end
-                                .col-lg-12
-                                    h2.title.mt-n5.textBigTitle= val
-                            .row.justify-content-end.align-items-end.content
-                                .col-lg-3.py-3.px-5
-                                    h4
-                                        a Weyerhauser. Seattle, WA. Santo Rio
-                                .col-lg-3.py-3.px-5
-                                    h4
-                                        a Brushed. Anodized. Veneer. Powder Coated.
-                                .col-lg-3.py-3.px-5
-                                    h4 
-                                        a Single, Double, and Curved glazed systems
+        #projectItem.two.mb-8.py-6
+            .container
+                each titleProject in ['rude', 'mkey', 'dance', 'popow', 'mels']
+                    .row.mb-4
+                        .col-lg-10.mb-4.offset-1.item
+                            .imageItem.position-relative
+                                img.img-fluid(src="https://www.wallpaperup.com/uploads/wallpapers/2012/05/25/3158/2c5d704d5867621088cfc6c4afbc76ff.jpg", alt="")
+                            .content.position-absolute.p-5
+                                h3.display-1.title.text-center.mt-n5= titleProject
+
     if (version == "three")
         #projectItem.three
             #itemSlide

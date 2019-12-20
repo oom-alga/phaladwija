@@ -31,28 +31,48 @@
         }
     }
     &.two{
-        position: relative;
-        z-index: 4;
-        .items{
-            height: 80vh;
-            position: relative;
-            .img-bg{
-                width: 100%;
-                height: 100%;
-                position: absolute;
-                background-image: url(../image/dummy.jpg);
-                background-position: center;
-                background-size: cover;
-            }
-            h2{
-                @include text-big-title(5px, $light:false);
+        .item{
+            .imageItem{
+                &::after{
+                    content: "";
+                    position: absolute;
+                    // background-color: red;
+                    top:0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0.6;
+                    background: color('shades', 'black');
+                    background: -moz-linear-gradient(45deg, color('shades', 'black') 0%, rgba(255,255,255,0) 100%);
+                    background: -webkit-gradient(left bottom, right top, color-stop(0%, color('shades', 'black')), color-stop(100%, rgba(255,255,255,0)));
+                    background: -webkit-linear-gradient(45deg, color('shades', 'black') 0%, rgba(255,255,255,0) 100%);
+                    background: -o-linear-gradient(45deg, color('shades', 'black') 0%, rgba(255,255,255,0) 100%);
+                    background: -ms-linear-gradient(45deg, color('shades', 'black') 0%, rgba(255,255,255,0) 100%);
+                    background: linear-gradient(45deg, color('shades', 'black') 0%, rgba(255,255,255,0) 100%);
+                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f84e30', endColorstr='#ffffff', GradientType=1 );
+                }
             }
             .content{
-                height: 68vh;
-                h4{
-                    a{
-                        @include underline;
-                    }  
+                color: color('grey', 'darken-2');
+                bottom: 0;
+                max-width: 30%;
+                .title{
+                    display: block;
+                    @include text-big-title(1px, $light:true);
+                    color: black;
+                    font-weight: bold;
+                    mix-blend-mode: screen;
+                    &::after{
+                        content: " ";
+                        width: 30%;
+                        height: 2px;
+                        background-color: color('grey', 'darken-1');
+                        display: block;
+                        margin: {
+                            top: 10%;
+                            bottom: 10%;
+                        }
+                    }
                 }
             }
         }
