@@ -5,6 +5,7 @@ include mixins/_page.pug
 
 include part/_nav.pug
 include part/_header.pug
+include part/_category.pug
 include part/_item.pug
 
 
@@ -13,6 +14,7 @@ block vars
     - var menu = 'classic'
 
 block main
-    +nav('four')
-    +header('two')
+    +nav('five')
+    //- +header('two')
+    +category('one')
     +item('three')

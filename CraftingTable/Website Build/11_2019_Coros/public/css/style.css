@@ -105,21 +105,19 @@ nav.four {
   text-transform: uppercase; }
 
 #header.two .item {
-  height: 100vh;
   position: relative; }
-  #header.two .item h1 {
-    letter-spacing: 22px;
-    font-weight: 900;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #212529;
-    font-family: 'Roboto', 'sans-serif';
-    color: transparent;
-    text-transform: uppercase; }
-  #header.two .item img {
-    position: absolute;
-    height: 100%;
-    width: auto;
-    right: 10vw; }
+  #header.two .item .content {
+    display: flex;
+    align-items: center; }
+    #header.two .item .content h1 {
+      letter-spacing: 22px;
+      font-weight: 900;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: #212529;
+      font-family: 'Roboto', 'sans-serif';
+      color: transparent;
+      text-transform: uppercase;
+      font-weight: bold; }
 
 #header.three .title {
   font-family: 'Roboto', sans-serif;
@@ -231,11 +229,15 @@ nav.four {
       #projectItem.three #itemSlide .item h4 {
         letter-spacing: 22px;
         font-weight: 900;
-        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-width: 1px;
         -webkit-text-stroke-color: #212529;
         font-family: 'Roboto', 'sans-serif';
         color: transparent;
-        text-transform: uppercase; }
+        text-transform: uppercase;
+        -webkit-text-stroke-color: #ffffff;
+        color: black;
+        font-weight: bold;
+        mix-blend-mode: screen; }
 
 #brand.one h2 {
   letter-spacing: 22px;
@@ -246,5 +248,20 @@ nav.four {
   color: transparent;
   text-transform: uppercase; }
 
+#category.one ul {
+  padding: 0;
+  margin: 0; }
+  #category.one ul li {
+    list-style: none; }
+
 .coba .row h1 {
   background-color: red; }
+
+footer ul {
+  padding: 0;
+  margin: 0; }
+  footer ul li {
+    display: inline-block;
+    list-style: none;
+    padding: 0;
+    margin: 0; }

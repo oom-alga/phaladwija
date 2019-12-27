@@ -93,7 +93,11 @@
                 float: left;
                 position: relative;
                 h4{
-                    @include text-big-title(2px, $light:false);
+                    @include text-big-title(1px, $light:true);
+                    color: black;
+                    // text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+                    font-weight: bold;
+                    mix-blend-mode: screen;
                 }
             }
         }

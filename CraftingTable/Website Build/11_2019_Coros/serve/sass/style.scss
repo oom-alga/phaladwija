@@ -41,10 +41,19 @@ body{
 @import 'page/_about';
 @import 'page/_item';
 @import 'page/_brand';
+
+@import 'page/_category';
+
 .coba{
     .row{
         h1{
             background-color: red;
         }
+    }
+}
+
+footer{
+    ul{
+        @include ul-vertical();
     }
 }

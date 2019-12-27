@@ -6,16 +6,13 @@
     }
     &.two{
         .item{
-            height: 100vh;
             position: relative;
-            h1{
-                @include text-big-title(1px, $light:false);
-            }
-            img{
-                position: absolute;
-                height: 100%;
-                width: auto;
-                right: 10vw;
+            .content{
+                @include vertical-center;
+                h1{
+                    @include text-big-title(1px, $light:false);
+                    font-weight: bold;
+                }
             }
         }
     }

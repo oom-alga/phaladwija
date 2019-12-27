@@ -17,14 +17,12 @@ mixin header(version)
                     .item
                         .container
                             .row.item
-                                .col-md-6.col-md-push-2.title
-                                    .row
-                                        .col-lg-12
-                                            p We are
-                                            h1.display-2 Creative Agency
-                                            p Digital agency based in Klaten, Indonesia that loves to craft attractive experiences for the web.
-                                .col-md-6.background
-                                    img.img-fluid(src="image/hero.png", alt="")
+                                .col-md-10.offset-1
+                                    .content.py-6
+                                        .article
+                                            p.desc We are
+                                            h1.title.display-2 Creative Agency
+                                            p.desc Digital agency based in Klaten, Indonesia that loves to craft attractive experiences for the web.
     if (version == "three")
         #header.three
             .container
