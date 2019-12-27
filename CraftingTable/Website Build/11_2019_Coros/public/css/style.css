@@ -265,3 +265,25 @@ footer ul {
     list-style: none;
     padding: 0;
     margin: 0; }
+
+.animate {
+  opacity: 0.2; }
+
+.wow {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-color: green; }
+  .wow:after {
+    position: absolute;
+    z-index: 99;
+    background-color: red;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%; }
+
+.hide {
+  background-color: green;
+  opacity: 1; }

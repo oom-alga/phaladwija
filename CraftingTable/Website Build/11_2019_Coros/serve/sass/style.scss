@@ -57,3 +57,76 @@ footer{
         @include ul-vertical();
     }
 }
+
+// .animate {
+//     position: relative;
+//     margin: auto;
+//     height: auto;
+//     width: auto;
+//     overflow: hidden;
+//   }
+  
+//   .animate:before {
+//     position: absolute;
+//     content: '';
+//     height: 100%;
+//     width: 100%;
+//     background-color: white;
+//   }
+  
+//   .hide:before {
+//     display: none;
+//   }
+  
+//   @keyframes hide {
+//     0% {height: 100%;}
+//     50% {height: 100%;}
+//     51% {height: 0%;}
+//   }
+  
+//   .animate:after {
+//     position: absolute;
+//     top: 0;
+//     content: '';
+//     display: block;
+//     height: 100%;
+//     width: 100%;
+//     background-color: black;
+//     transform: translate(100%);
+//   }
+  
+//   .wow:after {
+//     animation: wow 2s ease;
+//   }
+  
+//   @keyframes wow {
+//     0% {height: 0; width: 5px; transform: translate(0);}
+//     25% {height: 100%; width: 5px;}
+//     50% {width: 100%;}
+//     51% {transform: translate(0);}
+//     100% {transform: translateX(100%)}
+//   }
+
+.animate{
+    opacity: 0.2;
+}
+.wow{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: green;
+    &:after{
+        position: absolute;
+        z-index: 99;
+        background-color: red;
+        opacity: 1;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+    }
+}
+.hide{
+    background-color: green;
+    opacity: 1;
+}

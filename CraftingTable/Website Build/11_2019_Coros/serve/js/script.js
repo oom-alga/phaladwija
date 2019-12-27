@@ -4,6 +4,7 @@ itemSlide();
 menus();
 parallax();
 item();
+animate();
 // owl Slider
 function owl() {
   $('.owl-carousel-indexHeader').owlCarousel({
@@ -118,4 +119,17 @@ function woow(){
     }
 
   }
+}
+
+function animate(){
+  
+  // var box = $('.animate');
+
+  // setTimeout(() => {
+  //   box.addClass('hide');
+  // }, 2000);
+  // setTimeout(() => {
+  //   box.addClass('wow');  
+  // }, 1000);
+
 }
