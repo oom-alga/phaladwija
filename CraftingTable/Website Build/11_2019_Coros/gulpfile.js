@@ -40,9 +40,10 @@ gulp.task("serve",function(){
     gulp.watch('./serve/js/**/*.js', gulp.series('js'));
     gulp.watch("./serve/pug/**/*.pug", gulp.series('pug'));
     gulp.watch("./serve/template/**/*.pug", gulp.series('pug'));
-
-    // gulp.watch("./serve/js/*.js").on("change",browserSync.reload);
-    // gulp.watch("./serve/sass/**/*.scss").on("change",browserSync.reload);
-    // gulp.watch("./serve/pug/**/*.pug").on("change",browserSync.reload);
-    // gulp.watch("./serve/template/**/*.pug").on("change",browserSync.reload);
+    
+    // autoload
+    gulp.watch("./serve/js/*.js").on("change",browserSync.reload);
+    gulp.watch("./serve/sass/**/*.scss").on("change",browserSync.reload);
+    gulp.watch("./serve/pug/**/*.pug").on("change",browserSync.reload);
+    gulp.watch("./serve/template/**/*.pug").on("change",browserSync.reload);
 });

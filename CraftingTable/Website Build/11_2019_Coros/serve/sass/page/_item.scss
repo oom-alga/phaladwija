@@ -49,19 +49,19 @@
                     background: -o-linear-gradient(45deg, color('shades', 'black') 0%, rgba(255,255,255,0) 100%);
                     background: -ms-linear-gradient(45deg, color('shades', 'black') 0%, rgba(255,255,255,0) 100%);
                     background: linear-gradient(45deg, color('shades', 'black') 0%, rgba(255,255,255,0) 100%);
-                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f84e30', endColorstr='#ffffff', GradientType=1 );
                 }
             }
             .content{
                 color: color('grey', 'darken-2');
                 bottom: 0;
-                max-width: 30%;
+                // max-width: 30%;
                 .title{
-                    display: block;
                     @include text-big-title(1px, $light:true);
                     color: black;
+                    // text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
                     font-weight: bold;
                     mix-blend-mode: screen;
+                    visibility: visible;;
                     &::after{
                         content: " ";
                         width: 30%;

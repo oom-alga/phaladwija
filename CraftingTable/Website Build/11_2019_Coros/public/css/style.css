@@ -18,7 +18,10 @@ a {
 
 body {
   height: 100%;
-  background-color: #fafafa; }
+  background-color: black; }
+
+p {
+  filter: invert(100); }
 
 .wrapItemScroll .background-Scroll {
   transform: scaleX(1);
@@ -181,15 +184,12 @@ nav.four {
   background: -webkit-linear-gradient(45deg, #000 0%, rgba(255, 255, 255, 0) 100%);
   background: -o-linear-gradient(45deg, #000 0%, rgba(255, 255, 255, 0) 100%);
   background: -ms-linear-gradient(45deg, #000 0%, rgba(255, 255, 255, 0) 100%);
-  background: linear-gradient(45deg, #000 0%, rgba(255, 255, 255, 0) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f84e30', endColorstr='#ffffff', GradientType=1 ); }
+  background: linear-gradient(45deg, #000 0%, rgba(255, 255, 255, 0) 100%); }
 
 #projectItem.two .item .content {
   color: #616161;
-  bottom: 0;
-  max-width: 30%; }
+  bottom: 0; }
   #projectItem.two .item .content .title {
-    display: block;
     letter-spacing: 22px;
     font-weight: 900;
     -webkit-text-stroke-width: 1px;
@@ -200,7 +200,8 @@ nav.four {
     -webkit-text-stroke-color: #ffffff;
     color: black;
     font-weight: bold;
-    mix-blend-mode: screen; }
+    mix-blend-mode: screen;
+    visibility: visible; }
     #projectItem.two .item .content .title::after {
       content: " ";
       width: 30%;
@@ -248,11 +249,34 @@ nav.four {
   color: transparent;
   text-transform: uppercase; }
 
+#category.one .textBackground {
+  position: relative;
+  color: red; }
+  #category.one .textBackground p {
+    position: absolute;
+    letter-spacing: 22px;
+    font-weight: 900;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #212529;
+    font-family: 'Roboto', 'sans-serif';
+    color: transparent;
+    text-transform: uppercase;
+    opacity: 0.1; }
+
 #category.one ul {
   padding: 0;
   margin: 0; }
   #category.one ul li {
     list-style: none; }
+
+#category.two .sosialMedia ul {
+  padding: 0;
+  margin: 0; }
+  #category.two .sosialMedia ul li {
+    display: inline-block;
+    list-style: none;
+    padding: 0;
+    margin: 0; }
 
 .coba .row h1 {
   background-color: red; }
@@ -266,24 +290,48 @@ footer ul {
     padding: 0;
     margin: 0; }
 
-.animate {
-  opacity: 0.2; }
-
-.wow {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  background-color: green; }
-  .wow:after {
-    position: absolute;
-    z-index: 99;
-    background-color: red;
-    opacity: 1;
-    top: 0;
-    left: 0;
+@keyframes wow {
+  0% {
+    height: 0;
+    width: 5px;
+    transform: translate(0); }
+  25% {
     height: 100%;
+    width: 5px; }
+  50% {
     width: 100%; }
+  51% {
+    transform: translate(0); }
+  100% {
+    transform: translateX(100%); } }
 
-.hide {
-  background-color: green;
-  opacity: 1; }
+@keyframes sipp {
+  from {
+    visibility: hidden; }
+  50% {
+    visibility: hidden; }
+  to {
+    visibility: visible; } }
+
+.animate {
+  overflow: hidden;
+  visibility: hidden;
+  transition-delay: 0.75s; }
+  .animate.show {
+    visibility: visible; }
+  .animate.wow {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    opacity: 1; }
+    .animate.wow::after {
+      visibility: visible;
+      content: "";
+      position: absolute;
+      z-index: 99;
+      background-color: black;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      animation: wow 1.5s both; }

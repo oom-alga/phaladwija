@@ -5,6 +5,7 @@ menus();
 parallax();
 item();
 animate();
+woow();
 // owl Slider
 function owl() {
   $('.owl-carousel-indexHeader').owlCarousel({
@@ -83,12 +84,11 @@ function parallax(){
 }
 
 function item(){
-  
   var ctrl = new ScrollMagic.Controller();
   $(".wrapItemScroll").each(function(i) {
     var outer = $(this).find('.background-Scroll');
     var tk = new TimelineMax();
-    tk.from(outer, 0.5, {scaleX: 0, ease: Expo.easeOut});
+    tk.from(outer, 0.1, {scaleX: 0, ease: Expo.easeOut});
     new ScrollMagic.Scene({
       triggerElement: this,
       triggerHook: "onCenter",
@@ -97,9 +97,22 @@ function item(){
       .addIndicators() 
       .addTo(ctrl);
   });
+
+  $(".animate").each(function(i) {
+    var tk = new TimelineMax();
+    tk.to(this, 0.5, {css:{className:'+=show wow'}});
+    new ScrollMagic.Scene({
+      triggerElement: this,
+      triggerHook: "onCenter",
+      // triggerHook: 0.75,
+    })
+      .setTween(tk)
+      .reverse(false)
+      .addIndicators({name: "animate", colorEnd: "#FFFFFF"}) 
+      .addTo(ctrl);
+  });
 }
 
-woow();
 function woow(){
   $(function() {
     shuffleRows($('#shuffle .row'))
@@ -119,17 +132,4 @@ function woow(){
     }
 
   }
-}
-
-function animate(){
-  
-  // var box = $('.animate');
-
-  // setTimeout(() => {
-  //   box.addClass('hide');
-  // }, 2000);
-  // setTimeout(() => {
-  //   box.addClass('wow');  
-  // }, 1000);
-
 }

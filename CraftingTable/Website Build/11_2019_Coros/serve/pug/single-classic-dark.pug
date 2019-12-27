@@ -7,19 +7,16 @@ include part/_nav.pug
 include part/_header.pug
 include part/_about.pug
 include part/_item.pug
-include part/_brand.pug
+include part/_category.pug
+include part/_article.pug
 
 block vars
     - var bodyClass = ''
     - var menu = 'classic'
 
 block main
-    +nav('one')
-    +header('one')
-    +about('one')
-    +item('one')
-    +about('two')
-    +item('two')
-    +brand('one')
-    +nav('three')
-    //- +page('three')
+    +nav('five')
+    +header('three')
+    +article('one')
+    +category('two')
+    

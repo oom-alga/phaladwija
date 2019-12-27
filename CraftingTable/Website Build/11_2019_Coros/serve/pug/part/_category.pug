@@ -4,6 +4,8 @@ mixin category(version)
     if (version == "one")
         #category.one   
             .container.py-6
+                .textBackground
+                    p.display-2 Lorem ipsum
                 .row
                     .col-lg-3.text-center.offset-1
                         ul
@@ -13,3 +15,30 @@ mixin category(version)
                             li Produce
                             li TechnicalDirection
                             li echnicalProduce
+    if (version == "two")
+        #category.two
+            .container.py-6
+                .row
+                    .col-lg-3
+                    .col-lg-9
+                        p Role
+                        p Planning / Design / Graphic design
+                        br
+                        p Client
+                        p 株式会社ASTRY
+                        br
+                        p Credit
+                        p Ryo Tatsumi / Shosuke Nakano / Kaoruko Hironaga
+                        br
+                        p Share
+                        .sosialMedia
+                            ul
+                                li.pr-5 
+                                    a(href="#") fb.        
+                                li.pr-5 
+                                    a(href="#") Tw.        
+                                li.pr-5 
+                                    a(href="#") Tr.        
+                                li.pr-5 
+                                    a(href="#") ig.
+            

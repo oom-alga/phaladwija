@@ -21,7 +21,11 @@ a {
 }
 body{
     height: 100%;
-    background-color: color('grey', 'lighten-5');
+    // background-color: color('grey', 'lighten-5');
+    background-color: black;
+}
+p{
+    filter: invert(100);
 }
 
 
@@ -43,6 +47,7 @@ body{
 @import 'page/_brand';
 
 @import 'page/_category';
+@import 'page/_article';
 
 .coba{
     .row{
@@ -99,34 +104,49 @@ footer{
 //     animation: wow 2s ease;
 //   }
   
-//   @keyframes wow {
-//     0% {height: 0; width: 5px; transform: translate(0);}
-//     25% {height: 100%; width: 5px;}
-//     50% {width: 100%;}
-//     51% {transform: translate(0);}
-//     100% {transform: translateX(100%)}
-//   }
+  @keyframes wow {
+    0% {height: 0; width: 5px; transform: translate(0);}
+    25% {height: 100%; width: 5px;}
+    50% {width: 100%;}
+    51% {transform: translate(0);}
+    100% {transform: translateX(100%);}
+  }
+  @keyframes sipp {
+    from {
+            visibility:hidden;
+     }
+    50% {
+            visibility:hidden;
+        }
+    to {
+            visibility:visible;
+    }
+  }
 
 .animate{
-    opacity: 0.2;
-}
-.wow{
-    position: relative;
-    height: 100%;
-    width: 100%;
-    background-color: green;
-    &:after{
-        position: absolute;
-        z-index: 99;
-        background-color: red;
-        opacity: 1;
-        top: 0;
-        left: 0;
+    overflow: hidden;
+    visibility:hidden;
+    transition-delay: 0.75s;
+    &.show{
+        visibility: visible;
+    }
+    &.wow{
+        position: relative;
         height: 100%;
         width: 100%;
+        opacity: 1;
+        &::after{
+            visibility: visible;
+            content: "";
+            position: absolute;
+            z-index: 99;
+            background-color: black;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            animation: wow 1.5s both;
+        }
     }
 }
-.hide{
-    background-color: green;
-    opacity: 1;
-}
+
