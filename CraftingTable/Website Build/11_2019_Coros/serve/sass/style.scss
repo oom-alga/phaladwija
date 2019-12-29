@@ -8,6 +8,7 @@
     font-family: 'Reem Kufi';
 }
 button:focus {outline:0 !important;}
+
 a, p{
     margin: 0;
     letter-spacing: 0;
@@ -21,12 +22,12 @@ a {
 }
 body{
     height: 100%;
-    // background-color: color('grey', 'lighten-5');
-    background-color: black;
+    background-color: color('grey', 'lighten-5');
+    // background-color: black;
 }
-p{
-    filter: invert(100);
-}
+// p{
+    // filter: invert(100);
+// }
 
 
 .wrapItemScroll{
@@ -291,4 +292,9 @@ $time-4: 600s;
   z-index: 99;
   color: #666;
   text-decoration: none;
+}
+
+.hoverTransition{
+  color: red;
+  filter: grayscale(1);
 }

@@ -4,8 +4,9 @@ itemSlide();
 menus();
 parallax();
 item();
-animate();
+// animate();
 woow();
+hoverTransition();
 // owl Slider
 function owl() {
   $('.owl-carousel-indexHeader').owlCarousel({
@@ -132,4 +133,31 @@ function woow(){
     }
 
   }
+}
+
+function hoverTransition(){
+  const lineEq = (y2, y1, x2, x1, currentVal) => {
+    var m = (y2 - y1) / (x2 - x1), b = y1 - m * x1;
+    return m * currentVal + b;
+  };
+
+  const gridItems = Array.from(document.querySelectorAll('.itemTransition'));
+  const distanceThreshold = {min: 0, max: 250};
+  const grayscaleInterval = {from: 1, to: 0};
+
+  gridItems.forEach((item) => {
+    const img = item.querySelector('.hoverTransition');
+
+    new Nearby(img, {
+        onProgress: (distance) => {
+            const bw = lineEq(grayscaleInterval.from, grayscaleInterval.to, distanceThreshold.max, distanceThreshold.min, distance);
+            
+            TweenMax.to(img, 1, {
+                ease: Power2.easeOut,
+                filter: `grayscale(${Math.min(bw,grayscaleInterval.from)})`
+            });
+
+        }
+    });
+  });
 }

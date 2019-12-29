@@ -7,9 +7,9 @@ mixin item(version)
                 each titleProject in ['rude', 'mkey', 'dance', 'popow', 'mels']
                     .item.container-fluid
                         .wrap-parallax
-                            .row
+                            .row.itemTransition
                                 .col-lg-8.col-lg-push-3
-                                    img.img-fluid.background(src="https://www.wallpaperup.com/uploads/wallpapers/2012/05/25/3158/2c5d704d5867621088cfc6c4afbc76ff-700.jpg", alt="woownan")
+                                    img.hoverTransition.img-fluid.background(src="https://www.wallpaperup.com/uploads/wallpapers/2012/05/25/3158/2c5d704d5867621088cfc6c4afbc76ff-700.jpg", alt="woownan")
                                 .col-lg-4.col-lg-pull-7.text-right.pt-5.mt-5
                                     p.desc Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                     h4.textTitle.title= titleProject
@@ -22,9 +22,9 @@ mixin item(version)
                         .row.mb-4
                             .col-lg-10.mb-4.offset-1.item
                                 a(href="single-classic-dark.html")
-                                    .animate
+                                    .animate.itemTransition
                                         .imageItem.position-relative
-                                            img.img-fluid(src="https://www.wallpaperup.com/uploads/wallpapers/2012/05/25/3158/2c5d704d5867621088cfc6c4afbc76ff.jpg", alt="")
+                                            img.hoverTransition.img-fluid(src="https://www.wallpaperup.com/uploads/wallpapers/2012/05/25/3158/2c5d704d5867621088cfc6c4afbc76ff.jpg", alt="")
                                     .content.position-absolute.p-5
                                         h3.display-1.title.text-center.mt-n5= titleProject
 
