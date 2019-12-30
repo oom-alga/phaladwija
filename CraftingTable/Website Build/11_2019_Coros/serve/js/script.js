@@ -4,7 +4,6 @@ itemSlide();
 menus();
 parallax();
 item();
-// animate();
 woow();
 hoverTransition();
 // owl Slider
@@ -51,12 +50,17 @@ function itemSlide() {
   .to("#itemSlide", 1,   {x: "-20%"})	
   .to("#itemSlide", 1,   {x: "-40%"})
   .to("#itemSlide", 1,   {x: "-60%"})
-  .to("#itemSlide", 1,   {x: "-80%"})
+  .to("#itemSlide", 1,   {x: "-80%"});
+
+  // var tween = TweenMax.to("#header.four", 0.5, {css:{color:"#ff0004", ease: Linear.easeNone}});
+  var tween = TweenMax.to("#header.four", 1, {className: "+=animateScroll"});
 
   // create scene to pin and link animation
   new ScrollMagic.Scene({triggerElement: "#projectItem.one, #projectItem.three",triggerHook: "onLeave",duration: "500%"})
   .setPin("#projectItem.one, #projectItem.three").setTween(horizontalSlide).addIndicators({name: "1 (duration: 300)"}).addTo(controller);
 
+  new ScrollMagic.Scene({triggerElement: "#header.four", duration: 500, offset: -50,triggerHook: "onLeave"})
+  .setTween(tween).addIndicators({name: "Header (duration: 500)"}).addTo(controller);
 }
  
 function menus(){
