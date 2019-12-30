@@ -5,9 +5,9 @@ include mixins/_page.pug
 
 include part/_nav.pug
 include part/_header.pug
-include part/_about.pug
+include part/_category.pug
 include part/_item.pug
-include part/_brand.pug
+
 
 block vars
     - var bodyClass = ''
@@ -15,8 +15,5 @@ block vars
 
 block main
     +nav('five')
-    +header('one') 
-    +about('one')
-    +item('one')
-    +about('two')
-    +item('two')
+    +header('two') 
+    +item('four')

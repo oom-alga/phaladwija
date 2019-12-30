@@ -26,6 +26,20 @@
         }
     }
     &.four{
-        height: 100vh;
+        height: 80vh;
+        @include vertical-center;
+        h1{
+            @include text-big-title(2px, $light:true);
+        }
+        .footer{
+            width: 100%;
+            left: 15px;
+            bottom: 0;
+            .sosialMedia{
+                ul{
+                    @include ul-vertical();
+                }
+            }
+        }
     }
 }

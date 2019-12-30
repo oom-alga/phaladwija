@@ -102,4 +102,29 @@
             }
         }
     }
+    &.four{
+        .item{
+            height: 300px;
+            width: 100%;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            h1{
+                position: absolute;
+                left: 15px;
+                bottom: 15px;
+                color: white;
+                transition: all 1s ease;
+                opacity: 0;
+                font-weight: 900;
+                -webkit-text-stroke-width: 0.5px;
+                -webkit-text-stroke-color: white;
+                color: transparent;
+            }
+            &:hover h1{
+                opacity: 1;
+                letter-spacing: 10px;
+            }
+        }
+    }
 }

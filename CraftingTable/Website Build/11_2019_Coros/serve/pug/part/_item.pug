@@ -40,3 +40,16 @@ mixin item(version)
                                 .col-lg-4.col-lg-pull-7.text-right.pt-5.mt-5
                                     h4.display-4.title= titleProject
                                     p.desc Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    if (version == "four")
+        #projectItem.four
+            #shuffle
+                .text-center
+                    .container
+                        .row
+                            each size in [3, 4, 5, 4, 3, 6, 3, 4, 5, 12, 3, 6, 3, 4, 5 ]
+                                div.itemTransition(class='col-sm-'+size)
+                                    .item.wrap-parallax.hoverTransition.card.mb-4(style="background-image: url(https://www.wallpaperup.com/uploads/wallpapers/2012/05/25/3158/2c5d704d5867621088cfc6c4afbc76ff.jpg)")
+                                        .card-body
+                                            .card-title
+                                                h1.desc lorem
+                                    

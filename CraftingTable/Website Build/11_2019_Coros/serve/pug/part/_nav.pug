@@ -66,15 +66,16 @@ mixin nav(version)
                             li.display-8 Blog
                             li.display-8 Contact
     if (version == "five")
-        nav.five.container.navbar.navbar-expand-lg.navbar-light.pt-4
-            a.navbar-brand.display-5(href='#') andstudio
-            button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarTogglerDemo02' aria-controls='navbarTogglerDemo02' aria-expanded='false' aria-label='Toggle navigation')
-                span.navbar-toggler-icon
-            #navbarSupportedContent.collapse.navbar-collapse
-                ul.navbar-nav.ml-auto.topnav
-                    li.nav-item
-                        a.display-8.nav-link.px-3(href='#') Work
-                    li.nav-item
-                        a.display-8.nav-link.px-3(href='project-classic-dark.html') Studios
-                    li.nav-item
-                        a.display-8.nav-link.pl-3(href='#') Contact
+        nav.five.navbar.navbar-expand-lg.navbar-transparent.navbar-light.pt-3
+            .container
+                a.navbar-brand.display-5(href='#') andstudio
+                button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarTogglerDemo02' aria-controls='navbarTogglerDemo02' aria-expanded='false' aria-label='Toggle navigation')
+                    span.navbar-toggler-icon
+                #navbarSupportedContent.collapse.navbar-collapse
+                    ul.navbar-nav.ml-auto.topnav
+                        li.nav-item
+                            a.display-8.nav-link.px-3(href='single-classic-dark.html') Work
+                        li.nav-item
+                            a.display-8.nav-link.px-3(href='project-classic-dark.html') Studios
+                        li.nav-item
+                            a.display-8.nav-link.pl-3(href='blog-classic-dark.html') Contact

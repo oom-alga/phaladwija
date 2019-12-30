@@ -2,7 +2,7 @@ mixin header(version)
     -var item = version
 
     if (version == "one")
-        #header.one
+        #header.one.pt-5
             .header-text.container.owl-carousel.owl-carousel-indexHeader
                 each item in [1,2,3,4,5]
                     .row.item.align-items-center.py-6
@@ -11,7 +11,7 @@ mixin header(version)
                             h3.textBigTitle.text-uppercase Fun Begin
                             p.text-muted Written by Cicero in 45 BC
     if (version == "two")
-        #header.two
+        #header.two.pt-5
             .owl-carousel.owl-carousel-indexHeaderTwo.wrap-parallax
                 each item in [1,2,3,4,5]
                     .item
@@ -24,7 +24,7 @@ mixin header(version)
                                             h1.title.display-2 Creative Agency
                                             p.desc Digital agency based in Klaten, Indonesia that loves to craft attractive experiences for the web.
     if (version == "three")
-        #header.three
+        #header.three.pt-5
             .container.py-6
                 .row
                     .col-lg-3.offset-md-1
@@ -34,8 +34,22 @@ mixin header(version)
                         p.display-1.title Popow's 
                         p.display-1.title Strategy
     if(version == "four")
-        #header.four.parallax(data-speed="0.3" data-img-src="image/dummy.jpg")
-            .container
-                .row
-                    .col-lg-12
-                        h1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia cum, quidem quos molestias saepe nisi tenetur fugit alias, minima sunt nihil voluptas eum dolorem maxime voluptatibus labore beatae placeat. Numquam!
+        #header.four.position-relative.parallax(data-speed="0.5" data-img-src="image/dummy.jpg")
+            .container.wrap-parallax
+                .row.justify-content-center
+                    .col-lg-8.mt-6
+                        h1.text-center.background.textBigTitle.mt-n6 HELLO popo'w
+                .row.position-absolute.footer.py-3
+                    .col-lg-6.text-left
+                        p hello@algakhaa.com
+                    .col-lg-6.text-right
+                        .sosialMedia
+                            ul
+                                li.pr-5 
+                                    a(href="#") fb.        
+                                li.pr-5 
+                                    a(href="#") Tw.        
+                                li.pr-5 
+                                    a(href="#") Tr.        
+                                li.pr-5 
+                                    a(href="#") ig.

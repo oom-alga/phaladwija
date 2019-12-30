@@ -50,14 +50,6 @@ body{
 @import 'page/_category';
 @import 'page/_article';
 
-.coba{
-    .row{
-        h1{
-            background-color: red;
-        }
-    }
-}
-
 footer{
     ul{
         @include ul-vertical();
