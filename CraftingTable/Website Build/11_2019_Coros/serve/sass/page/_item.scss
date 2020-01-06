@@ -1,4 +1,41 @@
 #projectItem{
+    // &.one{
+    //     width: 100%;
+    //     height: 100vh;
+    //     overflow: hidden;
+    //     perspective: 1000;
+    //     position: relative;
+    //     #itemSlide{
+    //         width: 500%;
+    //         height: 100vh;
+    //         .item{
+    //             @include vertical-center();
+    //             height: 100vh;
+    //             width: calc(100% / 5);
+    //             float: left;
+    //             position: relative;
+    //             .content{
+    //                 p{
+    //                     color: black;
+    //                     font-weight: bold;
+    //                     mix-blend-mode: screen;
+    //                     @media #{$medium-and-down} {
+    //                         display: none;
+    //                     }
+    //                 }
+    //                 h4{
+    //                     @include text-big-title(1px, $light:true);
+    //                     font-weight: bold;
+    //                     mix-blend-mode: screen;
+    //                     @media #{$medium-and-down} {
+    //                         margin-top: -30%;
+    //                         text-align: center;
+    //                     }
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
     &.one{
         width: 100%;
         height: 100vh;
@@ -10,22 +47,45 @@
             height: 100vh;
             .item{
                 @include vertical-center();
+                background-position: center;
+                background-size: 50%;
+                background-repeat: no-repeat;
                 height: 100vh;
                 width: calc(100% / 5);
                 float: left;
                 position: relative;
-                p{
-                    color: black;
-                    // text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
-                    font-weight: bold;
-                    mix-blend-mode: screen;
+                .content{
+                    p{
+                        color: black;
+                        font-weight: bold;
+                        @media #{$medium-and-down} {
+                            display: none;
+                        }
+                    }
+                    h4{
+                        @include text-big-title(2px, light);
+                        color: black;
+                        font-weight: bold;
+                        mix-blend-mode: screen;
+                        @media #{$medium-and-down} {
+                            margin-top: -30%;
+                            text-align: center;
+                        }
+                    }
                 }
-                h4{
-                    @include text-big-title(1px, $light:true);
-                    color: black;
-                    // text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
-                    font-weight: bold;
-                    mix-blend-mode: screen;
+                @media #{$medium-and-down} {
+                    background-size: cover;
+                    -webkit-box-shadow:inset 0px 0px 0px 10px $light-color;
+                    -moz-box-shadow:inset 0px 0px 0px 10px $light-color;
+                    box-shadow:inset 0px 0px 0px 10px $light-color;
+                    h4{
+                        position: absolute;
+                        margin-left: 30px;
+                    }
+                }
+                @media #{$small-and-down} {
+                    // line-height: 100%;
+                    // font-size: 3rem;
                 }
             }
         }
@@ -56,7 +116,7 @@
                 bottom: 0;
                 // max-width: 30%;
                 .title{
-                    @include text-big-title(1px, $light:true);
+                    @include text-big-title(1px, light);
                     color: black;
                     // text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
                     font-weight: bold;
@@ -93,7 +153,7 @@
                 float: left;
                 position: relative;
                 h4{
-                    @include text-big-title(1px, $light:true);
+                    @include text-big-title(1px, light);
                     color: black;
                     // text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
                     font-weight: bold;
@@ -113,7 +173,7 @@
                 position: absolute;
                 left: 15px;
                 bottom: 15px;
-                color: white;
+                color: $light-color;
                 transition: all 1s ease;
                 opacity: 0;
                 font-weight: 900;

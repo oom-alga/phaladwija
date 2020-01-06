@@ -1,11 +1,12 @@
 owl();
-text();
 itemSlide();
 menus();
 parallax();
 item();
 woow();
 hoverTransition();
+
+
 // owl Slider
 function owl() {
   $('.owl-carousel-indexHeader').owlCarousel({
@@ -38,10 +39,6 @@ function owl() {
   
 }
 
-function text(){
-  $(".textBigTitle").fitText(0.999);
-  $(".textTitle").fitText(0.3);
-}
 
 function itemSlide() {
   var controller = new ScrollMagic.Controller();

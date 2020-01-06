@@ -7,8 +7,8 @@ mixin header(version)
                 each item in [1,2,3,4,5]
                     .row.item.align-items-center.py-6
                         .col-lg-12
-                            h3.textBigTitle.text-uppercase Let The 
-                            h3.textBigTitle.text-uppercase Fun Begin
+                            h3.display-1.text-uppercase Let The 
+                            h3.display-1.text-uppercase Fun Begin
                             p.text-muted Written by Cicero in 45 BC
     if (version == "two")
         #header.two.pt-5
@@ -29,8 +29,8 @@ mixin header(version)
                 .row
                     .col-lg-3.offset-md-1
                         p.display-8 & is a connection. Connection between
-                .row
-                    .col-lg-10.offset-md-1.pt-3
+                .row.justify-content-center
+                    .col-lg-10.pt-3
                         p.display-1.title Popow's 
                         p.display-1.title Strategy
     if(version == "four")

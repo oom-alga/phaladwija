@@ -5,7 +5,7 @@
 #header{
     &.one{
         h3{
-            @include text-big-title(2px, $light:false);
+            @include text-big-title(2px, dark);
         }
     }
     &.two{
@@ -14,7 +14,7 @@
             .content{
                 @include vertical-center;
                 h1{
-                    @include text-big-title(1px, $light:false);
+                    @include text-big-title(1px, dark);
                     font-weight: bold;
                 }
             }
@@ -22,14 +22,15 @@
     }
     &.three{
         .title{
-            @include text-title();
+            @include text-big-title(0px, dark);
+            color: $dark-color;
         }
     }
     &.four{
         height: 80vh;
         @include vertical-center;
         h1{
-            @include text-big-title(2px, $light:true);
+            @include text-big-title(2px, light);
         }
         .footer{
             width: 100%;

@@ -5,7 +5,7 @@
     &.two{
         h2{
             &.textBigTitle{
-                @include text-big-title(5px, $light:false);
+                @include text-big-title(5px, light);
             }
             // @include text-title;
         }

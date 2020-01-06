@@ -28,7 +28,7 @@ nav{
         background-size: cover;
         @include vertical-center();
         h3{
-            @include text-big-title(5px, $light:false);
+            @include text-big-title(5px, dark);
             display: inline-block;
         }  
     }

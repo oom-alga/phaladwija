@@ -5,7 +5,7 @@
             color: red;
             p{
                 position: absolute;
-                @include text-big-title(1px, $light:false);
+                @include text-big-title(1px, dark);
                 opacity: 0.1;
             }
         }

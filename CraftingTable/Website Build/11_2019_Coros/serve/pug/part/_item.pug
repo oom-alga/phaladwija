@@ -2,25 +2,35 @@ mixin item(version)
     -var item = version
 
     if (version == "one")
+        //- #projectItem.one
+        //-     #itemSlide
+        //-         each titleProject in ['rude', 'mkey', 'dance', 'popow', 'mels']
+        //-             .item.container-fluid(style="background-image:url(https://www.wallpaperup.com/uploads/wallpapers/2012/05/25/3158/2c5d704d5867621088cfc6c4afbc76ff-700.jpg)")
+        //-                 .wrap-parallax
+        //-                     .row.itemTransition
+                                //- .col-lg-8.col-lg-push-3.img
+                                //-     img.hoverTransition.img-fluid.background(src="https://www.wallpaperup.com/uploads/wallpapers/2012/05/25/3158/2c5d704d5867621088cfc6c4afbc76ff-700.jpg", alt="woownan")
+                                //- .col-lg-4.col-lg-pull-7.text-right.pt-5.mt-5.content
+                                //-     p.desc Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                //-     h4.textTitle.title= titleProject
         #projectItem.one
             #itemSlide
                 each titleProject in ['rude', 'mkey', 'dance', 'popow', 'mels']
-                    .item.container-fluid
-                        .wrap-parallax
-                            .row.itemTransition
-                                .col-lg-8.col-lg-push-3
-                                    img.hoverTransition.img-fluid.background(src="https://www.wallpaperup.com/uploads/wallpapers/2012/05/25/3158/2c5d704d5867621088cfc6c4afbc76ff-700.jpg", alt="woownan")
-                                .col-lg-4.col-lg-pull-7.text-right.pt-5.mt-5
+                    .wrap-parallax
+                        .item.container-fluid(style="background-image: url(https://www.wallpaperup.com/uploads/wallpapers/2012/05/25/3158/2c5d704d5867621088cfc6c4afbc76ff-700.jpg)")
+                            .row.justify-content-end
+                                .col-lg-8.pt-5.mt-5.content
                                     p.desc Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                     h4.textTitle.title= titleProject
+
 
     if (version == "two")
         #projectItem.two.py-6
             .container
                 each titleProject in ['rudes', 'mkey', 'dance', 'popow', 'mels']
                     .wrap-parallax
-                        .row.mb-4
-                            .col-lg-10.mb-4.offset-1.item
+                        .row.mb-4.justify-content-center
+                            .col-lg-10.mb-4.item.position-relative
                                 a(href="single-classic-dark.html")
                                     .animate.itemTransition
                                         .imageItem.position-relative

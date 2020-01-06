@@ -1,13 +1,25 @@
-@mixin text-big-title($stroke, $light:false){
+@mixin text-big-title($stroke, $color){
     letter-spacing: 22px;
     font-weight: 900;
     -webkit-text-stroke-width: $stroke;
-    -webkit-text-stroke-color: #212529;
     font-family: 'Roboto', 'sans-serif';
     color: transparent;
     text-transform: uppercase;
-    @if $light {
-        -webkit-text-stroke-color: #ffffff;
+    font-size: 10rem;
+    @if $color == light{
+        -webkit-text-stroke-color: $light-color;
+    }@else if $color == dark {
+        -webkit-text-stroke-color: $dark-color;
+    }@else if $color == blue {
+        -webkit-text-stroke-color: $sec-color-1;
+    }
+    @media #{$medium-and-down} {
+        letter-spacing: 0px;
+        font-size: 8rem;
+    }
+    @media #{$small-and-down} {
+        line-height: 100%;
+        font-size: 3rem;
     }
 }
 @mixin text-title(){

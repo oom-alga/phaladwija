@@ -1,7 +1,7 @@
 #brand{
     &.one{
         h2{
-            @include text-big-title(5px, $light:false);
+            @include text-big-title(5px, dark);
         }
     }
 }
